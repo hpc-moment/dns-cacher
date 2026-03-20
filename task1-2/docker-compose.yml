@@ -1,0 +1,21 @@
+services:
+  unbound-node:
+    build: .
+    container_name: dns-resolver
+    # privileged разрешает Docker-у автоматически настроить cgroups для контейнера
+    privileged: true
+    # tmpfs нужен systemd для хранения сокетов и PID файлов в памяти
+    tmpfs:
+      - /run
+      - /run/lock
+      - /tmp
+    networks:
+      dns-lab:
+        ipv4_address: 10.10.0.2
+
+networks:
+  dns-lab:
+    name: dns-lab
+    ipam:
+      config:
+        - subnet: 10.10.0.0/24
