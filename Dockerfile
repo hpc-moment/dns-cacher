@@ -18,11 +18,14 @@ RUN rm -f /lib/systemd/system/multi-user.target.wants/* \
     /lib/systemd/system/sysinit.target.wants/systemd-tmpfiles-setup* \
     /lib/systemd/system/systemd-update-utmp*
 
-# 3. Включаем Unbound в автозапуск
+# 3. Перенаправляем логи systemd (и unbound) в Docker stdout
+RUN mkdir -p /etc/systemd/journald.conf.d && \
+    echo "[Journal]\nForwardToConsole=yes" > /etc/systemd/journald.conf.d/docker-console.conf
+
+# 4. Включаем Unbound в автозапуск
 RUN systemctl enable unbound
 
-# 4. Настраиваем корректную остановку и запуск systemd
+# 5. Настраиваем корректную остановку и запуск systemd
 STOPSIGNAL SIGRTMIN+3
 
-# Обязательно ПРОБЕЛ после CMD!
 CMD ["/sbin/init"]
