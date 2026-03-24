@@ -12,7 +12,18 @@ docker compose up -d --build
 ```
 
 ## Checks to meet requirements 
-### Main checks 
+### Automated Checks
+```bash 
+./check.sh
+```
+This script validates:
+- Container status
+- Systemd initialization
+- Unbound service state
+- Configuration hash parity
+- DNS resolution functionality
+
+### Manual checks 
 ```bash 
 docker exec -it dns-resolver systemctl is-system-running
 

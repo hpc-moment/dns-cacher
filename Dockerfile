@@ -16,7 +16,12 @@ RUN rm -f /lib/systemd/system/multi-user.target.wants/* \
     /lib/systemd/system/sockets.target.wants/*udev* \
     /lib/systemd/system/sockets.target.wants/*initctl* \
     /lib/systemd/system/sysinit.target.wants/systemd-tmpfiles-setup* \
-    /lib/systemd/system/systemd-update-utmp*
+    /lib/systemd/system/systemd-update-utmp* \
+    /lib/systemd/system/getty.target \
+    /lib/systemd/system/graphical.target
+
+# Устанавливаем multi-user как дефолтный таргет (чтобы не запускать лишнего)
+RUN systemctl set-default multi-user.target
 
 # 3. Перенаправляем логи systemd (и unbound) в Docker stdout
 RUN mkdir -p /etc/systemd/journald.conf.d && \
