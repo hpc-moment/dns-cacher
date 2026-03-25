@@ -43,4 +43,4 @@ docker compose up -d # запуск без webui
 127.0.0.1:6379> set key_1 value_1 ex 90 # key_1=value_1 с TTL 90 секунд
 ```
 
-[redis-webui](redis-webui.png)
+![redis-webui](redis-webui.png)
