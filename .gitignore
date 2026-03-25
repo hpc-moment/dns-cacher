@@ -20,3 +20,6 @@ rad.json
 *.flf
 #Test results file
 TestResults.xml
+
+# Environmental variables, see example configuration at .env.example
+.env
