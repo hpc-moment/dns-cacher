@@ -1,0 +1,100 @@
+Mar 25 22:05:23 20c83be6ce2b unbound[2124]: [1774476323] unbound[2124:0] info: priming . IN NS
+Mar 25 22:05:23 20c83be6ce2b unbound[2124]: [1774476323] unbound[2124:0] info: response for . NS IN
+Mar 25 22:05:23 20c83be6ce2b unbound[2124]: [1774476323] unbound[2124:0] info: reply from <.> 199.7.83.42#53
+Mar 25 22:05:23 20c83be6ce2b unbound[2124]: [1774476323] unbound[2124:0] info: query response was THROWAWAY
+Mar 25 22:05:23 20c83be6ce2b unbound[2124]: [1774476323] unbound[2124:0] info: response for . NS IN
+Mar 25 22:05:23 20c83be6ce2b unbound[2124]: [1774476323] unbound[2124:0] info: reply from <.> 192.203.230.10#53
+Mar 25 22:05:23 20c83be6ce2b unbound[2124]: [1774476323] unbound[2124:0] info: query response was THROWAWAY
+Mar 25 22:05:23 20c83be6ce2b unbound[2124]: [1774476323] unbound[2124:0] info: response for . NS IN
+Mar 25 22:05:23 20c83be6ce2b unbound[2124]: [1774476323] unbound[2124:0] info: reply from <.> 192.58.128.30#53
+Mar 25 22:05:23 20c83be6ce2b unbound[2124]: [1774476323] unbound[2124:0] info: query response was THROWAWAY
+Mar 25 22:05:24 20c83be6ce2b unbound[2124]: [1774476324] unbound[2124:0] info: response for . NS IN
+Mar 25 22:05:24 20c83be6ce2b unbound[2124]: [1774476324] unbound[2124:0] info: reply from <.> 199.9.14.201#53
+Mar 25 22:05:24 20c83be6ce2b unbound[2124]: [1774476324] unbound[2124:0] info: query response was THROWAWAY
+Mar 25 22:05:24 20c83be6ce2b unbound[2124]: [1774476324] unbound[2124:0] info: response for . NS IN
+Mar 25 22:05:24 20c83be6ce2b unbound[2124]: [1774476324] unbound[2124:0] info: reply from <.> 192.36.148.17#53
+Mar 25 22:05:24 20c83be6ce2b unbound[2124]: [1774476324] unbound[2124:0] info: query response was THROWAWAY
+Mar 25 22:05:24 20c83be6ce2b unbound[2124]: [1774476324] unbound[2124:0] info: response for . NS IN
+Mar 25 22:05:24 20c83be6ce2b unbound[2124]: [1774476324] unbound[2124:0] info: reply from <.> 192.5.5.241#53
+Mar 25 22:05:24 20c83be6ce2b unbound[2124]: [1774476324] unbound[2124:0] info: query response was THROWAWAY
+Mar 25 22:05:24 20c83be6ce2b unbound[2124]: [1774476324] unbound[2124:0] info: response for . NS IN
+Mar 25 22:05:24 20c83be6ce2b unbound[2124]: [1774476324] unbound[2124:0] info: reply from <.> 199.7.83.42#53
+Mar 25 22:05:24 20c83be6ce2b unbound[2124]: [1774476324] unbound[2124:0] info: query response was THROWAWAY
+Mar 25 22:05:24 20c83be6ce2b unbound[2124]: [1774476324] unbound[2124:0] info: response for . NS IN
+Mar 25 22:05:24 20c83be6ce2b unbound[2124]: [1774476324] unbound[2124:0] info: reply from <.> 192.112.36.4#53
+Mar 25 22:05:24 20c83be6ce2b unbound[2124]: [1774476324] unbound[2124:0] info: query response was THROWAWAY
+Mar 25 22:05:24 20c83be6ce2b unbound[2124]: [1774476324] unbound[2124:0] info: response for . NS IN
+Mar 25 22:05:24 20c83be6ce2b unbound[2124]: [1774476324] unbound[2124:0] info: reply from <.> 199.7.83.42#53
+Mar 25 22:05:24 20c83be6ce2b unbound[2124]: [1774476324] unbound[2124:0] info: query response was THROWAWAY
+Mar 25 22:05:24 20c83be6ce2b unbound[2124]: [1774476324] unbound[2124:0] info: response for . NS IN
+Mar 25 22:05:24 20c83be6ce2b unbound[2124]: [1774476324] unbound[2124:0] info: reply from <.> 198.41.0.4#53
+Mar 25 22:05:24 20c83be6ce2b unbound[2124]: [1774476324] unbound[2124:0] info: query response was THROWAWAY
+Mar 25 22:05:24 20c83be6ce2b unbound[2124]: [1774476324] unbound[2124:0] info: response for . NS IN
+Mar 25 22:05:24 20c83be6ce2b unbound[2124]: [1774476324] unbound[2124:0] info: reply from <.> 199.7.91.13#53
+Mar 25 22:05:24 20c83be6ce2b unbound[2124]: [1774476324] unbound[2124:0] info: query response was THROWAWAY
+Mar 25 22:05:24 20c83be6ce2b unbound[2124]: [1774476324] unbound[2124:0] info: response for . NS IN
+Mar 25 22:05:24 20c83be6ce2b unbound[2124]: [1774476324] unbound[2124:0] info: reply from <.> 199.9.14.201#53
+Mar 25 22:05:24 20c83be6ce2b unbound[2124]: [1774476324] unbound[2124:0] info: query response was THROWAWAY
+Mar 25 22:05:24 20c83be6ce2b unbound[2124]: [1774476324] unbound[2124:0] info: response for . NS IN
+Mar 25 22:05:24 20c83be6ce2b unbound[2124]: [1774476324] unbound[2124:0] info: reply from <.> 193.0.14.129#53
+Mar 25 22:05:24 20c83be6ce2b unbound[2124]: [1774476324] unbound[2124:0] info: query response was THROWAWAY
+Mar 25 22:05:25 20c83be6ce2b unbound[2124]: [1774476325] unbound[2124:0] info: response for . NS IN
+Mar 25 22:05:25 20c83be6ce2b unbound[2124]: [1774476325] unbound[2124:0] info: reply from <.> 192.36.148.17#53
+Mar 25 22:05:25 20c83be6ce2b unbound[2124]: [1774476325] unbound[2124:0] info: query response was THROWAWAY
+Mar 25 22:05:25 20c83be6ce2b unbound[2124]: [1774476325] unbound[2124:0] info: response for . NS IN
+Mar 25 22:05:25 20c83be6ce2b unbound[2124]: [1774476325] unbound[2124:0] info: reply from <.> 198.97.190.53#53
+Mar 25 22:05:25 20c83be6ce2b unbound[2124]: [1774476325] unbound[2124:0] info: query response was THROWAWAY
+Mar 25 22:05:25 20c83be6ce2b unbound[2124]: [1774476325] unbound[2124:0] info: response for . NS IN
+Mar 25 22:05:25 20c83be6ce2b unbound[2124]: [1774476325] unbound[2124:0] info: reply from <.> 198.41.0.4#53
+Mar 25 22:05:25 20c83be6ce2b unbound[2124]: [1774476325] unbound[2124:0] info: query response was THROWAWAY
+Mar 25 22:05:25 20c83be6ce2b unbound[2124]: [1774476325] unbound[2124:0] info: response for . NS IN
+Mar 25 22:05:25 20c83be6ce2b unbound[2124]: [1774476325] unbound[2124:0] info: reply from <.> 199.7.83.42#53
+Mar 25 22:05:25 20c83be6ce2b unbound[2124]: [1774476325] unbound[2124:0] info: query response was THROWAWAY
+Mar 25 22:05:25 20c83be6ce2b unbound[2124]: [1774476325] unbound[2124:0] info: response for . NS IN
+Mar 25 22:05:25 20c83be6ce2b unbound[2124]: [1774476325] unbound[2124:0] info: reply from <.> 202.12.27.33#53
+Mar 25 22:05:25 20c83be6ce2b unbound[2124]: [1774476325] unbound[2124:0] info: query response was THROWAWAY
+Mar 25 22:05:25 20c83be6ce2b unbound[2124]: [1774476325] unbound[2124:0] info: response for . NS IN
+Mar 25 22:05:25 20c83be6ce2b unbound[2124]: [1774476325] unbound[2124:0] info: reply from <.> 193.0.14.129#53
+Mar 25 22:05:25 20c83be6ce2b unbound[2124]: [1774476325] unbound[2124:0] info: query response was THROWAWAY
+Mar 25 22:05:25 20c83be6ce2b unbound[2124]: [1774476325] unbound[2124:0] info: response for . NS IN
+Mar 25 22:05:25 20c83be6ce2b unbound[2124]: [1774476325] unbound[2124:0] info: reply from <.> 192.203.230.10#53
+Mar 25 22:05:25 20c83be6ce2b unbound[2124]: [1774476325] unbound[2124:0] info: query response was THROWAWAY
+Mar 25 22:05:25 20c83be6ce2b unbound[2124]: [1774476325] unbound[2124:0] info: response for . NS IN
+Mar 25 22:05:25 20c83be6ce2b unbound[2124]: [1774476325] unbound[2124:0] info: reply from <.> 193.0.14.129#53
+Mar 25 22:05:25 20c83be6ce2b unbound[2124]: [1774476325] unbound[2124:0] info: query response was THROWAWAY
+Mar 25 22:05:25 20c83be6ce2b unbound[2124]: [1774476325] unbound[2124:0] info: response for . NS IN
+Mar 25 22:05:25 20c83be6ce2b unbound[2124]: [1774476325] unbound[2124:0] info: reply from <.> 199.7.91.13#53
+Mar 25 22:05:25 20c83be6ce2b unbound[2124]: [1774476325] unbound[2124:0] info: query response was THROWAWAY
+Mar 25 22:05:25 20c83be6ce2b unbound[2124]: [1774476325] unbound[2124:0] info: response for . NS IN
+Mar 25 22:05:25 20c83be6ce2b unbound[2124]: [1774476325] unbound[2124:0] info: reply from <.> 192.112.36.4#53
+Mar 25 22:05:25 20c83be6ce2b unbound[2124]: [1774476325] unbound[2124:0] info: query response was THROWAWAY
+Mar 25 22:05:25 20c83be6ce2b unbound[2124]: [1774476325] unbound[2124:0] info: response for . NS IN
+Mar 25 22:05:25 20c83be6ce2b unbound[2124]: [1774476325] unbound[2124:0] info: reply from <.> 192.36.148.17#53
+Mar 25 22:05:25 20c83be6ce2b unbound[2124]: [1774476325] unbound[2124:0] info: query response was THROWAWAY
+Mar 25 22:05:26 20c83be6ce2b unbound[2124]: [1774476326] unbound[2124:0] info: response for . NS IN
+Mar 25 22:05:26 20c83be6ce2b unbound[2124]: [1774476326] unbound[2124:0] info: reply from <.> 198.41.0.4#53
+Mar 25 22:05:26 20c83be6ce2b unbound[2124]: [1774476326] unbound[2124:0] info: query response was THROWAWAY
+Mar 25 22:05:26 20c83be6ce2b unbound[2124]: [1774476326] unbound[2124:0] info: response for . NS IN
+Mar 25 22:05:26 20c83be6ce2b unbound[2124]: [1774476326] unbound[2124:0] info: reply from <.> 199.7.91.13#53
+Mar 25 22:05:26 20c83be6ce2b unbound[2124]: [1774476326] unbound[2124:0] info: query response was THROWAWAY
+Mar 25 22:05:26 20c83be6ce2b unbound[2124]: [1774476326] unbound[2124:0] info: response for . NS IN
+Mar 25 22:05:26 20c83be6ce2b unbound[2124]: [1774476326] unbound[2124:0] info: reply from <.> 199.7.91.13#53
+Mar 25 22:05:26 20c83be6ce2b unbound[2124]: [1774476326] unbound[2124:0] info: query response was THROWAWAY
+Mar 25 22:05:26 20c83be6ce2b unbound[2124]: [1774476326] unbound[2124:0] info: response for . NS IN
+Mar 25 22:05:26 20c83be6ce2b unbound[2124]: [1774476326] unbound[2124:0] info: reply from <.> 199.7.83.42#53
+Mar 25 22:05:26 20c83be6ce2b unbound[2124]: [1774476326] unbound[2124:0] info: query response was THROWAWAY
+Mar 25 22:05:26 20c83be6ce2b unbound[2124]: [1774476326] unbound[2124:0] info: response for . NS IN
+Mar 25 22:05:26 20c83be6ce2b unbound[2124]: [1774476326] unbound[2124:0] info: reply from <.> 193.0.14.129#53
+Mar 25 22:05:26 20c83be6ce2b unbound[2124]: [1774476326] unbound[2124:0] info: query response was THROWAWAY
+Mar 25 22:05:26 20c83be6ce2b unbound[2124]: [1774476326] unbound[2124:0] info: response for . NS IN
+Mar 25 22:05:26 20c83be6ce2b unbound[2124]: [1774476326] unbound[2124:0] info: reply from <.> 202.12.27.33#53
+Mar 25 22:05:26 20c83be6ce2b unbound[2124]: [1774476326] unbound[2124:0] info: query response was THROWAWAY
+Mar 25 22:05:26 20c83be6ce2b unbound[2124]: [1774476326] unbound[2124:0] info: response for . NS IN
+Mar 25 22:05:26 20c83be6ce2b unbound[2124]: [1774476326] unbound[2124:0] info: reply from <.> 192.203.230.10#53
+Mar 25 22:05:26 20c83be6ce2b unbound[2124]: [1774476326] unbound[2124:0] info: query response was THROWAWAY
+Mar 25 22:05:26 20c83be6ce2b unbound[2124]: [1774476326] unbound[2124:0] info: response for . NS IN
+Mar 25 22:05:26 20c83be6ce2b unbound[2124]: [1774476326] unbound[2124:0] info: reply from <.> 192.203.230.10#53
+Mar 25 22:05:26 20c83be6ce2b unbound[2124]: [1774476326] unbound[2124:0] info: query response was THROWAWAY
+Mar 25 22:05:26 20c83be6ce2b unbound[2124]: [1774476326] unbound[2124:0] info: response for . NS IN
+Mar 25 22:05:26 20c83be6ce2b unbound[2124]: [1774476326] unbound[2124:0] info: reply from <.> 192.203.230.10#53
+Mar 25 22:05:26 20c83be6ce2b unbound[2124]: [1774476326] unbound[2124:0] info: query response was THROWAWAY

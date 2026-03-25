@@ -1,0 +1,1 @@
+unbound-checkconf: no errors in /etc/unbound/unbound.conf

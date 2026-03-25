@@ -1,0 +1,8 @@
+[0;34m>>> Starting Automated Health Checks...[0m
+[0;32m[PASS][0m Container 'dns-resolver' is running.
+[0;32m[PASS][0m Systemd state: running
+[0;32m[PASS][0m Unbound service is active.
+[0;32m[PASS][0m Configuration hashes match (bind mount working).
+[0;31m[FAIL][0m Functional test: Unbound is NOT responding to DNS queries.
+[0;32m[PASS][0m Container IP is 10.10.0.2 (matches expectation).
+[0;34m>>> All checks completed.[0m
