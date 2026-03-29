@@ -12,9 +12,10 @@ services:
       - /tmp
     volumes:
       - ./unbound.conf:/etc/unbound/unbound.conf:ro
+      - ./scripts/:/scripts/
     healthcheck:
       test: ["CMD", "dig", "@127.0.0.1", ".", "NS", "+short"]
-      interval: 10s
+      interval: 90s
       timeout: 5s
       retries: 5
       start_period: 20s
