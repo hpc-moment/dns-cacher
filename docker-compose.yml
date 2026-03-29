@@ -22,9 +22,46 @@ services:
       dns-lab:
         ipv4_address: 10.10.0.2
 
+  # Redis server
+  cache:
+    image: redis:7.4-alpine
+    container_name: dns-cache
+    command: redis-server --save 20 1 --loglevel warning --requirepass ${REDIS_PASSWORD}
+    volumes:
+      - redis-data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "-a", "\"$$REDIS_PASSWORD\"", "ping", "|", "grep", "-q", "PONG"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 20s
+    networks:
+      dns-lab:
+        ipv4_address: 10.10.0.3
+
+  # Redis WebUI
+  redis-webui:
+    image: redis/redisinsight:2.70
+    container_name: redis-webui
+    volumes:
+      - redisinight-data:/data
+    ports:
+      - "127.0.0.1:5540:5540"
+    networks:
+      dns-lab:
+        ipv4_address: 10.10.0.4
+    depends_on:
+      - cache
+    profiles:
+      - debug
+
 networks:
   dns-lab:
     name: dns-lab
     ipam:
       config:
         - subnet: 10.10.0.0/24
+
+volumes:
+  redis-data:
+  redisinight-data:
