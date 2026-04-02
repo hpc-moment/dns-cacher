@@ -56,6 +56,20 @@ services:
     profiles:
       - debug
 
+  dns-proxy:
+    build: ./proxy
+    container_name: dns-proxy
+    depends_on:
+      - cache
+      - unbound-node
+    environment:
+      - REDIS_PASSWORD=${REDIS_PASSWORD}
+    networks:
+      dns-lab:
+        ipv4_address: 10.10.0.5
+    ports:
+      - "5300:53/udp"
+
 networks:
   dns-lab:
     name: dns-lab
