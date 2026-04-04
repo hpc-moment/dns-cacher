@@ -1,0 +1,16 @@
+Sat Apr  4 22:19:20 UTC 2026
+;; ANSWER SECTION:
+example.com.		1m57s	IN	A	104.18.26.120
+example.com.		1m57s	IN	A	104.18.27.120
+Sat Apr  4 22:19:50 UTC 2026
+;; ANSWER SECTION:
+example.com.		1m27s	IN	A	104.18.26.120
+example.com.		1m27s	IN	A	104.18.27.120
+Sat Apr  4 22:20:20 UTC 2026
+;; ANSWER SECTION:
+example.com.		57s	IN	A	104.18.27.120
+example.com.		57s	IN	A	104.18.26.120
+Sat Apr  4 22:20:50 UTC 2026
+;; ANSWER SECTION:
+example.com.		27s	IN	A	104.18.27.120
+example.com.		27s	IN	A	104.18.26.120

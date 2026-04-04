@@ -1,0 +1,19 @@
+;; communications error to 127.0.0.1#53: timed out
+
+; <<>> DiG 9.18.39-0ubuntu0.22.04.2-Ubuntu <<>> @127.0.0.1 example.com A +dnssec
+; (1 server found)
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: SERVFAIL, id: 14774
+;; flags: qr rd ra; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags: do; udp: 1232
+;; QUESTION SECTION:
+;example.com.			IN	A
+
+;; Query time: 1759 msec
+;; SERVER: 127.0.0.1#53(127.0.0.1) (UDP)
+;; WHEN: Wed Mar 25 22:05:51 UTC 2026
+;; MSG SIZE  rcvd: 40
+

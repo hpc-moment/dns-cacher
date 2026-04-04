@@ -1,0 +1,91 @@
+=== 1.1.B UPSTREAM SHORT TTL DOMAIN ===
+
+; <<>> DiG 9.18.39-0ubuntu0.22.04.3-Ubuntu <<>> @8.8.8.8 api.telegram.org A +ttlunits +time=2 +tries=1
+; (1 server found)
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 25363
+;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; MBZ: 0x00e1, udp: 512
+;; QUESTION SECTION:
+;api.telegram.org.		IN	A
+
+;; ANSWER SECTION:
+api.telegram.org.	3m45s	IN	A	149.154.166.110
+
+;; Query time: 100 msec
+;; SERVER: 8.8.8.8#53(8.8.8.8) (UDP)
+;; WHEN: Sat Apr 04 22:30:57 UTC 2026
+;; MSG SIZE  rcvd: 77
+
+
+=== 1.1.B LOCAL RESOLVER TRY 1 ===
+
+; <<>> DiG 9.18.39-0ubuntu0.22.04.3-Ubuntu <<>> @127.0.0.1 api.telegram.org A +ttlunits +time=5 +tries=1
+; (1 server found)
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 46164
+;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; QUESTION SECTION:
+;api.telegram.org.		IN	A
+
+;; ANSWER SECTION:
+api.telegram.org.	3m33s	IN	A	149.154.166.110
+
+;; Query time: 0 msec
+;; SERVER: 127.0.0.1#53(127.0.0.1) (UDP)
+;; WHEN: Sat Apr 04 22:30:57 UTC 2026
+;; MSG SIZE  rcvd: 61
+
+
+=== 1.1.B LOCAL RESOLVER TRY 2 ===
+
+; <<>> DiG 9.18.39-0ubuntu0.22.04.3-Ubuntu <<>> @127.0.0.1 api.telegram.org A +ttlunits +time=5 +tries=1
+; (1 server found)
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 19335
+;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; QUESTION SECTION:
+;api.telegram.org.		IN	A
+
+;; ANSWER SECTION:
+api.telegram.org.	3m33s	IN	A	149.154.166.110
+
+;; Query time: 0 msec
+;; SERVER: 127.0.0.1#53(127.0.0.1) (UDP)
+;; WHEN: Sat Apr 04 22:30:57 UTC 2026
+;; MSG SIZE  rcvd: 61
+
+
+=== 1.1.B LOCAL RESOLVER TRY 3 ===
+
+; <<>> DiG 9.18.39-0ubuntu0.22.04.3-Ubuntu <<>> @127.0.0.1 api.telegram.org A +ttlunits +time=5 +tries=1
+; (1 server found)
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 15361
+;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; QUESTION SECTION:
+;api.telegram.org.		IN	A
+
+;; ANSWER SECTION:
+api.telegram.org.	3m32s	IN	A	149.154.166.110
+
+;; Query time: 0 msec
+;; SERVER: 127.0.0.1#53(127.0.0.1) (UDP)
+;; WHEN: Sat Apr 04 22:30:58 UTC 2026
+;; MSG SIZE  rcvd: 61
+
