@@ -68,29 +68,31 @@ isc.org.                3600    IN      RRSIG   DS 8 2 3600 20260422153322 20260
 ; EDNS: version: 0, flags: do; udp: 1232
 ```
 
-### КОМАНДА 5: NXDOMAIN для несуществующего поддомена
+### КОМАНДА 5: NOERROR для несуществующего поддомена
 `dig nonexistent.isc.org A @127.0.0.1 +short`
 
 ```
 ; <<>> DiG 9.18.39-0ubuntu0.22.04.3-Ubuntu <<>> nonexistent.isc.org A @127.0.0.1
 ;; global options: +cmd
 ;; Got answer:
-;; ->>HEADER<<- opcode: QUERY, status: NXDOMAIN, id: 14618
-;; flags: qr aa rd ra; QUERY: 1, ANSWER: 0, AUTHORITY: 1, ADDITIONAL: 1
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 64754
+;; flags: qr aa rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
 
 ;; OPT PSEUDOSECTION:
 ; EDNS: version: 0, flags:; udp: 1232
 ;; QUESTION SECTION:
 ;nonexistent.isc.org.           IN      A
 
-;; AUTHORITY SECTION:
-isc.org.                300     IN      SOA     ns1.isc.org. support.isc.org. 2024011501 3600 900 604800 300
+;; ANSWER SECTION:
+nonexistent.isc.org.    3600    IN      A       192.0.2.0
 
 ;; Query time: 0 msec
 ;; SERVER: 127.0.0.1#53(127.0.0.1) (UDP)
-;; WHEN: Sat Apr 04 16:09:56 UTC 2026
-;; MSG SIZE  rcvd: 96
+;; WHEN: Sun Apr 05 20:23:48 UTC 2026
+;; MSG SIZE  rcvd: 64
 ```
+
+Также, при запуске скрипта `subdomain_check.sh` для всех поддоменов `isc.org` возвращается подменный ip `192.0.2.0`
 
 # КОМАНДА 6: Трассировка остановки рекурсии
 `dig isc.org A @127.0.0.1 +trace`
