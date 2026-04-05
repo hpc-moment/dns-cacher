@@ -1,0 +1,23 @@
+● unbound.service - Unbound DNS server
+     Loaded: loaded (/lib/systemd/system/unbound.service; enabled; vendor preset: enabled)
+     Active: active (running) since Sun 2026-04-05 14:14:31 UTC; 1h 24min ago
+       Docs: man:unbound(8)
+    Process: 32 ExecStartPre=/usr/lib/unbound/package-helper chroot_setup (code=exited, status=0/SUCCESS)
+    Process: 35 ExecStartPre=/usr/lib/unbound/package-helper root_trust_anchor_update (code=exited, status=0/SUCCESS)
+   Main PID: 39 (unbound)
+      Tasks: 2 (limit: 8217)
+     Memory: 10.1M
+        CPU: 152ms
+     CGroup: /system.slice/unbound.service
+             └─39 /usr/sbin/unbound -d -p
+
+Apr 05 15:38:34 49cf3f3cda51 unbound[39]: [1775403514] unbound[39:0] info: server stats for thread 0: 0 queries, 0 answers from cache, 0 recursions, 0 prefetch, 0 rejected by ip ratelimiting
+Apr 05 15:38:34 49cf3f3cda51 unbound[39]: [1775403514] unbound[39:0] info: server stats for thread 0: requestlist max 0 avg 0 exceeded 0 jostled 0
+Apr 05 15:38:34 49cf3f3cda51 unbound[39]: [1775403514] unbound[39:0] info: mesh has 0 recursion states (0 with reply, 0 detached), 0 waiting replies, 0 recursion replies sent, 0 replies dropped, 0 states jostled out
+Apr 05 15:38:34 49cf3f3cda51 unbound[39]: [1775403514] unbound[39:0] debug: cache memory msg=66817 rrset=67867 infra=8970 val=0 subnet=0
+Apr 05 15:38:34 49cf3f3cda51 unbound[39]: [1775403514] unbound[39:1] info: server stats for thread 1: 0 queries, 0 answers from cache, 0 recursions, 0 prefetch, 0 rejected by ip ratelimiting
+Apr 05 15:38:34 49cf3f3cda51 unbound[39]: [1775403514] unbound[39:1] info: server stats for thread 1: requestlist max 0 avg 0 exceeded 0 jostled 0
+Apr 05 15:38:34 49cf3f3cda51 unbound[39]: [1775403514] unbound[39:1] info: mesh has 0 recursion states (0 with reply, 0 detached), 0 waiting replies, 0 recursion replies sent, 0 replies dropped, 0 states jostled out
+Apr 05 15:38:34 49cf3f3cda51 unbound[39]: [1775403514] unbound[39:1] debug: cache memory msg=66817 rrset=67867 infra=8970 val=0 subnet=0
+Apr 05 15:38:40 49cf3f3cda51 unbound[39]: [1775403520] unbound[39:0] query: 127.0.0.1 . NS IN
+Apr 05 15:38:40 49cf3f3cda51 unbound[39]: [1775403520] unbound[39:0] reply: 127.0.0.1 . NS IN NOERROR 0.000000 1 239

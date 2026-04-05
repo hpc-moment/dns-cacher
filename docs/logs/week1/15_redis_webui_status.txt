@@ -1,0 +1,2 @@
+NAME          IMAGE                     COMMAND                  SERVICE       CREATED       STATUS       PORTS
+redis-webui   redis/redisinsight:2.70   "./docker-entry.sh n…"   redis-webui   2 hours ago   Up 2 hours   127.0.0.1:5540->5540/tcp

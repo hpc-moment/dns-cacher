@@ -1,0 +1,265 @@
+=== UNBOUND STATUS ===
+● unbound.service - Unbound DNS server
+     Loaded: loaded (/lib/systemd/system/unbound.service; enabled; vendor preset: enabled)
+     Active: active (running) since Sun 2026-04-05 13:04:49 UTC; 34min ago
+       Docs: man:unbound(8)
+    Process: 32 ExecStartPre=/usr/lib/unbound/package-helper chroot_setup (code=exited, status=0/SUCCESS)
+    Process: 35 ExecStartPre=/usr/lib/unbound/package-helper root_trust_anchor_update (code=exited, status=0/SUCCESS)
+   Main PID: 39 (unbound)
+      Tasks: 2 (limit: 8217)
+     Memory: 10.2M
+        CPU: 448ms
+     CGroup: /system.slice/unbound.service
+             └─39 /usr/sbin/unbound -d -p
+
+Apr 05 13:38:09 2a4a94b8b3f8 unbound[39]: [1775396289] unbound[39:1] info: validator operate: query . NS IN
+Apr 05 13:38:09 2a4a94b8b3f8 unbound[39]: [1775396289] unbound[39:1] debug: cache memory msg=66072 rrset=66072 infra=12237 val=66352 subnet=0
+Apr 05 13:38:50 2a4a94b8b3f8 unbound[39]: [1775396330] unbound[39:0] info: server stats for thread 0: 0 queries, 0 answers from cache, 0 recursions, 0 prefetch, 0 rejected by ip ratelimiting
+Apr 05 13:38:50 2a4a94b8b3f8 unbound[39]: [1775396330] unbound[39:0] info: server stats for thread 0: requestlist max 0 avg 0 exceeded 0 jostled 0
+Apr 05 13:38:50 2a4a94b8b3f8 unbound[39]: [1775396330] unbound[39:0] info: mesh has 0 recursion states (0 with reply, 0 detached), 20 waiting replies, 0 recursion replies sent, 0 replies dropped, 0 states jostled out
+Apr 05 13:38:50 2a4a94b8b3f8 unbound[39]: [1775396330] unbound[39:0] debug: cache memory msg=66072 rrset=66072 infra=12237 val=66352 subnet=0
+Apr 05 13:38:50 2a4a94b8b3f8 unbound[39]: [1775396330] unbound[39:1] info: server stats for thread 1: 1 queries, 0 answers from cache, 1 recursions, 0 prefetch, 0 rejected by ip ratelimiting
+Apr 05 13:38:50 2a4a94b8b3f8 unbound[39]: [1775396330] unbound[39:1] info: server stats for thread 1: requestlist max 0 avg 0 exceeded 1 jostled 0
+Apr 05 13:38:50 2a4a94b8b3f8 unbound[39]: [1775396330] unbound[39:1] info: mesh has 0 recursion states (0 with reply, 0 detached), 14 waiting replies, 0 recursion replies sent, 1 replies dropped, 0 states jostled out
+Apr 05 13:38:50 2a4a94b8b3f8 unbound[39]: [1775396330] unbound[39:1] debug: cache memory msg=66072 rrset=66072 infra=12237 val=66352 subnet=0
+
+=== UNBOUND CONTROL STATUS ===
+version: 1.13.1
+verbosity: 3
+threads: 2
+modules: 2 [ validator iterator ]
+uptime: 2061 seconds
+options: reuseport control(ssl)
+unbound (pid 39) is running...
+
+=== LISTENERS :53 ===
+udp   UNCONN 0      0            0.0.0.0:53         0.0.0.0:*    users:(("unbound",pid=39,fd=5))
+udp   UNCONN 0      0            0.0.0.0:53         0.0.0.0:*    users:(("unbound",pid=39,fd=3))
+tcp   LISTEN 0      256          0.0.0.0:53         0.0.0.0:*    users:(("unbound",pid=39,fd=6))
+tcp   LISTEN 0      256          0.0.0.0:53         0.0.0.0:*    users:(("unbound",pid=39,fd=4))
+
+=== ROOT NS VIA LOCAL UNBOUND ===
+;; communications error to 127.0.0.1#53: timed out
+
+; <<>> DiG 9.18.39-0ubuntu0.22.04.3-Ubuntu <<>> @127.0.0.1 . NS +time=5 +tries=1
+; (1 server found)
+;; global options: +cmd
+;; no servers could be reached
+
+=== EXAMPLE VIA LOCAL UNBOUND ===
+;; communications error to 127.0.0.1#53: timed out
+
+; <<>> DiG 9.18.39-0ubuntu0.22.04.3-Ubuntu <<>> @127.0.0.1 example.com A +ttlunits +time=5 +tries=1
+; (1 server found)
+;; global options: +cmd
+;; no servers could be reached
+
+=== YANDEX VIA LOCAL UNBOUND ===
+;; communications error to 127.0.0.1#53: timed out
+
+; <<>> DiG 9.18.39-0ubuntu0.22.04.3-Ubuntu <<>> @127.0.0.1 yandex.ru A +ttlunits +time=5 +tries=1
+; (1 server found)
+;; global options: +cmd
+;; no servers could be reached
+
+=== UNBOUND JOURNAL ===
+Apr 05 13:39:21 2a4a94b8b3f8 unbound[39]: [1775396361] unbound[39:1] debug: sending to target: <.> 192.58.128.30#53
+Apr 05 13:39:21 2a4a94b8b3f8 unbound[39]: [1775396361] unbound[39:1] debug: cache memory msg=66072 rrset=66072 infra=12237 val=66352 subnet=0
+Apr 05 13:39:21 2a4a94b8b3f8 unbound[39]: [1775396361] unbound[39:1] debug: iterator[module 1] operate: extstate:module_wait_reply event:module_event_reply
+Apr 05 13:39:21 2a4a94b8b3f8 unbound[39]: [1775396361] unbound[39:1] info: iterator operate: query . NS IN
+Apr 05 13:39:21 2a4a94b8b3f8 unbound[39]: [1775396361] unbound[39:1] info: response for . NS IN
+Apr 05 13:39:21 2a4a94b8b3f8 unbound[39]: [1775396361] unbound[39:1] info: reply from <.> 192.58.128.30#53
+Apr 05 13:39:21 2a4a94b8b3f8 unbound[39]: [1775396361] unbound[39:1] info: query response was THROWAWAY
+Apr 05 13:39:21 2a4a94b8b3f8 unbound[39]: [1775396361] unbound[39:1] info: processQueryTargets: . NS IN
+Apr 05 13:39:21 2a4a94b8b3f8 unbound[39]: [1775396361] unbound[39:1] info: sending query: . NS IN
+Apr 05 13:39:21 2a4a94b8b3f8 unbound[39]: [1775396361] unbound[39:1] debug: sending to target: <.> 199.9.14.201#53
+Apr 05 13:39:21 2a4a94b8b3f8 unbound[39]: [1775396361] unbound[39:1] debug: cache memory msg=66072 rrset=66072 infra=12237 val=66352 subnet=0
+Apr 05 13:39:22 2a4a94b8b3f8 unbound[39]: [1775396362] unbound[39:1] debug: iterator[module 1] operate: extstate:module_wait_reply event:module_event_reply
+Apr 05 13:39:22 2a4a94b8b3f8 unbound[39]: [1775396362] unbound[39:1] info: iterator operate: query . NS IN
+Apr 05 13:39:22 2a4a94b8b3f8 unbound[39]: [1775396362] unbound[39:1] info: response for . NS IN
+Apr 05 13:39:22 2a4a94b8b3f8 unbound[39]: [1775396362] unbound[39:1] info: reply from <.> 199.9.14.201#53
+Apr 05 13:39:22 2a4a94b8b3f8 unbound[39]: [1775396362] unbound[39:1] info: query response was THROWAWAY
+Apr 05 13:39:22 2a4a94b8b3f8 unbound[39]: [1775396362] unbound[39:1] info: processQueryTargets: . NS IN
+Apr 05 13:39:22 2a4a94b8b3f8 unbound[39]: [1775396362] unbound[39:1] info: sending query: . NS IN
+Apr 05 13:39:22 2a4a94b8b3f8 unbound[39]: [1775396362] unbound[39:1] debug: sending to target: <.> 192.5.5.241#53
+Apr 05 13:39:22 2a4a94b8b3f8 unbound[39]: [1775396362] unbound[39:1] debug: cache memory msg=66072 rrset=66072 infra=12237 val=66352 subnet=0
+Apr 05 13:39:22 2a4a94b8b3f8 unbound[39]: [1775396362] unbound[39:1] debug: iterator[module 1] operate: extstate:module_wait_reply event:module_event_reply
+Apr 05 13:39:22 2a4a94b8b3f8 unbound[39]: [1775396362] unbound[39:1] info: iterator operate: query . NS IN
+Apr 05 13:39:22 2a4a94b8b3f8 unbound[39]: [1775396362] unbound[39:1] info: response for . NS IN
+Apr 05 13:39:22 2a4a94b8b3f8 unbound[39]: [1775396362] unbound[39:1] info: reply from <.> 192.5.5.241#53
+Apr 05 13:39:22 2a4a94b8b3f8 unbound[39]: [1775396362] unbound[39:1] info: query response was THROWAWAY
+Apr 05 13:39:22 2a4a94b8b3f8 unbound[39]: [1775396362] unbound[39:1] info: processQueryTargets: . NS IN
+Apr 05 13:39:22 2a4a94b8b3f8 unbound[39]: [1775396362] unbound[39:1] info: sending query: . NS IN
+Apr 05 13:39:22 2a4a94b8b3f8 unbound[39]: [1775396362] unbound[39:1] debug: sending to target: <.> 199.7.83.42#53
+Apr 05 13:39:22 2a4a94b8b3f8 unbound[39]: [1775396362] unbound[39:1] debug: cache memory msg=66072 rrset=66072 infra=12237 val=66352 subnet=0
+Apr 05 13:39:22 2a4a94b8b3f8 unbound[39]: [1775396362] unbound[39:1] debug: iterator[module 1] operate: extstate:module_wait_reply event:module_event_reply
+Apr 05 13:39:22 2a4a94b8b3f8 unbound[39]: [1775396362] unbound[39:1] info: iterator operate: query . NS IN
+Apr 05 13:39:22 2a4a94b8b3f8 unbound[39]: [1775396362] unbound[39:1] info: response for . NS IN
+Apr 05 13:39:22 2a4a94b8b3f8 unbound[39]: [1775396362] unbound[39:1] info: reply from <.> 199.7.83.42#53
+Apr 05 13:39:22 2a4a94b8b3f8 unbound[39]: [1775396362] unbound[39:1] info: query response was THROWAWAY
+Apr 05 13:39:22 2a4a94b8b3f8 unbound[39]: [1775396362] unbound[39:1] info: processQueryTargets: . NS IN
+Apr 05 13:39:22 2a4a94b8b3f8 unbound[39]: [1775396362] unbound[39:1] info: sending query: . NS IN
+Apr 05 13:39:22 2a4a94b8b3f8 unbound[39]: [1775396362] unbound[39:1] debug: sending to target: <.> 193.0.14.129#53
+Apr 05 13:39:22 2a4a94b8b3f8 unbound[39]: [1775396362] unbound[39:1] debug: cache memory msg=66072 rrset=66072 infra=12237 val=66352 subnet=0
+Apr 05 13:39:22 2a4a94b8b3f8 unbound[39]: [1775396362] unbound[39:1] debug: iterator[module 1] operate: extstate:module_wait_reply event:module_event_reply
+Apr 05 13:39:22 2a4a94b8b3f8 unbound[39]: [1775396362] unbound[39:1] info: iterator operate: query . NS IN
+Apr 05 13:39:22 2a4a94b8b3f8 unbound[39]: [1775396362] unbound[39:1] info: response for . NS IN
+Apr 05 13:39:22 2a4a94b8b3f8 unbound[39]: [1775396362] unbound[39:1] info: reply from <.> 193.0.14.129#53
+Apr 05 13:39:22 2a4a94b8b3f8 unbound[39]: [1775396362] unbound[39:1] info: query response was THROWAWAY
+Apr 05 13:39:22 2a4a94b8b3f8 unbound[39]: [1775396362] unbound[39:1] info: processQueryTargets: . NS IN
+Apr 05 13:39:22 2a4a94b8b3f8 unbound[39]: [1775396362] unbound[39:1] info: sending query: . NS IN
+Apr 05 13:39:22 2a4a94b8b3f8 unbound[39]: [1775396362] unbound[39:1] debug: sending to target: <.> 199.9.14.201#53
+Apr 05 13:39:22 2a4a94b8b3f8 unbound[39]: [1775396362] unbound[39:1] debug: cache memory msg=66072 rrset=66072 infra=12237 val=66352 subnet=0
+Apr 05 13:39:22 2a4a94b8b3f8 unbound[39]: [1775396362] unbound[39:1] debug: iterator[module 1] operate: extstate:module_wait_reply event:module_event_reply
+Apr 05 13:39:22 2a4a94b8b3f8 unbound[39]: [1775396362] unbound[39:1] info: iterator operate: query . NS IN
+Apr 05 13:39:22 2a4a94b8b3f8 unbound[39]: [1775396362] unbound[39:1] info: response for . NS IN
+Apr 05 13:39:22 2a4a94b8b3f8 unbound[39]: [1775396362] unbound[39:1] info: reply from <.> 199.9.14.201#53
+Apr 05 13:39:22 2a4a94b8b3f8 unbound[39]: [1775396362] unbound[39:1] info: query response was THROWAWAY
+Apr 05 13:39:22 2a4a94b8b3f8 unbound[39]: [1775396362] unbound[39:1] info: processQueryTargets: . NS IN
+Apr 05 13:39:22 2a4a94b8b3f8 unbound[39]: [1775396362] unbound[39:1] info: sending query: . NS IN
+Apr 05 13:39:22 2a4a94b8b3f8 unbound[39]: [1775396362] unbound[39:1] debug: sending to target: <.> 199.9.14.201#53
+Apr 05 13:39:22 2a4a94b8b3f8 unbound[39]: [1775396362] unbound[39:1] debug: cache memory msg=66072 rrset=66072 infra=12237 val=66352 subnet=0
+Apr 05 13:39:23 2a4a94b8b3f8 unbound[39]: [1775396363] unbound[39:1] debug: iterator[module 1] operate: extstate:module_wait_reply event:module_event_reply
+Apr 05 13:39:23 2a4a94b8b3f8 unbound[39]: [1775396363] unbound[39:1] info: iterator operate: query . NS IN
+Apr 05 13:39:23 2a4a94b8b3f8 unbound[39]: [1775396363] unbound[39:1] info: response for . NS IN
+Apr 05 13:39:23 2a4a94b8b3f8 unbound[39]: [1775396363] unbound[39:1] info: reply from <.> 199.9.14.201#53
+Apr 05 13:39:23 2a4a94b8b3f8 unbound[39]: [1775396363] unbound[39:1] info: query response was THROWAWAY
+Apr 05 13:39:23 2a4a94b8b3f8 unbound[39]: [1775396363] unbound[39:1] info: processQueryTargets: . NS IN
+Apr 05 13:39:23 2a4a94b8b3f8 unbound[39]: [1775396363] unbound[39:1] info: sending query: . NS IN
+Apr 05 13:39:23 2a4a94b8b3f8 unbound[39]: [1775396363] unbound[39:1] debug: sending to target: <.> 199.9.14.201#53
+Apr 05 13:39:23 2a4a94b8b3f8 unbound[39]: [1775396363] unbound[39:1] debug: cache memory msg=66072 rrset=66072 infra=12237 val=66352 subnet=0
+Apr 05 13:39:23 2a4a94b8b3f8 unbound[39]: [1775396363] unbound[39:1] debug: iterator[module 1] operate: extstate:module_wait_reply event:module_event_reply
+Apr 05 13:39:23 2a4a94b8b3f8 unbound[39]: [1775396363] unbound[39:1] info: iterator operate: query . NS IN
+Apr 05 13:39:23 2a4a94b8b3f8 unbound[39]: [1775396363] unbound[39:1] info: response for . NS IN
+Apr 05 13:39:23 2a4a94b8b3f8 unbound[39]: [1775396363] unbound[39:1] info: reply from <.> 199.9.14.201#53
+Apr 05 13:39:23 2a4a94b8b3f8 unbound[39]: [1775396363] unbound[39:1] info: query response was THROWAWAY
+Apr 05 13:39:23 2a4a94b8b3f8 unbound[39]: [1775396363] unbound[39:1] info: processQueryTargets: . NS IN
+Apr 05 13:39:23 2a4a94b8b3f8 unbound[39]: [1775396363] unbound[39:1] info: sending query: . NS IN
+Apr 05 13:39:23 2a4a94b8b3f8 unbound[39]: [1775396363] unbound[39:1] debug: sending to target: <.> 193.0.14.129#53
+Apr 05 13:39:23 2a4a94b8b3f8 unbound[39]: [1775396363] unbound[39:1] debug: cache memory msg=66072 rrset=66072 infra=12237 val=66352 subnet=0
+Apr 05 13:39:23 2a4a94b8b3f8 unbound[39]: [1775396363] unbound[39:1] debug: iterator[module 1] operate: extstate:module_wait_reply event:module_event_reply
+Apr 05 13:39:23 2a4a94b8b3f8 unbound[39]: [1775396363] unbound[39:1] info: iterator operate: query . NS IN
+Apr 05 13:39:23 2a4a94b8b3f8 unbound[39]: [1775396363] unbound[39:1] info: response for . NS IN
+Apr 05 13:39:23 2a4a94b8b3f8 unbound[39]: [1775396363] unbound[39:1] info: reply from <.> 193.0.14.129#53
+Apr 05 13:39:23 2a4a94b8b3f8 unbound[39]: [1775396363] unbound[39:1] info: query response was THROWAWAY
+Apr 05 13:39:23 2a4a94b8b3f8 unbound[39]: [1775396363] unbound[39:1] info: processQueryTargets: . NS IN
+Apr 05 13:39:23 2a4a94b8b3f8 unbound[39]: [1775396363] unbound[39:1] info: sending query: . NS IN
+Apr 05 13:39:23 2a4a94b8b3f8 unbound[39]: [1775396363] unbound[39:1] debug: sending to target: <.> 198.97.190.53#53
+Apr 05 13:39:23 2a4a94b8b3f8 unbound[39]: [1775396363] unbound[39:1] debug: cache memory msg=66072 rrset=66072 infra=12237 val=66352 subnet=0
+Apr 05 13:39:23 2a4a94b8b3f8 unbound[39]: [1775396363] unbound[39:1] debug: iterator[module 1] operate: extstate:module_wait_reply event:module_event_reply
+Apr 05 13:39:23 2a4a94b8b3f8 unbound[39]: [1775396363] unbound[39:1] info: iterator operate: query . NS IN
+Apr 05 13:39:23 2a4a94b8b3f8 unbound[39]: [1775396363] unbound[39:1] info: response for . NS IN
+Apr 05 13:39:23 2a4a94b8b3f8 unbound[39]: [1775396363] unbound[39:1] info: reply from <.> 198.97.190.53#53
+Apr 05 13:39:23 2a4a94b8b3f8 unbound[39]: [1775396363] unbound[39:1] info: query response was THROWAWAY
+Apr 05 13:39:23 2a4a94b8b3f8 unbound[39]: [1775396363] unbound[39:1] info: processQueryTargets: . NS IN
+Apr 05 13:39:23 2a4a94b8b3f8 unbound[39]: [1775396363] unbound[39:1] info: sending query: . NS IN
+Apr 05 13:39:23 2a4a94b8b3f8 unbound[39]: [1775396363] unbound[39:1] debug: sending to target: <.> 199.7.91.13#53
+Apr 05 13:39:23 2a4a94b8b3f8 unbound[39]: [1775396363] unbound[39:1] debug: cache memory msg=66072 rrset=66072 infra=12237 val=66352 subnet=0
+Apr 05 13:39:23 2a4a94b8b3f8 unbound[39]: [1775396363] unbound[39:1] debug: iterator[module 1] operate: extstate:module_wait_reply event:module_event_reply
+Apr 05 13:39:23 2a4a94b8b3f8 unbound[39]: [1775396363] unbound[39:1] info: iterator operate: query . NS IN
+Apr 05 13:39:23 2a4a94b8b3f8 unbound[39]: [1775396363] unbound[39:1] info: response for . NS IN
+Apr 05 13:39:23 2a4a94b8b3f8 unbound[39]: [1775396363] unbound[39:1] info: reply from <.> 199.7.91.13#53
+Apr 05 13:39:23 2a4a94b8b3f8 unbound[39]: [1775396363] unbound[39:1] info: query response was THROWAWAY
+Apr 05 13:39:23 2a4a94b8b3f8 unbound[39]: [1775396363] unbound[39:1] info: processQueryTargets: . NS IN
+Apr 05 13:39:23 2a4a94b8b3f8 unbound[39]: [1775396363] unbound[39:1] info: sending query: . NS IN
+Apr 05 13:39:23 2a4a94b8b3f8 unbound[39]: [1775396363] unbound[39:1] debug: sending to target: <.> 199.7.83.42#53
+Apr 05 13:39:23 2a4a94b8b3f8 unbound[39]: [1775396363] unbound[39:1] debug: cache memory msg=66072 rrset=66072 infra=12237 val=66352 subnet=0
+Apr 05 13:39:24 2a4a94b8b3f8 unbound[39]: [1775396364] unbound[39:1] debug: iterator[module 1] operate: extstate:module_wait_reply event:module_event_reply
+Apr 05 13:39:24 2a4a94b8b3f8 unbound[39]: [1775396364] unbound[39:1] info: iterator operate: query . NS IN
+Apr 05 13:39:24 2a4a94b8b3f8 unbound[39]: [1775396364] unbound[39:1] info: response for . NS IN
+Apr 05 13:39:24 2a4a94b8b3f8 unbound[39]: [1775396364] unbound[39:1] info: reply from <.> 199.7.83.42#53
+Apr 05 13:39:24 2a4a94b8b3f8 unbound[39]: [1775396364] unbound[39:1] info: query response was THROWAWAY
+Apr 05 13:39:24 2a4a94b8b3f8 unbound[39]: [1775396364] unbound[39:1] info: processQueryTargets: . NS IN
+Apr 05 13:39:24 2a4a94b8b3f8 unbound[39]: [1775396364] unbound[39:1] info: sending query: . NS IN
+Apr 05 13:39:24 2a4a94b8b3f8 unbound[39]: [1775396364] unbound[39:1] debug: sending to target: <.> 199.7.91.13#53
+Apr 05 13:39:24 2a4a94b8b3f8 unbound[39]: [1775396364] unbound[39:1] debug: cache memory msg=66072 rrset=66072 infra=12237 val=66352 subnet=0
+Apr 05 13:39:24 2a4a94b8b3f8 unbound[39]: [1775396364] unbound[39:1] debug: iterator[module 1] operate: extstate:module_wait_reply event:module_event_reply
+Apr 05 13:39:24 2a4a94b8b3f8 unbound[39]: [1775396364] unbound[39:1] info: iterator operate: query . NS IN
+Apr 05 13:39:24 2a4a94b8b3f8 unbound[39]: [1775396364] unbound[39:1] info: response for . NS IN
+Apr 05 13:39:24 2a4a94b8b3f8 unbound[39]: [1775396364] unbound[39:1] info: reply from <.> 199.7.91.13#53
+Apr 05 13:39:24 2a4a94b8b3f8 unbound[39]: [1775396364] unbound[39:1] info: query response was THROWAWAY
+Apr 05 13:39:24 2a4a94b8b3f8 unbound[39]: [1775396364] unbound[39:1] info: processQueryTargets: . NS IN
+Apr 05 13:39:24 2a4a94b8b3f8 unbound[39]: [1775396364] unbound[39:1] info: sending query: . NS IN
+Apr 05 13:39:24 2a4a94b8b3f8 unbound[39]: [1775396364] unbound[39:1] debug: sending to target: <.> 199.9.14.201#53
+Apr 05 13:39:24 2a4a94b8b3f8 unbound[39]: [1775396364] unbound[39:1] debug: cache memory msg=66072 rrset=66072 infra=12237 val=66352 subnet=0
+Apr 05 13:39:24 2a4a94b8b3f8 unbound[39]: [1775396364] unbound[39:1] debug: iterator[module 1] operate: extstate:module_wait_reply event:module_event_reply
+Apr 05 13:39:24 2a4a94b8b3f8 unbound[39]: [1775396364] unbound[39:1] info: iterator operate: query . NS IN
+Apr 05 13:39:24 2a4a94b8b3f8 unbound[39]: [1775396364] unbound[39:1] info: response for . NS IN
+Apr 05 13:39:24 2a4a94b8b3f8 unbound[39]: [1775396364] unbound[39:1] info: reply from <.> 199.9.14.201#53
+Apr 05 13:39:24 2a4a94b8b3f8 unbound[39]: [1775396364] unbound[39:1] info: query response was THROWAWAY
+Apr 05 13:39:24 2a4a94b8b3f8 unbound[39]: [1775396364] unbound[39:1] info: processQueryTargets: . NS IN
+Apr 05 13:39:24 2a4a94b8b3f8 unbound[39]: [1775396364] unbound[39:1] info: sending query: . NS IN
+Apr 05 13:39:24 2a4a94b8b3f8 unbound[39]: [1775396364] unbound[39:1] debug: sending to target: <.> 193.0.14.129#53
+Apr 05 13:39:24 2a4a94b8b3f8 unbound[39]: [1775396364] unbound[39:1] debug: cache memory msg=66072 rrset=66072 infra=12237 val=66352 subnet=0
+Apr 05 13:39:24 2a4a94b8b3f8 unbound[39]: [1775396364] unbound[39:1] debug: iterator[module 1] operate: extstate:module_wait_reply event:module_event_reply
+Apr 05 13:39:24 2a4a94b8b3f8 unbound[39]: [1775396364] unbound[39:1] info: iterator operate: query . NS IN
+Apr 05 13:39:24 2a4a94b8b3f8 unbound[39]: [1775396364] unbound[39:1] info: response for . NS IN
+Apr 05 13:39:24 2a4a94b8b3f8 unbound[39]: [1775396364] unbound[39:1] info: reply from <.> 193.0.14.129#53
+Apr 05 13:39:24 2a4a94b8b3f8 unbound[39]: [1775396364] unbound[39:1] info: query response was THROWAWAY
+Apr 05 13:39:24 2a4a94b8b3f8 unbound[39]: [1775396364] unbound[39:1] info: processQueryTargets: . NS IN
+Apr 05 13:39:24 2a4a94b8b3f8 unbound[39]: [1775396364] unbound[39:1] info: sending query: . NS IN
+Apr 05 13:39:24 2a4a94b8b3f8 unbound[39]: [1775396364] unbound[39:1] debug: sending to target: <.> 199.7.91.13#53
+Apr 05 13:39:24 2a4a94b8b3f8 unbound[39]: [1775396364] unbound[39:1] debug: cache memory msg=66072 rrset=66072 infra=12237 val=66352 subnet=0
+Apr 05 13:39:24 2a4a94b8b3f8 unbound[39]: [1775396364] unbound[39:1] debug: iterator[module 1] operate: extstate:module_wait_reply event:module_event_reply
+Apr 05 13:39:24 2a4a94b8b3f8 unbound[39]: [1775396364] unbound[39:1] info: iterator operate: query . NS IN
+Apr 05 13:39:24 2a4a94b8b3f8 unbound[39]: [1775396364] unbound[39:1] info: response for . NS IN
+Apr 05 13:39:24 2a4a94b8b3f8 unbound[39]: [1775396364] unbound[39:1] info: reply from <.> 199.7.91.13#53
+Apr 05 13:39:24 2a4a94b8b3f8 unbound[39]: [1775396364] unbound[39:1] info: query response was THROWAWAY
+Apr 05 13:39:24 2a4a94b8b3f8 unbound[39]: [1775396364] unbound[39:1] info: processQueryTargets: . NS IN
+Apr 05 13:39:24 2a4a94b8b3f8 unbound[39]: [1775396364] unbound[39:1] info: sending query: . NS IN
+Apr 05 13:39:24 2a4a94b8b3f8 unbound[39]: [1775396364] unbound[39:1] debug: sending to target: <.> 198.97.190.53#53
+Apr 05 13:39:24 2a4a94b8b3f8 unbound[39]: [1775396364] unbound[39:1] debug: cache memory msg=66072 rrset=66072 infra=12237 val=66352 subnet=0
+Apr 05 13:39:24 2a4a94b8b3f8 unbound[39]: [1775396364] unbound[39:1] debug: iterator[module 1] operate: extstate:module_wait_reply event:module_event_reply
+Apr 05 13:39:24 2a4a94b8b3f8 unbound[39]: [1775396364] unbound[39:1] info: iterator operate: query . NS IN
+Apr 05 13:39:24 2a4a94b8b3f8 unbound[39]: [1775396364] unbound[39:1] info: response for . NS IN
+Apr 05 13:39:24 2a4a94b8b3f8 unbound[39]: [1775396364] unbound[39:1] info: reply from <.> 198.97.190.53#53
+Apr 05 13:39:24 2a4a94b8b3f8 unbound[39]: [1775396364] unbound[39:1] info: query response was THROWAWAY
+Apr 05 13:39:24 2a4a94b8b3f8 unbound[39]: [1775396364] unbound[39:1] info: processQueryTargets: . NS IN
+Apr 05 13:39:24 2a4a94b8b3f8 unbound[39]: [1775396364] unbound[39:1] info: sending query: . NS IN
+Apr 05 13:39:24 2a4a94b8b3f8 unbound[39]: [1775396364] unbound[39:1] debug: sending to target: <.> 192.58.128.30#53
+Apr 05 13:39:24 2a4a94b8b3f8 unbound[39]: [1775396364] unbound[39:1] debug: cache memory msg=66072 rrset=66072 infra=12237 val=66352 subnet=0
+Apr 05 13:39:25 2a4a94b8b3f8 unbound[39]: [1775396365] unbound[39:1] debug: iterator[module 1] operate: extstate:module_wait_reply event:module_event_reply
+Apr 05 13:39:25 2a4a94b8b3f8 unbound[39]: [1775396365] unbound[39:1] info: iterator operate: query . NS IN
+Apr 05 13:39:25 2a4a94b8b3f8 unbound[39]: [1775396365] unbound[39:1] info: response for . NS IN
+Apr 05 13:39:25 2a4a94b8b3f8 unbound[39]: [1775396365] unbound[39:1] info: reply from <.> 192.58.128.30#53
+Apr 05 13:39:25 2a4a94b8b3f8 unbound[39]: [1775396365] unbound[39:1] info: query response was THROWAWAY
+Apr 05 13:39:25 2a4a94b8b3f8 unbound[39]: [1775396365] unbound[39:1] info: processQueryTargets: . NS IN
+Apr 05 13:39:25 2a4a94b8b3f8 unbound[39]: [1775396365] unbound[39:1] info: sending query: . NS IN
+Apr 05 13:39:25 2a4a94b8b3f8 unbound[39]: [1775396365] unbound[39:1] debug: sending to target: <.> 199.7.91.13#53
+Apr 05 13:39:25 2a4a94b8b3f8 unbound[39]: [1775396365] unbound[39:1] debug: cache memory msg=66072 rrset=66072 infra=12237 val=66352 subnet=0
+Apr 05 13:39:25 2a4a94b8b3f8 unbound[39]: [1775396365] unbound[39:1] debug: iterator[module 1] operate: extstate:module_wait_reply event:module_event_reply
+Apr 05 13:39:25 2a4a94b8b3f8 unbound[39]: [1775396365] unbound[39:1] info: iterator operate: query . NS IN
+Apr 05 13:39:25 2a4a94b8b3f8 unbound[39]: [1775396365] unbound[39:1] info: response for . NS IN
+Apr 05 13:39:25 2a4a94b8b3f8 unbound[39]: [1775396365] unbound[39:1] info: reply from <.> 199.7.91.13#53
+Apr 05 13:39:25 2a4a94b8b3f8 unbound[39]: [1775396365] unbound[39:1] info: query response was THROWAWAY
+Apr 05 13:39:25 2a4a94b8b3f8 unbound[39]: [1775396365] unbound[39:1] info: processQueryTargets: . NS IN
+Apr 05 13:39:25 2a4a94b8b3f8 unbound[39]: [1775396365] unbound[39:1] info: sending query: . NS IN
+Apr 05 13:39:25 2a4a94b8b3f8 unbound[39]: [1775396365] unbound[39:1] debug: sending to target: <.> 198.97.190.53#53
+Apr 05 13:39:25 2a4a94b8b3f8 unbound[39]: [1775396365] unbound[39:1] debug: cache memory msg=66072 rrset=66072 infra=12237 val=66352 subnet=0
+Apr 05 13:39:25 2a4a94b8b3f8 unbound[39]: [1775396365] unbound[39:1] debug: iterator[module 1] operate: extstate:module_wait_reply event:module_event_reply
+Apr 05 13:39:25 2a4a94b8b3f8 unbound[39]: [1775396365] unbound[39:1] info: iterator operate: query . NS IN
+Apr 05 13:39:25 2a4a94b8b3f8 unbound[39]: [1775396365] unbound[39:1] info: response for . NS IN
+Apr 05 13:39:25 2a4a94b8b3f8 unbound[39]: [1775396365] unbound[39:1] info: reply from <.> 198.97.190.53#53
+Apr 05 13:39:25 2a4a94b8b3f8 unbound[39]: [1775396365] unbound[39:1] info: query response was THROWAWAY
+Apr 05 13:39:25 2a4a94b8b3f8 unbound[39]: [1775396365] unbound[39:1] info: processQueryTargets: . NS IN
+Apr 05 13:39:25 2a4a94b8b3f8 unbound[39]: [1775396365] unbound[39:1] info: sending query: . NS IN
+Apr 05 13:39:25 2a4a94b8b3f8 unbound[39]: [1775396365] unbound[39:1] debug: sending to target: <.> 193.0.14.129#53
+Apr 05 13:39:25 2a4a94b8b3f8 unbound[39]: [1775396365] unbound[39:1] debug: cache memory msg=66072 rrset=66072 infra=12237 val=66352 subnet=0
+Apr 05 13:39:25 2a4a94b8b3f8 unbound[39]: [1775396365] unbound[39:1] debug: iterator[module 1] operate: extstate:module_wait_reply event:module_event_reply
+Apr 05 13:39:25 2a4a94b8b3f8 unbound[39]: [1775396365] unbound[39:1] info: iterator operate: query . NS IN
+Apr 05 13:39:25 2a4a94b8b3f8 unbound[39]: [1775396365] unbound[39:1] info: response for . NS IN
+Apr 05 13:39:25 2a4a94b8b3f8 unbound[39]: [1775396365] unbound[39:1] info: reply from <.> 193.0.14.129#53
+Apr 05 13:39:25 2a4a94b8b3f8 unbound[39]: [1775396365] unbound[39:1] info: query response was THROWAWAY
+Apr 05 13:39:25 2a4a94b8b3f8 unbound[39]: [1775396365] unbound[39:1] info: processQueryTargets: . NS IN
+Apr 05 13:39:25 2a4a94b8b3f8 unbound[39]: [1775396365] unbound[39:1] info: sending query: . NS IN
+Apr 05 13:39:25 2a4a94b8b3f8 unbound[39]: [1775396365] unbound[39:1] debug: sending to target: <.> 192.5.5.241#53
+Apr 05 13:39:25 2a4a94b8b3f8 unbound[39]: [1775396365] unbound[39:1] debug: cache memory msg=66072 rrset=66072 infra=12237 val=66352 subnet=0
+Apr 05 13:39:25 2a4a94b8b3f8 unbound[39]: [1775396365] unbound[39:1] debug: iterator[module 1] operate: extstate:module_wait_reply event:module_event_reply
+Apr 05 13:39:25 2a4a94b8b3f8 unbound[39]: [1775396365] unbound[39:1] info: iterator operate: query . NS IN
+Apr 05 13:39:25 2a4a94b8b3f8 unbound[39]: [1775396365] unbound[39:1] info: response for . NS IN
+Apr 05 13:39:25 2a4a94b8b3f8 unbound[39]: [1775396365] unbound[39:1] info: reply from <.> 192.5.5.241#53
+Apr 05 13:39:25 2a4a94b8b3f8 unbound[39]: [1775396365] unbound[39:1] info: query response was THROWAWAY
+Apr 05 13:39:25 2a4a94b8b3f8 unbound[39]: [1775396365] unbound[39:1] info: processQueryTargets: . NS IN
+Apr 05 13:39:25 2a4a94b8b3f8 unbound[39]: [1775396365] unbound[39:1] info: sending query: . NS IN
+Apr 05 13:39:25 2a4a94b8b3f8 unbound[39]: [1775396365] unbound[39:1] debug: sending to target: <.> 192.5.5.241#53
+Apr 05 13:39:25 2a4a94b8b3f8 unbound[39]: [1775396365] unbound[39:1] debug: cache memory msg=66072 rrset=66072 infra=12237 val=66352 subnet=0

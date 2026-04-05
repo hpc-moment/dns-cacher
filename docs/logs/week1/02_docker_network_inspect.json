@@ -1,8 +1,8 @@
 [
     {
         "Name": "dns-lab",
-        "Id": "8d6b47a934aefd35bc8db4d7834b3a36f0339af77af5b2bfa72018806637d9da",
-        "Created": "2026-03-25T18:57:59.827754243Z",
+        "Id": "84d457d3fdcfe974633d152def31ba5ff1515bd2b18eb17fbb45bd8350311b15",
+        "Created": "2026-04-05T14:14:30.122525225Z",
         "Scope": "local",
         "Driver": "bridge",
         "EnableIPv4": true,
@@ -24,18 +24,32 @@
         },
         "ConfigOnly": false,
         "Containers": {
-            "20c83be6ce2b68f1909b13ea9652a3bc604e40ca9775d1d3e0a06f7709870750": {
+            "3fff1d56d86563ca8c9c30a5caecbf18661e15f06af52757084c67a85062a621": {
+                "Name": "dns-cache",
+                "EndpointID": "c1e60bcff5a74c81795623bdd69961f45c672f5ab37d7bac2fe07c1257ebbcbc",
+                "MacAddress": "52:f6:76:f3:82:06",
+                "IPv4Address": "10.10.0.3/24",
+                "IPv6Address": ""
+            },
+            "49cf3f3cda51fd0f52d10ddbaae9194c2c3f08bbd7bfadab42cfba7ddef16f8e": {
                 "Name": "dns-resolver",
-                "EndpointID": "7d7b5929c51e3d51c2cb81f09ed8ad6f63135d969809e7a2e634ba723b24c368",
-                "MacAddress": "f6:31:6e:f2:47:e1",
+                "EndpointID": "dffda8c240599271b369a3ecd571b8375ec23b6102759636d7f499bbc37e0bb1",
+                "MacAddress": "b2:d8:57:7d:58:44",
                 "IPv4Address": "10.10.0.2/24",
                 "IPv6Address": ""
             },
-            "efbce19a5c0f93586292453d7fcb9b72c9779849e144f3d6f9328d515929c985": {
-                "Name": "dns-cache",
-                "EndpointID": "6ab9d83d8154e4aafd73d9be59c1ba8453294cd59f8e5e4186126cb36111f227",
-                "MacAddress": "46:2f:53:69:ac:ce",
-                "IPv4Address": "10.10.0.3/24",
+            "73afe7716c973b5933966fcbf6489e1906f6d4a1ee7e478d0b88652735c21359": {
+                "Name": "dns-proxy",
+                "EndpointID": "20af9e8699fb93254a742be04ee2be94c140de2dd616c05a4224b3db81f3fae9",
+                "MacAddress": "4e:c3:46:70:08:2c",
+                "IPv4Address": "10.10.0.5/24",
+                "IPv6Address": ""
+            },
+            "d56ce7ac5fe7337d685d424d15e51d2ccf3c61af0d62fd850da85adc4d49cf3e": {
+                "Name": "redis-webui",
+                "EndpointID": "53120b549284e006ae41c151ec44e78a8ff9383b30039e6c27559db4796cf8da",
+                "MacAddress": "da:07:65:03:d8:41",
+                "IPv4Address": "10.10.0.4/24",
                 "IPv6Address": ""
             }
         },

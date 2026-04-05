@@ -1,3 +1,0 @@
-Host hash: df4ba2f847b996c955b81af26f2d86354998f34b14dc3985b1b3f46e4f536d67
-Container hash: df4ba2f847b996c955b81af26f2d86354998f34b14dc3985b1b3f46e4f536d67
-SUCCESS: Hashes match!

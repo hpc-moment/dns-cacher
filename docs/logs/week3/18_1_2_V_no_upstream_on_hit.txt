@@ -1,0 +1,133 @@
+=== CLEAR REDIS KEYS ===
+2
+
+=== UNBOUND JOURNAL BEFORE ===
+Apr 05 14:16:31 49cf3f3cda51 unbound[39]: [1775398591] unbound[39:0] info: mesh has 0 recursion states (0 with reply, 0 detached), 0 waiting replies, 0 recursion replies sent, 0 replies dropped, 0 states jostled out
+Apr 05 14:16:31 49cf3f3cda51 unbound[39]: [1775398591] unbound[39:0] debug: cache memory msg=66817 rrset=67867 infra=8401 val=0 subnet=0
+Apr 05 14:17:31 49cf3f3cda51 unbound[39]: [1775398651] unbound[39:1] info: server stats for thread 1: 0 queries, 0 answers from cache, 0 recursions, 0 prefetch, 0 rejected by ip ratelimiting
+Apr 05 14:17:31 49cf3f3cda51 unbound[39]: [1775398651] unbound[39:1] info: server stats for thread 1: requestlist max 0 avg 0 exceeded 0 jostled 0
+Apr 05 14:17:31 49cf3f3cda51 unbound[39]: [1775398651] unbound[39:1] info: mesh has 0 recursion states (0 with reply, 0 detached), 0 waiting replies, 0 recursion replies sent, 0 replies dropped, 0 states jostled out
+Apr 05 14:17:31 49cf3f3cda51 unbound[39]: [1775398651] unbound[39:1] debug: cache memory msg=66817 rrset=67867 infra=8401 val=0 subnet=0
+Apr 05 14:17:31 49cf3f3cda51 unbound[39]: [1775398651] unbound[39:0] info: server stats for thread 0: 0 queries, 0 answers from cache, 0 recursions, 0 prefetch, 0 rejected by ip ratelimiting
+Apr 05 14:17:31 49cf3f3cda51 unbound[39]: [1775398651] unbound[39:0] info: server stats for thread 0: requestlist max 0 avg 0 exceeded 0 jostled 0
+Apr 05 14:17:31 49cf3f3cda51 unbound[39]: [1775398651] unbound[39:0] info: mesh has 0 recursion states (0 with reply, 0 detached), 0 waiting replies, 0 recursion replies sent, 0 replies dropped, 0 states jostled out
+Apr 05 14:17:31 49cf3f3cda51 unbound[39]: [1775398651] unbound[39:0] debug: cache memory msg=66817 rrset=67867 infra=8401 val=0 subnet=0
+Apr 05 14:17:36 49cf3f3cda51 unbound[39]: [1775398656] unbound[39:1] query: 127.0.0.1 . NS IN
+Apr 05 14:17:36 49cf3f3cda51 unbound[39]: [1775398656] unbound[39:1] reply: 127.0.0.1 . NS IN NOERROR 0.000000 1 239
+Apr 05 14:18:31 49cf3f3cda51 unbound[39]: [1775398711] unbound[39:1] info: server stats for thread 1: 1 queries, 1 answers from cache, 0 recursions, 0 prefetch, 0 rejected by ip ratelimiting
+Apr 05 14:18:31 49cf3f3cda51 unbound[39]: [1775398711] unbound[39:1] info: server stats for thread 1: requestlist max 0 avg 0 exceeded 0 jostled 0
+Apr 05 14:18:31 49cf3f3cda51 unbound[39]: [1775398711] unbound[39:1] info: mesh has 0 recursion states (0 with reply, 0 detached), 0 waiting replies, 0 recursion replies sent, 0 replies dropped, 0 states jostled out
+Apr 05 14:18:31 49cf3f3cda51 unbound[39]: [1775398711] unbound[39:1] debug: cache memory msg=66817 rrset=67867 infra=8401 val=0 subnet=0
+Apr 05 14:18:31 49cf3f3cda51 unbound[39]: [1775398711] unbound[39:0] info: server stats for thread 0: 0 queries, 0 answers from cache, 0 recursions, 0 prefetch, 0 rejected by ip ratelimiting
+Apr 05 14:18:31 49cf3f3cda51 unbound[39]: [1775398711] unbound[39:0] info: server stats for thread 0: requestlist max 0 avg 0 exceeded 0 jostled 0
+Apr 05 14:18:31 49cf3f3cda51 unbound[39]: [1775398711] unbound[39:0] info: mesh has 0 recursion states (0 with reply, 0 detached), 0 waiting replies, 0 recursion replies sent, 0 replies dropped, 0 states jostled out
+Apr 05 14:18:31 49cf3f3cda51 unbound[39]: [1775398711] unbound[39:0] debug: cache memory msg=66817 rrset=67867 infra=8401 val=0 subnet=0
+
+=== FIRST QUERY VIA PROXY (MISS EXPECTED) ===
+
+; <<>> DiG 9.18.39-0ubuntu0.22.04.2-Ubuntu <<>> @127.0.0.1 -p 5300 example.com +ttlunits +time=10 +tries=1
+; (1 server found)
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 16910
+;; flags: qr rd ra; QUERY: 1, ANSWER: 2, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; QUESTION SECTION:
+;example.com.			IN	A
+
+;; ANSWER SECTION:
+example.com.		1h	IN	A	104.18.27.120
+example.com.		1h	IN	A	104.18.26.120
+
+;; Query time: 4 msec
+;; SERVER: 127.0.0.1#5300(127.0.0.1) (UDP)
+;; WHEN: Sun Apr 05 17:18:41 MSK 2026
+;; MSG SIZE  rcvd: 72
+
+
+=== SECOND QUERY VIA PROXY (HIT EXPECTED) ===
+
+; <<>> DiG 9.18.39-0ubuntu0.22.04.2-Ubuntu <<>> @127.0.0.1 -p 5300 example.com +ttlunits +time=10 +tries=1
+; (1 server found)
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 11404
+;; flags: qr rd ra; QUERY: 1, ANSWER: 2, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; QUESTION SECTION:
+;example.com.			IN	A
+
+;; ANSWER SECTION:
+example.com.		1h	IN	A	104.18.26.120
+example.com.		1h	IN	A	104.18.27.120
+
+;; Query time: 0 msec
+;; SERVER: 127.0.0.1#5300(127.0.0.1) (UDP)
+;; WHEN: Sun Apr 05 17:18:41 MSK 2026
+;; MSG SIZE  rcvd: 72
+
+
+=== DNS-PROXY LOGS ===
+DNS proxy listening on port 53...
+[MISS] dns:example.com.:A
+[MISS] dns:yandex.ru.:A
+[HIT] dns:example.com.:A
+[HIT] dns:yandex.ru.:A
+[MISS] dns:example.com.:A
+[HIT] dns:example.com.:A
+
+=== UNBOUND JOURNAL AFTER ===
+Apr 05 14:14:41 49cf3f3cda51 unbound[39]: [1775398481] unbound[39:1] reply: 10.10.0.5 example.com. A IN NOERROR 0.000000 1 72
+Apr 05 14:14:41 49cf3f3cda51 unbound[39]: [1775398481] unbound[39:0] query: 10.10.0.5 yandex.ru. A IN
+Apr 05 14:14:41 49cf3f3cda51 unbound[39]: [1775398481] unbound[39:0] reply: 10.10.0.5 yandex.ru. A IN NOERROR 0.000000 1 86
+Apr 05 14:14:52 49cf3f3cda51 unbound[39]: [1775398492] unbound[39:1] query: 127.0.0.1 example.com. A IN
+Apr 05 14:14:52 49cf3f3cda51 unbound[39]: [1775398492] unbound[39:1] reply: 127.0.0.1 example.com. A IN NOERROR 0.000000 1 72
+Apr 05 14:14:52 49cf3f3cda51 unbound[39]: [1775398492] unbound[39:1] query: 127.0.0.1 yandex.ru. A IN
+Apr 05 14:14:52 49cf3f3cda51 unbound[39]: [1775398492] unbound[39:1] reply: 127.0.0.1 yandex.ru. A IN NOERROR 0.000000 1 86
+Apr 05 14:15:31 49cf3f3cda51 unbound[39]: [1775398531] unbound[39:1] info: server stats for thread 1: 6 queries, 3 answers from cache, 3 recursions, 0 prefetch, 0 rejected by ip ratelimiting
+Apr 05 14:15:31 49cf3f3cda51 unbound[39]: [1775398531] unbound[39:1] info: server stats for thread 1: requestlist max 0 avg 0 exceeded 0 jostled 0
+Apr 05 14:15:31 49cf3f3cda51 unbound[39]: [1775398531] unbound[39:1] info: mesh has 0 recursion states (0 with reply, 0 detached), 0 waiting replies, 3 recursion replies sent, 0 replies dropped, 0 states jostled out
+Apr 05 14:15:31 49cf3f3cda51 unbound[39]: [1775398531] unbound[39:1] info: average recursion processing time 0.071404 sec
+Apr 05 14:15:31 49cf3f3cda51 unbound[39]: [1775398531] unbound[39:1] info: histogram of recursion processing times
+Apr 05 14:15:31 49cf3f3cda51 unbound[39]: [1775398531] unbound[39:1] info: [25%]=0 median[50%]=0 [75%]=0
+Apr 05 14:15:31 49cf3f3cda51 unbound[39]: [1775398531] unbound[39:1] info: lower(secs) upper(secs) recursions
+Apr 05 14:15:31 49cf3f3cda51 unbound[39]: [1775398531] unbound[39:1] info:    0.065536    0.131072 3
+Apr 05 14:15:31 49cf3f3cda51 unbound[39]: [1775398531] unbound[39:1] debug: cache memory msg=66817 rrset=67867 infra=8401 val=0 subnet=0
+Apr 05 14:15:31 49cf3f3cda51 unbound[39]: [1775398531] unbound[39:0] info: server stats for thread 0: 1 queries, 1 answers from cache, 0 recursions, 0 prefetch, 0 rejected by ip ratelimiting
+Apr 05 14:15:31 49cf3f3cda51 unbound[39]: [1775398531] unbound[39:0] info: server stats for thread 0: requestlist max 0 avg 0 exceeded 0 jostled 0
+Apr 05 14:15:31 49cf3f3cda51 unbound[39]: [1775398531] unbound[39:0] info: mesh has 0 recursion states (0 with reply, 0 detached), 0 waiting replies, 0 recursion replies sent, 0 replies dropped, 0 states jostled out
+Apr 05 14:15:31 49cf3f3cda51 unbound[39]: [1775398531] unbound[39:0] debug: cache memory msg=66817 rrset=67867 infra=8401 val=0 subnet=0
+Apr 05 14:16:06 49cf3f3cda51 unbound[39]: [1775398566] unbound[39:0] query: 127.0.0.1 . NS IN
+Apr 05 14:16:06 49cf3f3cda51 unbound[39]: [1775398566] unbound[39:0] reply: 127.0.0.1 . NS IN NOERROR 0.000000 1 239
+Apr 05 14:16:31 49cf3f3cda51 unbound[39]: [1775398591] unbound[39:1] info: server stats for thread 1: 0 queries, 0 answers from cache, 0 recursions, 0 prefetch, 0 rejected by ip ratelimiting
+Apr 05 14:16:31 49cf3f3cda51 unbound[39]: [1775398591] unbound[39:1] info: server stats for thread 1: requestlist max 0 avg 0 exceeded 0 jostled 0
+Apr 05 14:16:31 49cf3f3cda51 unbound[39]: [1775398591] unbound[39:1] info: mesh has 0 recursion states (0 with reply, 0 detached), 0 waiting replies, 0 recursion replies sent, 0 replies dropped, 0 states jostled out
+Apr 05 14:16:31 49cf3f3cda51 unbound[39]: [1775398591] unbound[39:1] debug: cache memory msg=66817 rrset=67867 infra=8401 val=0 subnet=0
+Apr 05 14:16:31 49cf3f3cda51 unbound[39]: [1775398591] unbound[39:0] info: server stats for thread 0: 1 queries, 1 answers from cache, 0 recursions, 0 prefetch, 0 rejected by ip ratelimiting
+Apr 05 14:16:31 49cf3f3cda51 unbound[39]: [1775398591] unbound[39:0] info: server stats for thread 0: requestlist max 0 avg 0 exceeded 0 jostled 0
+Apr 05 14:16:31 49cf3f3cda51 unbound[39]: [1775398591] unbound[39:0] info: mesh has 0 recursion states (0 with reply, 0 detached), 0 waiting replies, 0 recursion replies sent, 0 replies dropped, 0 states jostled out
+Apr 05 14:16:31 49cf3f3cda51 unbound[39]: [1775398591] unbound[39:0] debug: cache memory msg=66817 rrset=67867 infra=8401 val=0 subnet=0
+Apr 05 14:17:31 49cf3f3cda51 unbound[39]: [1775398651] unbound[39:1] info: server stats for thread 1: 0 queries, 0 answers from cache, 0 recursions, 0 prefetch, 0 rejected by ip ratelimiting
+Apr 05 14:17:31 49cf3f3cda51 unbound[39]: [1775398651] unbound[39:1] info: server stats for thread 1: requestlist max 0 avg 0 exceeded 0 jostled 0
+Apr 05 14:17:31 49cf3f3cda51 unbound[39]: [1775398651] unbound[39:1] info: mesh has 0 recursion states (0 with reply, 0 detached), 0 waiting replies, 0 recursion replies sent, 0 replies dropped, 0 states jostled out
+Apr 05 14:17:31 49cf3f3cda51 unbound[39]: [1775398651] unbound[39:1] debug: cache memory msg=66817 rrset=67867 infra=8401 val=0 subnet=0
+Apr 05 14:17:31 49cf3f3cda51 unbound[39]: [1775398651] unbound[39:0] info: server stats for thread 0: 0 queries, 0 answers from cache, 0 recursions, 0 prefetch, 0 rejected by ip ratelimiting
+Apr 05 14:17:31 49cf3f3cda51 unbound[39]: [1775398651] unbound[39:0] info: server stats for thread 0: requestlist max 0 avg 0 exceeded 0 jostled 0
+Apr 05 14:17:31 49cf3f3cda51 unbound[39]: [1775398651] unbound[39:0] info: mesh has 0 recursion states (0 with reply, 0 detached), 0 waiting replies, 0 recursion replies sent, 0 replies dropped, 0 states jostled out
+Apr 05 14:17:31 49cf3f3cda51 unbound[39]: [1775398651] unbound[39:0] debug: cache memory msg=66817 rrset=67867 infra=8401 val=0 subnet=0
+Apr 05 14:17:36 49cf3f3cda51 unbound[39]: [1775398656] unbound[39:1] query: 127.0.0.1 . NS IN
+Apr 05 14:17:36 49cf3f3cda51 unbound[39]: [1775398656] unbound[39:1] reply: 127.0.0.1 . NS IN NOERROR 0.000000 1 239
+Apr 05 14:18:31 49cf3f3cda51 unbound[39]: [1775398711] unbound[39:1] info: server stats for thread 1: 1 queries, 1 answers from cache, 0 recursions, 0 prefetch, 0 rejected by ip ratelimiting
+Apr 05 14:18:31 49cf3f3cda51 unbound[39]: [1775398711] unbound[39:1] info: server stats for thread 1: requestlist max 0 avg 0 exceeded 0 jostled 0
+Apr 05 14:18:31 49cf3f3cda51 unbound[39]: [1775398711] unbound[39:1] info: mesh has 0 recursion states (0 with reply, 0 detached), 0 waiting replies, 0 recursion replies sent, 0 replies dropped, 0 states jostled out
+Apr 05 14:18:31 49cf3f3cda51 unbound[39]: [1775398711] unbound[39:1] debug: cache memory msg=66817 rrset=67867 infra=8401 val=0 subnet=0
+Apr 05 14:18:31 49cf3f3cda51 unbound[39]: [1775398711] unbound[39:0] info: server stats for thread 0: 0 queries, 0 answers from cache, 0 recursions, 0 prefetch, 0 rejected by ip ratelimiting
+Apr 05 14:18:31 49cf3f3cda51 unbound[39]: [1775398711] unbound[39:0] info: server stats for thread 0: requestlist max 0 avg 0 exceeded 0 jostled 0
+Apr 05 14:18:31 49cf3f3cda51 unbound[39]: [1775398711] unbound[39:0] info: mesh has 0 recursion states (0 with reply, 0 detached), 0 waiting replies, 0 recursion replies sent, 0 replies dropped, 0 states jostled out
+Apr 05 14:18:31 49cf3f3cda51 unbound[39]: [1775398711] unbound[39:0] debug: cache memory msg=66817 rrset=67867 infra=8401 val=0 subnet=0
+Apr 05 14:18:41 49cf3f3cda51 unbound[39]: [1775398721] unbound[39:1] query: 10.10.0.5 example.com. A IN
+Apr 05 14:18:41 49cf3f3cda51 unbound[39]: [1775398721] unbound[39:1] reply: 10.10.0.5 example.com. A IN NOERROR 0.000000 1 72

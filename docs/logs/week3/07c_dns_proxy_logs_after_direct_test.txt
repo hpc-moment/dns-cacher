@@ -1,0 +1,9 @@
+DNS proxy listening on port 53...
+[MISS] dns:yandex.ru.:A
+[ERROR] DNS/Redis error: The DNS operation timed out.
+[MISS] dns:yandex.ru.:A
+[ERROR] DNS/Redis error: The DNS operation timed out.
+[MISS] dns:yandex.ru.:A
+[ERROR] DNS/Redis error: The DNS operation timed out.
+[MISS] dns:yandex.ru.:A
+[ERROR] DNS/Redis error: The DNS operation timed out.

@@ -1,0 +1,62 @@
+=== CLEAN START COMPOSE PS ===
+NAME           IMAGE                     COMMAND                  SERVICE        CREATED         STATUS                   PORTS
+dns-cache      redis:7.4-alpine          "docker-entrypoint.s…"   cache          4 minutes ago   Up 4 minutes (healthy)   6379/tcp
+dns-proxy      dns-cacher-dns-proxy      "python -u main.py"      dns-proxy      4 minutes ago   Up 4 minutes             0.0.0.0:5300->53/udp, [::]:5300->53/udp
+dns-resolver   dns-cacher-unbound-node   "/sbin/init"             unbound-node   4 minutes ago   Up 4 minutes (healthy)   
+redis-webui    redis/redisinsight:2.70   "./docker-entry.sh n…"   redis-webui    4 minutes ago   Up 4 minutes             127.0.0.1:5540->5540/tcp
+
+=== FIRST PROXY QUERY YANDEX ===
+
+; <<>> DiG 9.18.39-0ubuntu0.22.04.2-Ubuntu <<>> @127.0.0.1 -p 5300 yandex.ru +ttlunits +time=10 +tries=1
+; (1 server found)
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: SERVFAIL, id: 30449
+;; flags: qr rd; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 1
+;; WARNING: recursion requested but not available
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 8192
+;; QUESTION SECTION:
+;yandex.ru.			IN	A
+
+;; Query time: 5012 msec
+;; SERVER: 127.0.0.1#5300(127.0.0.1) (UDP)
+;; WHEN: Sun Apr 05 16:09:52 MSK 2026
+;; MSG SIZE  rcvd: 38
+
+
+=== FIRST PROXY QUERY EXAMPLE ===
+
+; <<>> DiG 9.18.39-0ubuntu0.22.04.2-Ubuntu <<>> @127.0.0.1 -p 5300 example.com +ttlunits +time=10 +tries=1
+; (1 server found)
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: SERVFAIL, id: 37361
+;; flags: qr rd ra; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; QUESTION SECTION:
+;example.com.			IN	A
+
+;; Query time: 228 msec
+;; SERVER: 127.0.0.1#5300(127.0.0.1) (UDP)
+;; WHEN: Sun Apr 05 16:09:52 MSK 2026
+;; MSG SIZE  rcvd: 40
+
+
+=== REDIS KEYS AFTER FIRST QUERIES ===
+dns:example.com.:A
+
+=== REDIS TTL FOR EXAMPLE ===
+3600
+
+=== REDIS TTL FOR YANDEX ===
+-2
+
+=== DNS-PROXY LOGS AFTER CLEAN START TEST ===
+DNS proxy listening on port 53...
+[MISS] dns:yandex.ru.:A
+[ERROR] DNS/Redis error: The DNS operation timed out.
+[MISS] dns:example.com.:A

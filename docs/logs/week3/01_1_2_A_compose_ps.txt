@@ -1,0 +1,5 @@
+NAME           IMAGE                     COMMAND                  SERVICE        CREATED          STATUS                             PORTS
+dns-cache      redis:7.4-alpine          "docker-entrypoint.s…"   cache          14 hours ago     Up 22 seconds (healthy)            6379/tcp
+dns-proxy      dns-cacher-dns-proxy      "python -u main.py"      dns-proxy      23 seconds ago   Up 22 seconds                      0.0.0.0:5300->53/udp, [::]:5300->53/udp
+dns-resolver   dns-cacher-unbound-node   "/sbin/init"             unbound-node   23 seconds ago   Up 22 seconds (health: starting)   
+redis-webui    redis/redisinsight:2.70   "./docker-entry.sh n…"   redis-webui    14 hours ago     Up 22 seconds                      127.0.0.1:5540->5540/tcp
