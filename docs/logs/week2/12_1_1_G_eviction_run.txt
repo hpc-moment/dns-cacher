@@ -1,0 +1,55 @@
+=== INITIAL YANDEX QUERY ===
+;; communications error to 127.0.0.1#53: timed out
+
+; <<>> DiG 9.18.39-0ubuntu0.22.04.3-Ubuntu <<>> @127.0.0.1 yandex.ru A +ttlunits +time=2 +tries=1
+; (1 server found)
+;; global options: +cmd
+;; no servers could be reached
+
+=== EVICTION SCRIPT RUN ===
+Начало заполнения кэша: Sat Apr  4 22:44:26 UTC 2026
+Размер кэша до: mem.cache.message=539395
+=== Запросов: 500, Время: 22:45:34 ===
+thread0.num.cachehits=0
+thread0.num.cachemiss=21
+thread1.num.cachehits=0
+thread1.num.cachemiss=32
+total.num.cachehits=0
+total.num.cachemiss=53
+mem.cache.rrset=589943
+mem.cache.message=692311
+yandex.ru в кэше: 6 записей
+=== Запросов: 1000, Время: 22:46:47 ===
+thread0.num.cachehits=0
+thread0.num.cachemiss=65
+thread1.num.cachehits=0
+thread1.num.cachemiss=74
+total.num.cachehits=0
+total.num.cachemiss=139
+mem.cache.rrset=589187
+mem.cache.message=845312
+yandex.ru в кэше: 6 записей
+=== Запросов: 1500, Время: 22:48:02 ===
+thread0.num.cachehits=0
+thread0.num.cachemiss=136
+thread1.num.cachehits=0
+thread1.num.cachemiss=100
+total.num.cachehits=0
+total.num.cachemiss=236
+mem.cache.rrset=589345
+mem.cache.message=998812
+yandex.ru в кэше: 0 записей
+!!! EVICTION ОБНАРУЖЕН: yandex.ru вытеснен из кэша! Запросов: 1500
+Размер кэша после: mem.cache.message=998812
+
+=== CACHE STATS AFTER RUN ===
+thread0.num.cachehits=0
+thread0.num.cachemiss=136
+thread1.num.cachehits=0
+thread1.num.cachemiss=100
+total.num.cachehits=0
+total.num.cachemiss=236
+mem.cache.rrset=589345
+mem.cache.message=998812
+
+=== DUMP CACHE FOR YANDEX AFTER RUN ===

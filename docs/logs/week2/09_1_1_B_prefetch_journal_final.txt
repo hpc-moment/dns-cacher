@@ -1,0 +1,200 @@
+Apr 04 22:15:47 00242187013e unbound[40]: [1775340947] unbound[40:1] debug: cache memory msg=75289 rrset=86561 infra=13762 val=70497 subnet=0
+Apr 04 22:15:47 00242187013e unbound[40]: [1775340947] unbound[40:1] debug: iterator[module 1] operate: extstate:module_wait_reply event:module_event_reply
+Apr 04 22:15:47 00242187013e unbound[40]: [1775340947] unbound[40:1] info: iterator operate: query example.com. A IN
+Apr 04 22:15:47 00242187013e unbound[40]: [1775340947] unbound[40:1] info: response for example.com. A IN
+Apr 04 22:15:47 00242187013e unbound[40]: [1775340947] unbound[40:1] info: reply from <.> 192.203.230.10#53
+Apr 04 22:15:47 00242187013e unbound[40]: [1775340947] unbound[40:1] info: query response was nodata ANSWER
+Apr 04 22:15:47 00242187013e unbound[40]: [1775340947] unbound[40:1] info: processQueryTargets: example.com. A IN
+Apr 04 22:15:47 00242187013e unbound[40]: [1775340947] unbound[40:1] info: sending query: example.com. A IN
+Apr 04 22:15:47 00242187013e unbound[40]: [1775340947] unbound[40:1] debug: sending to target: <.> 192.203.230.10#53
+Apr 04 22:15:47 00242187013e unbound[40]: [1775340947] unbound[40:1] debug: cache memory msg=75289 rrset=86561 infra=13762 val=70497 subnet=0
+Apr 04 22:15:47 00242187013e unbound[40]: [1775340947] unbound[40:1] debug: iterator[module 1] operate: extstate:module_wait_reply event:module_event_reply
+Apr 04 22:15:47 00242187013e unbound[40]: [1775340947] unbound[40:1] info: iterator operate: query example.com. A IN
+Apr 04 22:15:47 00242187013e unbound[40]: [1775340947] unbound[40:1] info: response for example.com. A IN
+Apr 04 22:15:47 00242187013e unbound[40]: [1775340947] unbound[40:1] info: reply from <.> 192.203.230.10#53
+Apr 04 22:15:47 00242187013e unbound[40]: [1775340947] unbound[40:1] info: query response was ANSWER
+Apr 04 22:15:47 00242187013e unbound[40]: [1775340947] unbound[40:1] info: finishing processing for example.com. A IN
+Apr 04 22:15:47 00242187013e unbound[40]: [1775340947] unbound[40:1] debug: validator[module 0] operate: extstate:module_wait_module event:module_event_moddone
+Apr 04 22:15:47 00242187013e unbound[40]: [1775340947] unbound[40:1] info: validator operate: query example.com. A IN
+Apr 04 22:15:47 00242187013e unbound[40]: [1775340947] unbound[40:1] info: validate(positive): sec_status_secure
+Apr 04 22:15:47 00242187013e unbound[40]: [1775340947] unbound[40:1] info: validation success example.com. A IN
+Apr 04 22:15:47 00242187013e unbound[40]: [1775340947] unbound[40:1] reply: 127.0.0.1 example.com. A IN NOERROR 0.211497 0 72
+Apr 04 22:15:47 00242187013e unbound[40]: [1775340947] unbound[40:1] debug: cache memory msg=75289 rrset=86561 infra=13762 val=70497 subnet=0
+Apr 04 22:15:58 00242187013e unbound[40]: [1775340958] unbound[40:1] query: 127.0.0.1 example.com. A IN
+Apr 04 22:15:58 00242187013e unbound[40]: [1775340958] unbound[40:1] reply: 127.0.0.1 example.com. A IN NOERROR 0.000000 1 72
+Apr 04 22:16:26 00242187013e unbound[40]: [1775340986] unbound[40:1] info: server stats for thread 1: 2 queries, 1 answers from cache, 1 recursions, 0 prefetch, 0 rejected by ip ratelimiting
+Apr 04 22:16:26 00242187013e unbound[40]: [1775340986] unbound[40:1] info: server stats for thread 1: requestlist max 0 avg 0 exceeded 0 jostled 0
+Apr 04 22:16:26 00242187013e unbound[40]: [1775340986] unbound[40:1] info: mesh has 0 recursion states (0 with reply, 0 detached), 2 waiting replies, 1 recursion replies sent, 0 replies dropped, 0 states jostled out
+Apr 04 22:16:26 00242187013e unbound[40]: [1775340986] unbound[40:1] info: average recursion processing time 0.211497 sec
+Apr 04 22:16:26 00242187013e unbound[40]: [1775340986] unbound[40:1] info: histogram of recursion processing times
+Apr 04 22:16:26 00242187013e unbound[40]: [1775340986] unbound[40:1] info: [25%]=0 median[50%]=0 [75%]=0
+Apr 04 22:16:26 00242187013e unbound[40]: [1775340986] unbound[40:1] info: lower(secs) upper(secs) recursions
+Apr 04 22:16:26 00242187013e unbound[40]: [1775340986] unbound[40:1] info:    0.131072    0.262144 1
+Apr 04 22:16:26 00242187013e unbound[40]: [1775340986] unbound[40:1] debug: cache memory msg=75289 rrset=86561 infra=13762 val=70497 subnet=0
+Apr 04 22:16:26 00242187013e unbound[40]: [1775340986] unbound[40:0] info: server stats for thread 0: 0 queries, 0 answers from cache, 0 recursions, 0 prefetch, 0 rejected by ip ratelimiting
+Apr 04 22:16:26 00242187013e unbound[40]: [1775340986] unbound[40:0] info: server stats for thread 0: requestlist max 0 avg 0 exceeded 0 jostled 0
+Apr 04 22:16:26 00242187013e unbound[40]: [1775340986] unbound[40:0] info: mesh has 0 recursion states (0 with reply, 0 detached), 2 waiting replies, 0 recursion replies sent, 0 replies dropped, 0 states jostled out
+Apr 04 22:16:26 00242187013e unbound[40]: [1775340986] unbound[40:0] debug: cache memory msg=75289 rrset=86561 infra=13762 val=70497 subnet=0
+Apr 04 22:16:51 00242187013e unbound[40]: [1775341011] unbound[40:0] query: 127.0.0.1 . NS IN
+Apr 04 22:16:51 00242187013e unbound[40]: [1775341011] unbound[40:0] reply: 127.0.0.1 . NS IN NOERROR 0.000000 1 239
+Apr 04 22:17:26 00242187013e unbound[40]: [1775341046] unbound[40:1] info: server stats for thread 1: 0 queries, 0 answers from cache, 0 recursions, 0 prefetch, 0 rejected by ip ratelimiting
+Apr 04 22:17:26 00242187013e unbound[40]: [1775341046] unbound[40:1] info: server stats for thread 1: requestlist max 0 avg 0 exceeded 0 jostled 0
+Apr 04 22:17:26 00242187013e unbound[40]: [1775341046] unbound[40:1] info: mesh has 0 recursion states (0 with reply, 0 detached), 2 waiting replies, 0 recursion replies sent, 0 replies dropped, 0 states jostled out
+Apr 04 22:17:26 00242187013e unbound[40]: [1775341046] unbound[40:1] debug: cache memory msg=75289 rrset=86561 infra=13762 val=70497 subnet=0
+Apr 04 22:17:26 00242187013e unbound[40]: [1775341046] unbound[40:0] info: server stats for thread 0: 1 queries, 1 answers from cache, 0 recursions, 0 prefetch, 0 rejected by ip ratelimiting
+Apr 04 22:17:26 00242187013e unbound[40]: [1775341046] unbound[40:0] info: server stats for thread 0: requestlist max 0 avg 0 exceeded 0 jostled 0
+Apr 04 22:17:26 00242187013e unbound[40]: [1775341046] unbound[40:0] info: mesh has 0 recursion states (0 with reply, 0 detached), 2 waiting replies, 0 recursion replies sent, 0 replies dropped, 0 states jostled out
+Apr 04 22:17:26 00242187013e unbound[40]: [1775341046] unbound[40:0] debug: cache memory msg=75289 rrset=86561 infra=13762 val=70497 subnet=0
+Apr 04 22:18:21 00242187013e unbound[40]: [1775341101] unbound[40:0] query: 127.0.0.1 . NS IN
+Apr 04 22:18:21 00242187013e unbound[40]: [1775341101] unbound[40:0] reply: 127.0.0.1 . NS IN NOERROR 0.000000 1 239
+Apr 04 22:18:26 00242187013e unbound[40]: [1775341106] unbound[40:0] info: server stats for thread 0: 1 queries, 1 answers from cache, 0 recursions, 0 prefetch, 0 rejected by ip ratelimiting
+Apr 04 22:18:26 00242187013e unbound[40]: [1775341106] unbound[40:0] info: server stats for thread 0: requestlist max 0 avg 0 exceeded 0 jostled 0
+Apr 04 22:18:26 00242187013e unbound[40]: [1775341106] unbound[40:0] info: mesh has 0 recursion states (0 with reply, 0 detached), 2 waiting replies, 0 recursion replies sent, 0 replies dropped, 0 states jostled out
+Apr 04 22:18:26 00242187013e unbound[40]: [1775341106] unbound[40:0] debug: cache memory msg=75289 rrset=86561 infra=13762 val=70497 subnet=0
+Apr 04 22:18:26 00242187013e unbound[40]: [1775341106] unbound[40:1] info: server stats for thread 1: 0 queries, 0 answers from cache, 0 recursions, 0 prefetch, 0 rejected by ip ratelimiting
+Apr 04 22:18:26 00242187013e unbound[40]: [1775341106] unbound[40:1] info: server stats for thread 1: requestlist max 0 avg 0 exceeded 0 jostled 0
+Apr 04 22:18:26 00242187013e unbound[40]: [1775341106] unbound[40:1] info: mesh has 0 recursion states (0 with reply, 0 detached), 2 waiting replies, 0 recursion replies sent, 0 replies dropped, 0 states jostled out
+Apr 04 22:18:26 00242187013e unbound[40]: [1775341106] unbound[40:1] debug: cache memory msg=75289 rrset=86561 infra=13762 val=70497 subnet=0
+Apr 04 22:19:07 00242187013e unbound[40]: [1775341147] unbound[40:0] debug: new control connection from 127.0.0.1 port 40036
+Apr 04 22:19:07 00242187013e unbound[40]: [1775341147] unbound[40:0] info: control cmd:  stats_noreset
+Apr 04 22:19:07 00242187013e unbound[40]: [1775341147] unbound[40:0] query: 127.0.0.1 example.com. A IN
+Apr 04 22:19:07 00242187013e unbound[40]: [1775341147] unbound[40:0] reply: 127.0.0.1 example.com. A IN NOERROR 0.000000 1 72
+Apr 04 22:19:20 00242187013e unbound[40]: [1775341160] unbound[40:0] query: 127.0.0.1 example.com. A IN
+Apr 04 22:19:20 00242187013e unbound[40]: [1775341160] unbound[40:0] reply: 127.0.0.1 example.com. A IN NOERROR 0.000000 1 72
+Apr 04 22:19:26 00242187013e unbound[40]: [1775341166] unbound[40:0] info: server stats for thread 0: 2 queries, 2 answers from cache, 0 recursions, 0 prefetch, 0 rejected by ip ratelimiting
+Apr 04 22:19:26 00242187013e unbound[40]: [1775341166] unbound[40:0] info: server stats for thread 0: requestlist max 0 avg 0 exceeded 0 jostled 0
+Apr 04 22:19:26 00242187013e unbound[40]: [1775341166] unbound[40:0] info: mesh has 0 recursion states (0 with reply, 0 detached), 2 waiting replies, 0 recursion replies sent, 0 replies dropped, 0 states jostled out
+Apr 04 22:19:26 00242187013e unbound[40]: [1775341166] unbound[40:0] debug: cache memory msg=75289 rrset=86561 infra=13762 val=70497 subnet=0
+Apr 04 22:19:26 00242187013e unbound[40]: [1775341166] unbound[40:1] info: server stats for thread 1: 0 queries, 0 answers from cache, 0 recursions, 0 prefetch, 0 rejected by ip ratelimiting
+Apr 04 22:19:26 00242187013e unbound[40]: [1775341166] unbound[40:1] info: server stats for thread 1: requestlist max 0 avg 0 exceeded 0 jostled 0
+Apr 04 22:19:26 00242187013e unbound[40]: [1775341166] unbound[40:1] info: mesh has 0 recursion states (0 with reply, 0 detached), 2 waiting replies, 0 recursion replies sent, 0 replies dropped, 0 states jostled out
+Apr 04 22:19:26 00242187013e unbound[40]: [1775341166] unbound[40:1] debug: cache memory msg=75289 rrset=86561 infra=13762 val=70497 subnet=0
+Apr 04 22:19:50 00242187013e unbound[40]: [1775341190] unbound[40:1] query: 127.0.0.1 example.com. A IN
+Apr 04 22:19:50 00242187013e unbound[40]: [1775341190] unbound[40:1] reply: 127.0.0.1 example.com. A IN NOERROR 0.000000 1 72
+Apr 04 22:19:51 00242187013e unbound[40]: [1775341191] unbound[40:1] query: 127.0.0.1 . NS IN
+Apr 04 22:19:51 00242187013e unbound[40]: [1775341191] unbound[40:1] reply: 127.0.0.1 . NS IN NOERROR 0.000000 1 239
+Apr 04 22:20:20 00242187013e unbound[40]: [1775341220] unbound[40:0] query: 127.0.0.1 example.com. A IN
+Apr 04 22:20:20 00242187013e unbound[40]: [1775341220] unbound[40:0] reply: 127.0.0.1 example.com. A IN NOERROR 0.000000 1 72
+Apr 04 22:20:26 00242187013e unbound[40]: [1775341226] unbound[40:0] info: server stats for thread 0: 1 queries, 1 answers from cache, 0 recursions, 0 prefetch, 0 rejected by ip ratelimiting
+Apr 04 22:20:26 00242187013e unbound[40]: [1775341226] unbound[40:0] info: server stats for thread 0: requestlist max 0 avg 0 exceeded 0 jostled 0
+Apr 04 22:20:26 00242187013e unbound[40]: [1775341226] unbound[40:0] info: mesh has 0 recursion states (0 with reply, 0 detached), 2 waiting replies, 0 recursion replies sent, 0 replies dropped, 0 states jostled out
+Apr 04 22:20:26 00242187013e unbound[40]: [1775341226] unbound[40:0] debug: cache memory msg=75289 rrset=86561 infra=13762 val=70497 subnet=0
+Apr 04 22:20:26 00242187013e unbound[40]: [1775341226] unbound[40:1] info: server stats for thread 1: 2 queries, 2 answers from cache, 0 recursions, 0 prefetch, 0 rejected by ip ratelimiting
+Apr 04 22:20:26 00242187013e unbound[40]: [1775341226] unbound[40:1] info: server stats for thread 1: requestlist max 0 avg 0 exceeded 0 jostled 0
+Apr 04 22:20:26 00242187013e unbound[40]: [1775341226] unbound[40:1] info: mesh has 0 recursion states (0 with reply, 0 detached), 2 waiting replies, 0 recursion replies sent, 0 replies dropped, 0 states jostled out
+Apr 04 22:20:26 00242187013e unbound[40]: [1775341226] unbound[40:1] debug: cache memory msg=75289 rrset=86561 infra=13762 val=70497 subnet=0
+Apr 04 22:20:50 00242187013e unbound[40]: [1775341250] unbound[40:0] query: 127.0.0.1 example.com. A IN
+Apr 04 22:20:50 00242187013e unbound[40]: [1775341250] unbound[40:0] debug: validator[module 0] operate: extstate:module_state_initial event:module_event_new
+Apr 04 22:20:50 00242187013e unbound[40]: [1775341250] unbound[40:0] info: validator operate: query example.com. A IN
+Apr 04 22:20:50 00242187013e unbound[40]: [1775341250] unbound[40:0] debug: iterator[module 1] operate: extstate:module_state_initial event:module_event_pass
+Apr 04 22:20:50 00242187013e unbound[40]: [1775341250] unbound[40:0] info: resolving example.com. A IN
+Apr 04 22:20:50 00242187013e unbound[40]: [1775341250] unbound[40:0] info: resolving (init part 2):  example.com. A IN
+Apr 04 22:20:50 00242187013e unbound[40]: [1775341250] unbound[40:0] info: resolving (init part 3):  example.com. A IN
+Apr 04 22:20:50 00242187013e unbound[40]: [1775341250] unbound[40:0] info: processQueryTargets: example.com. A IN
+Apr 04 22:20:50 00242187013e unbound[40]: [1775341250] unbound[40:0] debug: removing 1 labels
+Apr 04 22:20:50 00242187013e unbound[40]: [1775341250] unbound[40:0] info: processQueryTargets: example.com. A IN
+Apr 04 22:20:50 00242187013e unbound[40]: [1775341250] unbound[40:0] info: sending query: example.com. A IN
+Apr 04 22:20:50 00242187013e unbound[40]: [1775341250] unbound[40:0] debug: sending to target: <.> 192.203.230.10#53
+Apr 04 22:20:50 00242187013e unbound[40]: [1775341250] unbound[40:0] debug: iterator[module 1] operate: extstate:module_state_initial event:module_event_pass
+Apr 04 22:20:50 00242187013e unbound[40]: [1775341250] unbound[40:0] info: iterator operate: query . DNSKEY IN
+Apr 04 22:20:50 00242187013e unbound[40]: [1775341250] unbound[40:0] info: resolving . DNSKEY IN
+Apr 04 22:20:50 00242187013e unbound[40]: [1775341250] unbound[40:0] info: finishing processing for . DNSKEY IN
+Apr 04 22:20:50 00242187013e unbound[40]: [1775341250] unbound[40:0] debug: validator[module 0] operate: extstate:module_state_initial event:module_event_moddone
+Apr 04 22:20:50 00242187013e unbound[40]: [1775341250] unbound[40:0] info: validator operate: query . DNSKEY IN
+Apr 04 22:20:50 00242187013e unbound[40]: [1775341250] unbound[40:0] reply: 127.0.0.1 example.com. A IN NOERROR 0.000000 1 72
+Apr 04 22:20:50 00242187013e unbound[40]: [1775341250] unbound[40:0] debug: iterator[module 1] operate: extstate:module_wait_reply event:module_event_reply
+Apr 04 22:20:50 00242187013e unbound[40]: [1775341250] unbound[40:0] info: iterator operate: query example.com. A IN
+Apr 04 22:20:50 00242187013e unbound[40]: [1775341250] unbound[40:0] info: response for example.com. A IN
+Apr 04 22:20:50 00242187013e unbound[40]: [1775341250] unbound[40:0] info: reply from <.> 192.203.230.10#53
+Apr 04 22:20:50 00242187013e unbound[40]: [1775341250] unbound[40:0] info: query response was ANSWER
+Apr 04 22:20:50 00242187013e unbound[40]: [1775341250] unbound[40:0] info: finishing processing for example.com. A IN
+Apr 04 22:20:50 00242187013e unbound[40]: [1775341250] unbound[40:0] debug: validator[module 0] operate: extstate:module_wait_module event:module_event_moddone
+Apr 04 22:20:50 00242187013e unbound[40]: [1775341250] unbound[40:0] info: validator operate: query example.com. A IN
+Apr 04 22:20:50 00242187013e unbound[40]: [1775341250] unbound[40:0] debug: validator[module 0] operate: extstate:module_state_initial event:module_event_pass
+Apr 04 22:20:50 00242187013e unbound[40]: [1775341250] unbound[40:0] info: validator operate: query com. DS IN
+Apr 04 22:20:50 00242187013e unbound[40]: [1775341250] unbound[40:0] debug: iterator[module 1] operate: extstate:module_state_initial event:module_event_pass
+Apr 04 22:20:50 00242187013e unbound[40]: [1775341250] unbound[40:0] info: resolving com. DS IN
+Apr 04 22:20:50 00242187013e unbound[40]: [1775341250] unbound[40:0] info: finishing processing for com. DS IN
+Apr 04 22:20:50 00242187013e unbound[40]: [1775341250] unbound[40:0] debug: validator[module 0] operate: extstate:module_wait_module event:module_event_moddone
+Apr 04 22:20:50 00242187013e unbound[40]: [1775341250] unbound[40:0] info: validator operate: query com. DS IN
+Apr 04 22:20:50 00242187013e unbound[40]: [1775341250] unbound[40:0] info: validated DS com. DS IN
+Apr 04 22:20:50 00242187013e unbound[40]: [1775341250] unbound[40:0] debug: validator[module 0] operate: extstate:module_wait_subquery event:module_event_pass
+Apr 04 22:20:50 00242187013e unbound[40]: [1775341250] unbound[40:0] info: validator operate: query example.com. A IN
+Apr 04 22:20:50 00242187013e unbound[40]: [1775341250] unbound[40:0] debug: validator[module 0] operate: extstate:module_state_initial event:module_event_pass
+Apr 04 22:20:50 00242187013e unbound[40]: [1775341250] unbound[40:0] info: validator operate: query com. DNSKEY IN
+Apr 04 22:20:50 00242187013e unbound[40]: [1775341250] unbound[40:0] debug: iterator[module 1] operate: extstate:module_state_initial event:module_event_pass
+Apr 04 22:20:50 00242187013e unbound[40]: [1775341250] unbound[40:0] info: resolving com. DNSKEY IN
+Apr 04 22:20:50 00242187013e unbound[40]: [1775341250] unbound[40:0] info: resolving (init part 2):  com. DNSKEY IN
+Apr 04 22:20:50 00242187013e unbound[40]: [1775341250] unbound[40:0] info: resolving (init part 3):  com. DNSKEY IN
+Apr 04 22:20:50 00242187013e unbound[40]: [1775341250] unbound[40:0] info: processQueryTargets: com. DNSKEY IN
+Apr 04 22:20:50 00242187013e unbound[40]: [1775341250] unbound[40:0] info: processQueryTargets: com. DNSKEY IN
+Apr 04 22:20:50 00242187013e unbound[40]: [1775341250] unbound[40:0] info: sending query: com. DNSKEY IN
+Apr 04 22:20:50 00242187013e unbound[40]: [1775341250] unbound[40:0] debug: sending to target: <.> 192.33.4.12#53
+Apr 04 22:20:50 00242187013e unbound[40]: [1775341250] unbound[40:0] debug: cache memory msg=75289 rrset=86561 infra=13762 val=70497 subnet=0
+Apr 04 22:20:50 00242187013e unbound[40]: [1775341250] unbound[40:0] debug: iterator[module 1] operate: extstate:module_wait_reply event:module_event_reply
+Apr 04 22:20:50 00242187013e unbound[40]: [1775341250] unbound[40:0] info: iterator operate: query com. DNSKEY IN
+Apr 04 22:20:50 00242187013e unbound[40]: [1775341250] unbound[40:0] info: response for com. DNSKEY IN
+Apr 04 22:20:50 00242187013e unbound[40]: [1775341250] unbound[40:0] info: reply from <.> 192.33.4.12#53
+Apr 04 22:20:50 00242187013e unbound[40]: [1775341250] unbound[40:0] info: query response was ANSWER
+Apr 04 22:20:50 00242187013e unbound[40]: [1775341250] unbound[40:0] info: finishing processing for com. DNSKEY IN
+Apr 04 22:20:50 00242187013e unbound[40]: [1775341250] unbound[40:0] debug: validator[module 0] operate: extstate:module_wait_module event:module_event_moddone
+Apr 04 22:20:50 00242187013e unbound[40]: [1775341250] unbound[40:0] info: validator operate: query com. DNSKEY IN
+Apr 04 22:20:50 00242187013e unbound[40]: [1775341250] unbound[40:0] info: validated DNSKEY com. DNSKEY IN
+Apr 04 22:20:50 00242187013e unbound[40]: [1775341250] unbound[40:0] debug: validator[module 0] operate: extstate:module_wait_subquery event:module_event_pass
+Apr 04 22:20:50 00242187013e unbound[40]: [1775341250] unbound[40:0] info: validator operate: query example.com. A IN
+Apr 04 22:20:50 00242187013e unbound[40]: [1775341250] unbound[40:0] debug: validator[module 0] operate: extstate:module_state_initial event:module_event_pass
+Apr 04 22:20:50 00242187013e unbound[40]: [1775341250] unbound[40:0] info: validator operate: query example.com. DS IN
+Apr 04 22:20:50 00242187013e unbound[40]: [1775341250] unbound[40:0] debug: iterator[module 1] operate: extstate:module_state_initial event:module_event_pass
+Apr 04 22:20:50 00242187013e unbound[40]: [1775341250] unbound[40:0] info: resolving example.com. DS IN
+Apr 04 22:20:50 00242187013e unbound[40]: [1775341250] unbound[40:0] info: resolving (init part 2):  example.com. DS IN
+Apr 04 22:20:50 00242187013e unbound[40]: [1775341250] unbound[40:0] info: resolving (init part 3):  example.com. DS IN
+Apr 04 22:20:50 00242187013e unbound[40]: [1775341250] unbound[40:0] info: processQueryTargets: example.com. DS IN
+Apr 04 22:20:50 00242187013e unbound[40]: [1775341250] unbound[40:0] debug: removing 1 labels
+Apr 04 22:20:50 00242187013e unbound[40]: [1775341250] unbound[40:0] info: processQueryTargets: example.com. DS IN
+Apr 04 22:20:50 00242187013e unbound[40]: [1775341250] unbound[40:0] info: sending query: example.com. DS IN
+Apr 04 22:20:50 00242187013e unbound[40]: [1775341250] unbound[40:0] debug: sending to target: <.> 199.7.91.13#53
+Apr 04 22:20:50 00242187013e unbound[40]: [1775341250] unbound[40:0] debug: cache memory msg=75289 rrset=86561 infra=13762 val=70497 subnet=0
+Apr 04 22:20:50 00242187013e unbound[40]: [1775341250] unbound[40:0] debug: iterator[module 1] operate: extstate:module_wait_reply event:module_event_reply
+Apr 04 22:20:50 00242187013e unbound[40]: [1775341250] unbound[40:0] info: iterator operate: query example.com. DS IN
+Apr 04 22:20:50 00242187013e unbound[40]: [1775341250] unbound[40:0] info: response for example.com. DS IN
+Apr 04 22:20:50 00242187013e unbound[40]: [1775341250] unbound[40:0] info: reply from <.> 199.7.91.13#53
+Apr 04 22:20:50 00242187013e unbound[40]: [1775341250] unbound[40:0] info: query response was ANSWER
+Apr 04 22:20:50 00242187013e unbound[40]: [1775341250] unbound[40:0] info: finishing processing for example.com. DS IN
+Apr 04 22:20:50 00242187013e unbound[40]: [1775341250] unbound[40:0] debug: validator[module 0] operate: extstate:module_wait_module event:module_event_moddone
+Apr 04 22:20:50 00242187013e unbound[40]: [1775341250] unbound[40:0] info: validator operate: query example.com. DS IN
+Apr 04 22:20:50 00242187013e unbound[40]: [1775341250] unbound[40:0] info: validated DS example.com. DS IN
+Apr 04 22:20:50 00242187013e unbound[40]: [1775341250] unbound[40:0] debug: validator[module 0] operate: extstate:module_wait_subquery event:module_event_pass
+Apr 04 22:20:50 00242187013e unbound[40]: [1775341250] unbound[40:0] info: validator operate: query example.com. A IN
+Apr 04 22:20:50 00242187013e unbound[40]: [1775341250] unbound[40:0] debug: validator[module 0] operate: extstate:module_state_initial event:module_event_pass
+Apr 04 22:20:50 00242187013e unbound[40]: [1775341250] unbound[40:0] info: validator operate: query example.com. DNSKEY IN
+Apr 04 22:20:50 00242187013e unbound[40]: [1775341250] unbound[40:0] debug: iterator[module 1] operate: extstate:module_state_initial event:module_event_pass
+Apr 04 22:20:50 00242187013e unbound[40]: [1775341250] unbound[40:0] info: resolving example.com. DNSKEY IN
+Apr 04 22:20:50 00242187013e unbound[40]: [1775341250] unbound[40:0] info: resolving (init part 2):  example.com. DNSKEY IN
+Apr 04 22:20:50 00242187013e unbound[40]: [1775341250] unbound[40:0] info: resolving (init part 3):  example.com. DNSKEY IN
+Apr 04 22:20:50 00242187013e unbound[40]: [1775341250] unbound[40:0] info: processQueryTargets: example.com. DNSKEY IN
+Apr 04 22:20:50 00242187013e unbound[40]: [1775341250] unbound[40:0] debug: removing 1 labels
+Apr 04 22:20:50 00242187013e unbound[40]: [1775341250] unbound[40:0] info: processQueryTargets: example.com. DNSKEY IN
+Apr 04 22:20:50 00242187013e unbound[40]: [1775341250] unbound[40:0] info: processQueryTargets: example.com. DNSKEY IN
+Apr 04 22:20:50 00242187013e unbound[40]: [1775341250] unbound[40:0] info: sending query: example.com. DNSKEY IN
+Apr 04 22:20:50 00242187013e unbound[40]: [1775341250] unbound[40:0] debug: sending to target: <.> 199.7.91.13#53
+Apr 04 22:20:50 00242187013e unbound[40]: [1775341250] unbound[40:0] debug: cache memory msg=75289 rrset=86561 infra=13762 val=70497 subnet=0
+Apr 04 22:20:51 00242187013e unbound[40]: [1775341251] unbound[40:0] debug: iterator[module 1] operate: extstate:module_wait_reply event:module_event_reply
+Apr 04 22:20:51 00242187013e unbound[40]: [1775341251] unbound[40:0] info: iterator operate: query example.com. DNSKEY IN
+Apr 04 22:20:51 00242187013e unbound[40]: [1775341251] unbound[40:0] info: response for example.com. DNSKEY IN
+Apr 04 22:20:51 00242187013e unbound[40]: [1775341251] unbound[40:0] info: reply from <.> 199.7.91.13#53
+Apr 04 22:20:51 00242187013e unbound[40]: [1775341251] unbound[40:0] info: query response was ANSWER
+Apr 04 22:20:51 00242187013e unbound[40]: [1775341251] unbound[40:0] info: finishing processing for example.com. DNSKEY IN
+Apr 04 22:20:51 00242187013e unbound[40]: [1775341251] unbound[40:0] debug: validator[module 0] operate: extstate:module_wait_module event:module_event_moddone
+Apr 04 22:20:51 00242187013e unbound[40]: [1775341251] unbound[40:0] info: validator operate: query example.com. DNSKEY IN
+Apr 04 22:20:51 00242187013e unbound[40]: [1775341251] unbound[40:0] info: validated DNSKEY example.com. DNSKEY IN
+Apr 04 22:20:51 00242187013e unbound[40]: [1775341251] unbound[40:0] debug: validator[module 0] operate: extstate:module_wait_subquery event:module_event_pass
+Apr 04 22:20:51 00242187013e unbound[40]: [1775341251] unbound[40:0] info: validator operate: query example.com. A IN
+Apr 04 22:20:51 00242187013e unbound[40]: [1775341251] unbound[40:0] info: validate(positive): sec_status_secure
+Apr 04 22:20:51 00242187013e unbound[40]: [1775341251] unbound[40:0] info: validation success example.com. A IN
+Apr 04 22:20:51 00242187013e unbound[40]: [1775341251] unbound[40:0] debug: cache memory msg=75289 rrset=86561 infra=13762 val=70497 subnet=0
+Apr 04 22:20:52 00242187013e unbound[40]: [1775341252] unbound[40:0] query: 127.0.0.1 example.com. A IN
+Apr 04 22:20:52 00242187013e unbound[40]: [1775341252] unbound[40:0] reply: 127.0.0.1 example.com. A IN NOERROR 0.000000 1 72
+Apr 04 22:21:00 00242187013e unbound[40]: [1775341260] unbound[40:0] debug: new control connection from 127.0.0.1 port 38156
+Apr 04 22:21:00 00242187013e unbound[40]: [1775341260] unbound[40:0] info: control cmd:  stats_noreset
+Apr 04 22:21:00 00242187013e unbound[40]: [1775341260] unbound[40:0] query: 127.0.0.1 example.com. A IN
+Apr 04 22:21:00 00242187013e unbound[40]: [1775341260] unbound[40:0] reply: 127.0.0.1 example.com. A IN NOERROR 0.000000 1 72
