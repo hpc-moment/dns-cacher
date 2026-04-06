@@ -1,0 +1,98 @@
+=== PRE-RESET COMPOSE PS ===
+NAME           IMAGE                     COMMAND                  SERVICE        CREATED             STATUS                         PORTS
+dns-cache      redis:7.4-alpine          "docker-entrypoint.s…"   cache          About an hour ago   Up About an hour (healthy)     6379/tcp
+dns-proxy      dns-cacher-dns-proxy      "python -u main.py"      dns-proxy      About an hour ago   Up About an hour               0.0.0.0:5300->53/udp, [::]:5300->53/udp
+dns-resolver   dns-cacher-unbound-node   "/sbin/init"             unbound-node   About an hour ago   Up About an hour (unhealthy)   
+redis-webui    redis/redisinsight:2.70   "./docker-entry.sh n…"   redis-webui    About an hour ago   Up About an hour               127.0.0.1:5540->5540/tcp
+
+=== PRE-RESET CHECK.SH ===
+[0;34m>>> Starting Automated Health Checks...[0m
+[0;32m[PASS][0m Container 'dns-resolver' is running.
+[0;32m[PASS][0m Systemd state: running
+[0;32m[PASS][0m Unbound service is active.
+[0;32m[PASS][0m Configuration hashes match (bind mount working).
+[0;32m[PASS][0m Functional test: Unbound is responding to DNS queries.
+[0;32m[PASS][0m Container IP is 10.10.0.2 (matches expectation).
+[0;34m>>> All checks completed.[0m
+
+=== PRE-RESET DIG YANDEX VIA PROXY ===
+
+; <<>> DiG 9.18.39-0ubuntu0.22.04.2-Ubuntu <<>> @127.0.0.1 -p 5300 yandex.ru
+; (1 server found)
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: SERVFAIL, id: 12811
+;; flags: qr rd ra; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; QUESTION SECTION:
+;yandex.ru.			IN	A
+
+;; Query time: 0 msec
+;; SERVER: 127.0.0.1#5300(127.0.0.1) (UDP)
+;; WHEN: Sun Apr 05 15:59:51 MSK 2026
+;; MSG SIZE  rcvd: 38
+
+
+=== PRE-RESET DIG EXAMPLE VIA PROXY ===
+
+; <<>> DiG 9.18.39-0ubuntu0.22.04.2-Ubuntu <<>> @127.0.0.1 -p 5300 example.com
+; (1 server found)
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: SERVFAIL, id: 49138
+;; flags: qr rd ra; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; QUESTION SECTION:
+;example.com.			IN	A
+
+;; Query time: 0 msec
+;; SERVER: 127.0.0.1#5300(127.0.0.1) (UDP)
+;; WHEN: Sun Apr 05 15:59:51 MSK 2026
+;; MSG SIZE  rcvd: 40
+
+
+=== PRE-RESET DNS-PROXY LOGS ===
+DNS proxy listening on port 53...
+[MISS] dns:yandex.ru.:A
+[ERROR] DNS/Redis error: The DNS operation timed out.
+[MISS] dns:yandex.ru.:A
+[ERROR] DNS/Redis error: The DNS operation timed out.
+[MISS] dns:yandex.ru.:A
+[ERROR] DNS/Redis error: The DNS operation timed out.
+[MISS] dns:yandex.ru.:A
+[ERROR] DNS/Redis error: The DNS operation timed out.
+[MISS] dns:example.com.:A
+[ERROR] DNS/Redis error: The DNS operation timed out.
+[MISS] dns:yandex.ru.:A
+[ERROR] DNS/Redis error: The DNS operation timed out.
+[MISS] dns:example.com.:A
+[ERROR] DNS/Redis error: The DNS operation timed out.
+[MISS] dns:example.com.:A
+[ERROR] DNS/Redis error: The DNS operation timed out.
+[MISS] dns:example.com.:A
+[ERROR] DNS/Redis error: The DNS operation timed out.
+[MISS] dns:yandex.ru.:A
+[ERROR] DNS/Redis error: The DNS operation timed out.
+[MISS] dns:yandex.ru.:A
+[ERROR] DNS/Redis error: The DNS operation timed out.
+[MISS] dns:yandex.ru.:A
+[ERROR] DNS/Redis error: The DNS operation timed out.
+[MISS] dns:yandex.ru.:A
+[ERROR] DNS/Redis error: The DNS operation timed out.
+[MISS] dns:yandex.ru.:A
+[ERROR] DNS/Redis error: The DNS operation timed out.
+[MISS] dns:yandex.ru.:A
+[ERROR] DNS/Redis error: The DNS operation timed out.
+[MISS] dns:example.com.:A
+[ERROR] DNS/Redis error: The DNS operation timed out.
+[MISS] dns:example.com.:A
+[ERROR] DNS/Redis error: The DNS operation timed out.
+[MISS] dns:example.com.:A
+[MISS] dns:yandex.ru.:A
+[HIT] dns:example.com.:A
+[HIT] dns:yandex.ru.:A
+[HIT] dns:example.com.:A

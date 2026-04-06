@@ -1,8 +1,0 @@
-;; communications error to 127.0.0.1#53: timed out
-;; communications error to 127.0.0.1#53: timed out
-;; communications error to 127.0.0.1#53: timed out
-
-; <<>> DiG 9.18.39-0ubuntu0.22.04.2-Ubuntu <<>> @127.0.0.1 yandex.ru A +dnssec
-; (1 server found)
-;; global options: +cmd
-;; no servers could be reached

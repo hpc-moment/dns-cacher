@@ -1,3 +1,0 @@
-NAME           IMAGE                     COMMAND                  SERVICE        CREATED          STATUS                      PORTS
-dns-cache      redis:7.4-alpine          "docker-entrypoint.s…"   cache          13 minutes ago   Up 13 minutes (healthy)     6379/tcp
-dns-resolver   dns-cacher-unbound-node   "/sbin/init"             unbound-node   13 minutes ago   Up 13 minutes (unhealthy)   

@@ -18,16 +18,52 @@
 - [x] Есть `docs/protocols/PROTOCOL_WEEK1.md`
 - [x] Созданы папки `docs/screenshots/week1/...`
 - [x] Созданы папки `docs/logs/week1/...`
-- [x] Сохранен `docker compose ps`
-- [x] Сохранен `docker network inspect dns-lab`
-- [x] Сохранен `systemctl is-system-running`
-- [x] Сохранен `systemctl status unbound`
-- [x] Сохранен `unbound -V`
-- [x] Сохранен `unbound -V | grep "Linked modules"`
-- [x] Сохранен `unbound-checkconf /etc/unbound/unbound.conf`
-- [ ] Сохранен DNSSEC-запрос к `example.com`
+
+- [x] Сохранён `docker compose ps`
+- [x] Сохранён `docker network inspect dns-lab`
+- [x] Сохранён `systemctl is-system-running`
+- [x] Сохранён `systemctl status unbound`
+- [x] Сохранён `unbound -V`
+- [x] Сохранён `unbound -V | grep "Linked modules"`
+- [x] Сохранён `unbound-checkconf /etc/unbound/unbound.conf`
+- [x] Сохранён DNSSEC-запрос к `yandex.ru`
 - [x] Сохранены логи `docker logs dns-resolver`
 - [x] Сохранена версия Redis
-- [ ] Сохранен `redis-cli ping`
+- [x] Сохранён `redis-cli ping`
+- [x] Есть лог статуса `redis-webui`
+
+- [x] Есть скриншот проверки версии Unbound и модулей
+- [x] Есть скриншот базовой конфигурации `unbound.conf`
+- [x] Есть скриншот DNSSEC-проверки `yandex.ru` с `AD`-флагом
+- [x] Есть скриншот аутентифицированного `redis-cli ping`
 - [x] Есть скриншот RedisInsight
-- [x] В протоколе Week 1 перечислены открытые риски и замечания
+
+## Week 2
+- [x] Есть `docs/protocols/PROTOCOL_WEEK2.md`
+- [x] Сохранён лог `1.1.А` с двумя запросами и убыванием TTL
+- [x] Сохранён лог `1.1.Б` с prefetch counter до и после
+- [x] Сохранён лог `1.1.В` с `unbound-control flush` и повышением TTL
+- [x] Сохранён лог `1.1.Г` с фактом eviction
+- [x] Есть скриншот `1.1.А`
+- [x] Есть скриншот `1.1.Б`
+- [x] Есть скриншот `1.1.В`
+- [x] Есть скриншот `1.1.Г`
+
+## Week 3
+- [x] Есть `docs/protocols/PROTOCOL_WEEK3.md`
+- [x] Сохранён лог `1.2.А` с появлением DNS-ключа в Redis
+- [x] Сохранён лог `1.2.Б` с последовательностью `MISS -> HIT`
+- [x] Сохранён лог `1.2.В` с подтверждением ответа из Redis без повторного обращения к локальному резолверу
+- [x] Сохранён лог `1.2.Г` с кастомным TTL во внешнем кэше
+- [x] Есть скриншот `1.2.А`
+- [x] Есть скриншот `1.2.Б`
+- [x] Есть скриншот `1.2.В`
+- [x] Есть скриншот `1.2.Г`
+
+## Итог по текущему этапу
+- [x] Week 2 подтверждена логами (баллы не предусмотрены)
+- [x] Week 2 подтверждена логами на `25 / 25`
+- [x] Week 3 подтверждена логами на `35 / 35`
+- [x] Скриншоты Week 1 полностью собраны
+- [x] Скриншоты Week 2 полностью собраны
+- [x] Скриншоты Week 3 полностью собраны

@@ -1,7 +1,0 @@
-PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-HOSTNAME=efbce19a5c0f
-GOSU_VERSION=1.17
-REDIS_VERSION=7.4.8
-REDIS_DOWNLOAD_URL=http://download.redis.io/releases/redis-7.4.8.tar.gz
-REDIS_DOWNLOAD_SHA=f6773cb7d63be236c59c2917a82f1f08e47b77d89b2f0c9f53becb22b8ea4172
-HOME=/root

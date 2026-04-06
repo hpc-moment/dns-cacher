@@ -1,0 +1,10 @@
+18:    interface: 0.0.0.0
+22:    access-control: 0.0.0.0/0 refuse
+23:    access-control: 127.0.0.0/8 allow
+24:    access-control: 10.10.0.0/24 allow
+33:    verbosity: 3
+48:    do-not-query-localhost: no
+55:    # root-hints: "/etc/unbound/root.hints"
+58:    # auto-trust-anchor-file: "/var/lib/unbound/root.key"
+61:    module-config: "iterator"
+80:    control-interface: 127.0.0.1

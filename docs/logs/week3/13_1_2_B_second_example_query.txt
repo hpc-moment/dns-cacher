@@ -1,0 +1,30 @@
+=== SECOND QUERY EXAMPLE VIA PROXY ===
+
+; <<>> DiG 9.18.39-0ubuntu0.22.04.2-Ubuntu <<>> @127.0.0.1 -p 5300 example.com +ttlunits +time=10 +tries=1
+; (1 server found)
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: SERVFAIL, id: 20825
+;; flags: qr rd ra; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; QUESTION SECTION:
+;example.com.			IN	A
+
+;; Query time: 0 msec
+;; SERVER: 127.0.0.1#5300(127.0.0.1) (UDP)
+;; WHEN: Sun Apr 05 16:25:20 MSK 2026
+;; MSG SIZE  rcvd: 40
+
+
+=== REDIS TTL FOR EXAMPLE AFTER SECOND QUERY ===
+2672
+
+=== DNS-PROXY LOGS AFTER SECOND QUERY ===
+DNS proxy listening on port 53...
+[MISS] dns:yandex.ru.:A
+[ERROR] DNS/Redis error: The DNS operation timed out.
+[MISS] dns:example.com.:A
+[HIT] dns:example.com.:A
+[HIT] dns:example.com.:A

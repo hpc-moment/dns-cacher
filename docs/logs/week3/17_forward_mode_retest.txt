@@ -1,0 +1,140 @@
+=== CONFIG CHECK ===
+55:    # root-hints: "/etc/unbound/root.hints"
+58:    # auto-trust-anchor-file: "/var/lib/unbound/root.key"
+61:    module-config: "iterator"
+83:forward-zone:
+85:    forward-addr: 8.8.8.8
+86:    forward-addr: 1.1.1.1
+
+=== UNBOUND CHECKCONF ===
+unbound-checkconf: no errors in /etc/unbound/unbound.conf
+
+=== UNBOUND STATUS ===
+● unbound.service - Unbound DNS server
+     Loaded: loaded (/lib/systemd/system/unbound.service; enabled; vendor preset: enabled)
+     Active: active (running) since Sun 2026-04-05 14:14:31 UTC; 20s ago
+       Docs: man:unbound(8)
+    Process: 32 ExecStartPre=/usr/lib/unbound/package-helper chroot_setup (code=exited, status=0/SUCCESS)
+    Process: 35 ExecStartPre=/usr/lib/unbound/package-helper root_trust_anchor_update (code=exited, status=0/SUCCESS)
+   Main PID: 39 (unbound)
+      Tasks: 2 (limit: 8217)
+     Memory: 10.1M
+        CPU: 124ms
+     CGroup: /system.slice/unbound.service
+             └─39 /usr/sbin/unbound -d -p
+
+Apr 05 14:14:41 49cf3f3cda51 unbound[39]: [1775398481] unbound[39:1] info: response for yandex.ru. A IN
+Apr 05 14:14:41 49cf3f3cda51 unbound[39]: [1775398481] unbound[39:1] info: reply from <.> 8.8.8.8#53
+Apr 05 14:14:41 49cf3f3cda51 unbound[39]: [1775398481] unbound[39:1] info: query response was ANSWER
+Apr 05 14:14:41 49cf3f3cda51 unbound[39]: [1775398481] unbound[39:1] info: finishing processing for yandex.ru. A IN
+Apr 05 14:14:41 49cf3f3cda51 unbound[39]: [1775398481] unbound[39:1] reply: 127.0.0.1 yandex.ru. A IN NOERROR 0.072445 0 86
+Apr 05 14:14:41 49cf3f3cda51 unbound[39]: [1775398481] unbound[39:1] debug: cache memory msg=66817 rrset=67867 infra=8401 val=0 subnet=0
+Apr 05 14:14:41 49cf3f3cda51 unbound[39]: [1775398481] unbound[39:1] query: 10.10.0.5 example.com. A IN
+Apr 05 14:14:41 49cf3f3cda51 unbound[39]: [1775398481] unbound[39:1] reply: 10.10.0.5 example.com. A IN NOERROR 0.000000 1 72
+Apr 05 14:14:41 49cf3f3cda51 unbound[39]: [1775398481] unbound[39:0] query: 10.10.0.5 yandex.ru. A IN
+Apr 05 14:14:41 49cf3f3cda51 unbound[39]: [1775398481] unbound[39:0] reply: 10.10.0.5 yandex.ru. A IN NOERROR 0.000000 1 86
+
+=== EXAMPLE VIA LOCAL UNBOUND ===
+
+; <<>> DiG 9.18.39-0ubuntu0.22.04.3-Ubuntu <<>> @127.0.0.1 example.com A +ttlunits +time=5 +tries=1
+; (1 server found)
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 22713
+;; flags: qr rd ra; QUERY: 1, ANSWER: 2, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; QUESTION SECTION:
+;example.com.			IN	A
+
+;; ANSWER SECTION:
+example.com.		5m19s	IN	A	104.18.27.120
+example.com.		5m19s	IN	A	104.18.26.120
+
+;; Query time: 0 msec
+;; SERVER: 127.0.0.1#53(127.0.0.1) (UDP)
+;; WHEN: Sun Apr 05 14:14:52 UTC 2026
+;; MSG SIZE  rcvd: 72
+
+
+=== YANDEX VIA LOCAL UNBOUND ===
+
+; <<>> DiG 9.18.39-0ubuntu0.22.04.3-Ubuntu <<>> @127.0.0.1 yandex.ru A +ttlunits +time=5 +tries=1
+; (1 server found)
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 31278
+;; flags: qr rd ra; QUERY: 1, ANSWER: 3, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; QUESTION SECTION:
+;yandex.ru.			IN	A
+
+;; ANSWER SECTION:
+yandex.ru.		5m19s	IN	A	5.255.255.77
+yandex.ru.		5m19s	IN	A	77.88.55.88
+yandex.ru.		5m19s	IN	A	77.88.44.55
+
+;; Query time: 0 msec
+;; SERVER: 127.0.0.1#53(127.0.0.1) (UDP)
+;; WHEN: Sun Apr 05 14:14:52 UTC 2026
+;; MSG SIZE  rcvd: 86
+
+
+=== EXAMPLE VIA PROXY ===
+
+; <<>> DiG 9.18.39-0ubuntu0.22.04.2-Ubuntu <<>> @127.0.0.1 -p 5300 example.com +ttlunits +time=10 +tries=1
+; (1 server found)
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 37334
+;; flags: qr rd ra; QUERY: 1, ANSWER: 2, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; QUESTION SECTION:
+;example.com.			IN	A
+
+;; ANSWER SECTION:
+example.com.		59m49s	IN	A	104.18.26.120
+example.com.		59m49s	IN	A	104.18.27.120
+
+;; Query time: 4 msec
+;; SERVER: 127.0.0.1#5300(127.0.0.1) (UDP)
+;; WHEN: Sun Apr 05 17:14:52 MSK 2026
+;; MSG SIZE  rcvd: 72
+
+
+=== YANDEX VIA PROXY ===
+
+; <<>> DiG 9.18.39-0ubuntu0.22.04.2-Ubuntu <<>> @127.0.0.1 -p 5300 yandex.ru +ttlunits +time=10 +tries=1
+; (1 server found)
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 4544
+;; flags: qr rd ra; QUERY: 1, ANSWER: 3, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; QUESTION SECTION:
+;yandex.ru.			IN	A
+
+;; ANSWER SECTION:
+yandex.ru.		59m49s	IN	A	77.88.44.55
+yandex.ru.		59m49s	IN	A	77.88.55.88
+yandex.ru.		59m49s	IN	A	5.255.255.77
+
+;; Query time: 4 msec
+;; SERVER: 127.0.0.1#5300(127.0.0.1) (UDP)
+;; WHEN: Sun Apr 05 17:14:52 MSK 2026
+;; MSG SIZE  rcvd: 86
+
+
+=== DNS-PROXY LOGS ===
+DNS proxy listening on port 53...
+[MISS] dns:example.com.:A
+[MISS] dns:yandex.ru.:A
+[HIT] dns:example.com.:A
+[HIT] dns:yandex.ru.:A

@@ -1,0 +1,56 @@
+=== COMPOSE PS ===
+NAME           IMAGE                     COMMAND                  SERVICE        CREATED       STATUS                 PORTS
+dns-cache      redis:7.4-alpine          "docker-entrypoint.s…"   cache          2 hours ago   Up 2 hours (healthy)   6379/tcp
+dns-proxy      dns-cacher-dns-proxy      "python -u main.py"      dns-proxy      2 hours ago   Up 2 hours             0.0.0.0:5300->53/udp, [::]:5300->53/udp
+dns-resolver   dns-cacher-unbound-node   "/sbin/init"             unbound-node   2 hours ago   Up 2 hours (healthy)   
+redis-webui    redis/redisinsight:2.70   "./docker-entry.sh n…"   redis-webui    2 hours ago   Up 2 hours             127.0.0.1:5540->5540/tcp
+
+=== UNBOUND STATUS ===
+● unbound.service - Unbound DNS server
+     Loaded: loaded (/lib/systemd/system/unbound.service; enabled; vendor preset: enabled)
+     Active: active (running) since Sun 2026-04-05 14:14:31 UTC; 1h 36min ago
+       Docs: man:unbound(8)
+    Process: 32 ExecStartPre=/usr/lib/unbound/package-helper chroot_setup (code=exited, status=0/SUCCESS)
+    Process: 35 ExecStartPre=/usr/lib/unbound/package-helper root_trust_anchor_update (code=exited, status=0/SUCCESS)
+   Main PID: 39 (unbound)
+      Tasks: 2 (limit: 8217)
+     Memory: 10.1M
+        CPU: 158ms
+     CGroup: /system.slice/unbound.service
+             └─39 /usr/sbin/unbound -d -p
+
+Apr 05 15:50:35 49cf3f3cda51 unbound[39]: [1775404235] unbound[39:0] info: server stats for thread 0: 0 queries, 0 answers from cache, 0 recursions, 0 prefetch, 0 rejected by ip ratelimiting
+Apr 05 15:50:35 49cf3f3cda51 unbound[39]: [1775404235] unbound[39:0] info: server stats for thread 0: requestlist max 0 avg 0 exceeded 0 jostled 0
+Apr 05 15:50:35 49cf3f3cda51 unbound[39]: [1775404235] unbound[39:0] info: mesh has 0 recursion states (0 with reply, 0 detached), 0 waiting replies, 0 recursion replies sent, 0 replies dropped, 0 states jostled out
+Apr 05 15:50:35 49cf3f3cda51 unbound[39]: [1775404235] unbound[39:0] debug: cache memory msg=66817 rrset=67867 infra=8970 val=0 subnet=0
+Apr 05 15:50:35 49cf3f3cda51 unbound[39]: [1775404235] unbound[39:1] info: server stats for thread 1: 0 queries, 0 answers from cache, 0 recursions, 0 prefetch, 0 rejected by ip ratelimiting
+Apr 05 15:50:35 49cf3f3cda51 unbound[39]: [1775404235] unbound[39:1] info: server stats for thread 1: requestlist max 0 avg 0 exceeded 0 jostled 0
+Apr 05 15:50:35 49cf3f3cda51 unbound[39]: [1775404235] unbound[39:1] info: mesh has 0 recursion states (0 with reply, 0 detached), 0 waiting replies, 0 recursion replies sent, 0 replies dropped, 0 states jostled out
+
+=== DNS CHECK ===
+
+; <<>> DiG 9.18.39-0ubuntu0.22.04.3-Ubuntu <<>> @127.0.0.1 yandex.ru A +time=5 +tries=1
+; (1 server found)
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 27517
+;; flags: qr rd ra; QUERY: 1, ANSWER: 3, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; QUESTION SECTION:
+;yandex.ru.			IN	A
+
+;; ANSWER SECTION:
+yandex.ru.		330	IN	A	77.88.55.88
+yandex.ru.		330	IN	A	77.88.44.55
+yandex.ru.		330	IN	A	5.255.255.77
+
+;; Query time: 68 msec
+;; SERVER: 127.0.0.1#53(127.0.0.1) (UDP)
+;; WHEN: Sun Apr 05 15:50:52 UTC 2026
+;; MSG SIZE  rcvd: 86
+
+
+=== REDIS PING ===
+PONG
