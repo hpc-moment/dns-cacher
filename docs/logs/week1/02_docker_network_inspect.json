@@ -1,0 +1,53 @@
+[
+    {
+        "Name": "dns-lab",
+        "Id": "8d6b47a934aefd35bc8db4d7834b3a36f0339af77af5b2bfa72018806637d9da",
+        "Created": "2026-03-25T18:57:59.827754243Z",
+        "Scope": "local",
+        "Driver": "bridge",
+        "EnableIPv4": true,
+        "EnableIPv6": false,
+        "IPAM": {
+            "Driver": "default",
+            "Options": null,
+            "Config": [
+                {
+                    "Subnet": "10.10.0.0/24"
+                }
+            ]
+        },
+        "Internal": false,
+        "Attachable": false,
+        "Ingress": false,
+        "ConfigFrom": {
+            "Network": ""
+        },
+        "ConfigOnly": false,
+        "Containers": {
+            "20c83be6ce2b68f1909b13ea9652a3bc604e40ca9775d1d3e0a06f7709870750": {
+                "Name": "dns-resolver",
+                "EndpointID": "7d7b5929c51e3d51c2cb81f09ed8ad6f63135d969809e7a2e634ba723b24c368",
+                "MacAddress": "f6:31:6e:f2:47:e1",
+                "IPv4Address": "10.10.0.2/24",
+                "IPv6Address": ""
+            },
+            "efbce19a5c0f93586292453d7fcb9b72c9779849e144f3d6f9328d515929c985": {
+                "Name": "dns-cache",
+                "EndpointID": "6ab9d83d8154e4aafd73d9be59c1ba8453294cd59f8e5e4186126cb36111f227",
+                "MacAddress": "46:2f:53:69:ac:ce",
+                "IPv4Address": "10.10.0.3/24",
+                "IPv6Address": ""
+            }
+        },
+        "Options": {
+            "com.docker.network.enable_ipv4": "true",
+            "com.docker.network.enable_ipv6": "false"
+        },
+        "Labels": {
+            "com.docker.compose.config-hash": "5dd5773b1863dc338e8be9aedd31fa191a90cc89e23210a3d02d3b4b98907c7b",
+            "com.docker.compose.network": "dns-lab",
+            "com.docker.compose.project": "dns-cacher",
+            "com.docker.compose.version": "2.40.2"
+        }
+    }
+]
