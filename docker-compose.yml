@@ -12,6 +12,7 @@ services:
       - /tmp
     volumes:
       - ./unbound.conf:/etc/unbound/unbound.conf:ro
+      - ./local-zones.conf:/etc/unbound/local-zones.conf:ro
       - ./scripts/:/scripts/
     healthcheck:
       test: ["CMD", "dig", "@127.0.0.1", ".", "NS", "+short"]
