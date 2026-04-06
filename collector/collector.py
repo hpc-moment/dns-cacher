@@ -82,7 +82,8 @@ def generate_config(zone, output_file="local-zones.conf"):
 
     with open(output_file, "w") as f:
         f.write("server:\n\n")
-        f.write(f'local-zone: "{zone}." redirect\n\n')
+        f.write(f'local-zone: "{zone}." transparent\n')
+        f.write(f'domain-insecure: "{zone}."\n\n')
 
         for key in sorted(keys):
             _, z, name, rtype = key.split(":")
