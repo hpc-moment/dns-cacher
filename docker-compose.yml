@@ -71,6 +71,25 @@ services:
     ports:
       - "5300:53/udp"
 
+  zone-collector:
+    build: ./collector
+    container_name: zone-collector
+    command: python collector.py isc.org
+    depends_on:
+      - cache
+    volumes:
+      - ./local-zones.conf:/app/local-zones.conf
+    environment:
+      - REDIS_PASSWORD=${REDIS_PASSWORD}
+      - TTL_MODE=${TTL_MODE}
+      - TTL_MIN=${TTL_MIN}
+      - TTL_OVERRIDE=${TTL_OVERRIDE}
+    networks:
+      dns-lab:
+        ipv4_address: 10.10.0.6
+    profiles:
+      - manual
+
 networks:
   dns-lab:
     name: dns-lab
