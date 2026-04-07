@@ -81,6 +81,9 @@ services:
       - ./local-zones.conf:/app/local-zones.conf
     environment:
       - REDIS_PASSWORD=${REDIS_PASSWORD}
+      - TTL_MODE=${TTL_MODE}
+      - TTL_MIN=${TTL_MIN}
+      - TTL_OVERRIDE=${TTL_OVERRIDE}
     networks:
       dns-lab:
         ipv4_address: 10.10.0.6

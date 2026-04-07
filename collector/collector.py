@@ -9,6 +9,10 @@ REDIS_PASSWORD = os.getenv("REDIS_PASSWORD")
 
 RECORD_TYPES = ["A", "AAAA", "MX", "NS", "SOA"]
 
+TTL_MODE = os.getenv("TTL_MODE", "respect")
+TTL_MIN = int(os.getenv("TTL_MIN", "0"))
+TTL_OVERRIDE = os.getenv("TTL_OVERRIDE")
+
 r = redis.Redis(
     host=REDIS_HOST,
     port=REDIS_PORT,
@@ -19,8 +23,17 @@ r = redis.Redis(
 def fqdn(name):
     return name.rstrip(".") + "."
 
+def apply_ttl_policy(ttl):
+    if TTL_MODE == "override":
+        return int(TTL_OVERRIDE)
+    elif TTL_MODE == "min":
+        return max(ttl, TTL_MIN)
+    return ttl
+
 def store_record(zone, name, rtype, ttl, value):
     key = f"zone:{zone}:{name}:{rtype}"
+
+    ttl = apply_ttl_policy(ttl)
 
     if rtype == "SOA":
         r.set(key, value)
@@ -31,10 +44,19 @@ def store_record(zone, name, rtype, ttl, value):
 
     ttl_key = f"{key}:ttl"
     existing_ttl = r.get(ttl_key)
+
     if existing_ttl is None:
         r.set(ttl_key, ttl)
     else:
-        ttl = min(int(existing_ttl), ttl)
+        existing_ttl = int(existing_ttl)
+
+        if TTL_MODE == "override":
+            ttl = int(TTL_OVERRIDE)
+        elif TTL_MODE == "respect":
+            ttl = min(existing_ttl, ttl)
+        else:
+            ttl = max(int(existing_ttl), ttl)
+
         r.set(ttl_key, ttl)
 
 def resolve_and_store(resolver, zone, name, rtype):
@@ -106,6 +128,13 @@ if __name__ == "__main__":
     if len(sys.argv) != 2:
         print("Usage: python collector.py <domain>")
         sys.exit(1)
+
+    if TTL_MODE not in ['respect', 'min', 'override']:
+        print(f"Incorrect TTL_MODE, expected on of: \"respect\", \"min\", \"override\", got: {TTL_MODE}")
+        sys.exit(1)
+
+    if TTL_OVERRIDE is None or int(TTL_OVERRIDE) > 0:
+        print(f"Value of TTL_OVERRIDE was not correct: {TTL_OVERRIDE}")
 
     zone = sys.argv[1].rstrip(".")
 
