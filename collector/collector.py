@@ -133,8 +133,9 @@ if __name__ == "__main__":
         print(f"Incorrect TTL_MODE, expected on of: \"respect\", \"min\", \"override\", got: {TTL_MODE}")
         sys.exit(1)
 
-    if TTL_OVERRIDE is None or int(TTL_OVERRIDE) > 0:
+    if TTL_MODE == 'override' and (TTL_OVERRIDE is None or int(TTL_OVERRIDE) == 0):
         print(f"Value of TTL_OVERRIDE was not correct: {TTL_OVERRIDE}")
+        sys.exit(1)
 
     zone = sys.argv[1].rstrip(".")
 
