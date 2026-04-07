@@ -1,0 +1,55 @@
+=== 1.3.B LOCAL ZONE RESPONSE PRIORITY ===
+
+=== REAL IP isc.org (AUTHORITATIVE SERVER) ===
+151.101.194.217
+151.101.2.217
+151.101.66.217
+151.101.130.217
+
+=== LOCAL IP isc.org (UNBOUND CONTAINER) ===
+151.101.2.217
+151.101.66.217
+151.101.130.217
+151.101.194.217
+
+=== PUBLIC VALIDATING FLAGS ===
+;; flags: qr rd ra ad; QUERY: 1, ANSWER: 5, AUTHORITY: 0, ADDITIONAL: 1
+; EDNS: version: 0, flags:; MBZ: 0x00a2, udp: 512
+
+=== LOCAL ZONE FLAGS ===
+;; flags: qr aa rd ra; QUERY: 1, ANSWER: 4, AUTHORITY: 0, ADDITIONAL: 1
+; EDNS: version: 0, flags: do; udp: 1232
+
+=== NONEXISTENT SUBDOMAIN CHECK ===
+
+; <<>> DiG 9.18.39-0ubuntu0.22.04.3-Ubuntu <<>> @127.0.0.1 nonexistent.isc.org A
+; (1 server found)
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NXDOMAIN, id: 9967
+;; flags: qr rd ra; QUERY: 1, ANSWER: 0, AUTHORITY: 1, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; QUESTION SECTION:
+;nonexistent.isc.org.		IN	A
+
+;; AUTHORITY SECTION:
+isc.org.		1800	IN	SOA	ns-int.isc.org. hostmaster.isc.org. 2026040237 7200 3600 24796800 3600
+
+;; Query time: 116 msec
+;; SERVER: 127.0.0.1#53(127.0.0.1) (UDP)
+;; WHEN: Tue Apr 07 21:17:48 UTC 2026
+;; MSG SIZE  rcvd: 102
+
+
+=== KNOWN SUBDOMAIN REDIRECT CHECK ===
+www.isc.org -> isc.map.fastlydns.net.
+151.101.66.217
+151.101.194.217
+151.101.2.217
+151.101.130.217
+ftp.isc.org -> ftp2.isc.org.
+149.20.2.21
+mail.isc.org -> 
+dl.isc.org -> 

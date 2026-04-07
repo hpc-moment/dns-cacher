@@ -1,0 +1,385 @@
+=== UNBOUND LOGS BEFORE ===
+[10561.225134] unbound[39]: [1775597019] unbound[39:0] info: server stats for thread 0: 0 queries, 0 answers from cache, 0 recursions, 0 prefetch, 0 rejected by ip ratelimiting
+[10561.225348] unbound[39]: [1775597019] unbound[39:0] info: server stats for thread 0: requestlist max 0 avg 0 exceeded 0 jostled 0
+[10561.225441] unbound[39]: [1775597019] unbound[39:0] info: mesh has 0 recursion states (0 with reply, 0 detached), 0 waiting replies, 0 recursion replies sent, 0 replies dropped, 0 states jostled out
+[10561.225523] unbound[39]: [1775597019] unbound[39:0] debug: cache memory msg=69608 rrset=75723 infra=8698 val=68767 subnet=0
+[10596.134169] unbound[39]: [1775597054] unbound[39:0] query: 127.0.0.1 . NS IN
+[10596.134483] unbound[39]: [1775597054] unbound[39:0] reply: 127.0.0.1 . NS IN NOERROR 0.000000 1 239
+[10621.088595] unbound[39]: [1775597079] unbound[39:1] info: server stats for thread 1: 0 queries, 0 answers from cache, 0 recursions, 0 prefetch, 0 rejected by ip ratelimiting
+[10621.088763] unbound[39]: [1775597079] unbound[39:1] info: server stats for thread 1: requestlist max 0 avg 0 exceeded 0 jostled 0
+[10621.088866] unbound[39]: [1775597079] unbound[39:1] info: mesh has 0 recursion states (0 with reply, 0 detached), 0 waiting replies, 0 recursion replies sent, 0 replies dropped, 0 states jostled out
+[10621.088996] unbound[39]: [1775597079] unbound[39:1] debug: cache memory msg=69608 rrset=75723 infra=8698 val=68767 subnet=0
+[10621.228526] unbound[39]: [1775597079] unbound[39:0] info: server stats for thread 0: 1 queries, 1 answers from cache, 0 recursions, 0 prefetch, 0 rejected by ip ratelimiting
+[10621.228746] unbound[39]: [1775597079] unbound[39:0] info: server stats for thread 0: requestlist max 0 avg 0 exceeded 0 jostled 0
+[10621.228905] unbound[39]: [1775597079] unbound[39:0] info: mesh has 0 recursion states (0 with reply, 0 detached), 0 waiting replies, 0 recursion replies sent, 0 replies dropped, 0 states jostled out
+[10621.229035] unbound[39]: [1775597079] unbound[39:0] debug: cache memory msg=69608 rrset=75723 infra=8698 val=68767 subnet=0
+[10681.148528] unbound[39]: [1775597139] unbound[39:1] info: server stats for thread 1: 0 queries, 0 answers from cache, 0 recursions, 0 prefetch, 0 rejected by ip ratelimiting
+[10681.148847] unbound[39]: [1775597139] unbound[39:1] info: server stats for thread 1: requestlist max 0 avg 0 exceeded 0 jostled 0
+[10681.148935] unbound[39]: [1775597139] unbound[39:1] info: mesh has 0 recursion states (0 with reply, 0 detached), 0 waiting replies, 0 recursion replies sent, 0 replies dropped, 0 states jostled out
+[10681.149014] unbound[39]: [1775597139] unbound[39:1] debug: cache memory msg=69608 rrset=75723 infra=8698 val=68767 subnet=0
+[10681.288625] unbound[39]: [1775597139] unbound[39:0] info: server stats for thread 0: 0 queries, 0 answers from cache, 0 recursions, 0 prefetch, 0 rejected by ip ratelimiting
+[10681.288831] unbound[39]: [1775597139] unbound[39:0] info: server stats for thread 0: requestlist max 0 avg 0 exceeded 0 jostled 0
+[10681.288918] unbound[39]: [1775597139] unbound[39:0] info: mesh has 0 recursion states (0 with reply, 0 detached), 0 waiting replies, 0 recursion replies sent, 0 replies dropped, 0 states jostled out
+[10681.289004] unbound[39]: [1775597139] unbound[39:0] debug: cache memory msg=69608 rrset=75723 infra=8698 val=68767 subnet=0
+[10686.218105] unbound[39]: [1775597144] unbound[39:1] query: 127.0.0.1 . NS IN
+[10686.218266] unbound[39]: [1775597144] unbound[39:1] reply: 127.0.0.1 . NS IN NOERROR 0.000000 1 239
+[10730.107366] unbound[39]: [1775597188] unbound[39:1] query: 127.0.0.1 isc.org. A IN
+[10730.107808] unbound[39]: [1775597188] unbound[39:1] reply: 127.0.0.1 isc.org. A IN NOERROR 0.000000 1 100
+[10741.164689] unbound[39]: [1775597199] unbound[39:1] info: server stats for thread 1: 2 queries, 2 answers from cache, 0 recursions, 0 prefetch, 0 rejected by ip ratelimiting
+[10741.167496] unbound[39]: [1775597199] unbound[39:1] info: server stats for thread 1: requestlist max 0 avg 0 exceeded 0 jostled 0
+[10741.167589] unbound[39]: [1775597199] unbound[39:1] info: mesh has 0 recursion states (0 with reply, 0 detached), 0 waiting replies, 0 recursion replies sent, 0 replies dropped, 0 states jostled out
+[10741.167663] unbound[39]: [1775597199] unbound[39:1] debug: cache memory msg=69608 rrset=75723 infra=8698 val=68767 subnet=0
+[10741.344193] unbound[39]: [1775597199] unbound[39:0] info: server stats for thread 0: 0 queries, 0 answers from cache, 0 recursions, 0 prefetch, 0 rejected by ip ratelimiting
+[10741.344380] unbound[39]: [1775597199] unbound[39:0] info: server stats for thread 0: requestlist max 0 avg 0 exceeded 0 jostled 0
+[10741.344469] unbound[39]: [1775597199] unbound[39:0] info: mesh has 0 recursion states (0 with reply, 0 detached), 0 waiting replies, 0 recursion replies sent, 0 replies dropped, 0 states jostled out
+[10741.344554] unbound[39]: [1775597199] unbound[39:0] debug: cache memory msg=69608 rrset=75723 infra=8698 val=68767 subnet=0
+[10776.286692] unbound[39]: [1775597234] unbound[39:0] query: 127.0.0.1 . NS IN
+[10776.287096] unbound[39]: [1775597234] unbound[39:0] reply: 127.0.0.1 . NS IN NOERROR 0.000000 1 239
+[10801.224616] unbound[39]: [1775597259] unbound[39:1] info: server stats for thread 1: 0 queries, 0 answers from cache, 0 recursions, 0 prefetch, 0 rejected by ip ratelimiting
+[10801.224780] unbound[39]: [1775597259] unbound[39:1] info: server stats for thread 1: requestlist max 0 avg 0 exceeded 0 jostled 0
+[10801.224903] unbound[39]: [1775597259] unbound[39:1] info: mesh has 0 recursion states (0 with reply, 0 detached), 0 waiting replies, 0 recursion replies sent, 0 replies dropped, 0 states jostled out
+[10801.225003] unbound[39]: [1775597259] unbound[39:1] debug: cache memory msg=69608 rrset=75723 infra=8698 val=68767 subnet=0
+[10801.372195] unbound[39]: [1775597259] unbound[39:0] info: server stats for thread 0: 1 queries, 1 answers from cache, 0 recursions, 0 prefetch, 0 rejected by ip ratelimiting
+[10801.372506] unbound[39]: [1775597259] unbound[39:0] info: server stats for thread 0: requestlist max 0 avg 0 exceeded 0 jostled 0
+[10801.372638] unbound[39]: [1775597259] unbound[39:0] info: mesh has 0 recursion states (0 with reply, 0 detached), 0 waiting replies, 0 recursion replies sent, 0 replies dropped, 0 states jostled out
+[10801.372734] unbound[39]: [1775597259] unbound[39:0] debug: cache memory msg=69608 rrset=75723 infra=8698 val=68767 subnet=0
+[10828.958545] unbound[39]: [1775597287] unbound[39:0] query: 127.0.0.1 isc.org. A IN
+[10828.958871] unbound[39]: [1775597287] unbound[39:0] reply: 127.0.0.1 isc.org. A IN NOERROR 0.000000 1 100
+[10861.231082] unbound[39]: [1775597319] unbound[39:1] info: server stats for thread 1: 0 queries, 0 answers from cache, 0 recursions, 0 prefetch, 0 rejected by ip ratelimiting
+[10861.231390] unbound[39]: [1775597319] unbound[39:1] info: server stats for thread 1: requestlist max 0 avg 0 exceeded 0 jostled 0
+[10861.231476] unbound[39]: [1775597319] unbound[39:1] info: mesh has 0 recursion states (0 with reply, 0 detached), 0 waiting replies, 0 recursion replies sent, 0 replies dropped, 0 states jostled out
+[10861.231544] unbound[39]: [1775597319] unbound[39:1] debug: cache memory msg=69608 rrset=75723 infra=8698 val=68767 subnet=0
+[10861.396247] unbound[39]: [1775597319] unbound[39:0] info: server stats for thread 0: 1 queries, 1 answers from cache, 0 recursions, 0 prefetch, 0 rejected by ip ratelimiting
+[10861.396510] unbound[39]: [1775597319] unbound[39:0] info: server stats for thread 0: requestlist max 0 avg 0 exceeded 0 jostled 0
+[10861.396616] unbound[39]: [1775597319] unbound[39:0] info: mesh has 0 recursion states (0 with reply, 0 detached), 0 waiting replies, 0 recursion replies sent, 0 replies dropped, 0 states jostled out
+[10861.396721] unbound[39]: [1775597319] unbound[39:0] debug: cache memory msg=69608 rrset=75723 infra=8698 val=68767 subnet=0
+[10866.370152] unbound[39]: [1775597324] unbound[39:1] query: 127.0.0.1 . NS IN
+[10866.370326] unbound[39]: [1775597324] unbound[39:1] reply: 127.0.0.1 . NS IN NOERROR 0.000000 1 239
+[10883.182046] unbound[39]: [1775597341] unbound[39:0] debug: new control connection from 127.0.0.1 port 34224
+[10883.226292] unbound[39]: [1775597341] unbound[39:0] info: control cmd:  stats_noreset
+[10883.239649] unbound[39]: [1775597341] unbound[39:1] query: 127.0.0.1 isc.org. A IN
+[10883.239812] unbound[39]: [1775597341] unbound[39:1] reply: 127.0.0.1 isc.org. A IN NOERROR 0.000000 1 100
+[10883.260417] unbound[39]: [1775597341] unbound[39:1] query: 127.0.0.1 isc.org. A IN
+[10883.260545] unbound[39]: [1775597341] unbound[39:1] reply: 127.0.0.1 isc.org. A IN NOERROR 0.000000 1 100
+[10883.270259] unbound[39]: [1775597341] unbound[39:1] query: 127.0.0.1 isc.org. A IN
+[10883.270360] unbound[39]: [1775597341] unbound[39:1] reply: 127.0.0.1 isc.org. A IN NOERROR 0.000000 1 100
+[10883.280267] unbound[39]: [1775597341] unbound[39:1] query: 127.0.0.1 isc.org. A IN
+[10883.280379] unbound[39]: [1775597341] unbound[39:1] reply: 127.0.0.1 isc.org. A IN NOERROR 0.000000 1 100
+[10883.290085] unbound[39]: [1775597341] unbound[39:0] query: 127.0.0.1 isc.org. A IN
+[10883.290228] unbound[39]: [1775597341] unbound[39:0] reply: 127.0.0.1 isc.org. A IN NOERROR 0.000000 1 100
+[10883.299972] unbound[39]: [1775597341] unbound[39:1] query: 127.0.0.1 isc.org. A IN
+[10883.300104] unbound[39]: [1775597341] unbound[39:1] reply: 127.0.0.1 isc.org. A IN NOERROR 0.000000 1 100
+[10883.309954] unbound[39]: [1775597341] unbound[39:1] query: 127.0.0.1 isc.org. A IN
+[10883.310059] unbound[39]: [1775597341] unbound[39:1] reply: 127.0.0.1 isc.org. A IN NOERROR 0.000000 1 100
+[10883.319834] unbound[39]: [1775597341] unbound[39:1] query: 127.0.0.1 isc.org. A IN
+[10883.319958] unbound[39]: [1775597341] unbound[39:1] reply: 127.0.0.1 isc.org. A IN NOERROR 0.000000 1 100
+[10883.329938] unbound[39]: [1775597341] unbound[39:0] query: 127.0.0.1 isc.org. A IN
+[10883.330035] unbound[39]: [1775597341] unbound[39:0] reply: 127.0.0.1 isc.org. A IN NOERROR 0.000000 1 100
+[10883.339889] unbound[39]: [1775597341] unbound[39:0] query: 127.0.0.1 isc.org. A IN
+[10883.339998] unbound[39]: [1775597341] unbound[39:0] reply: 127.0.0.1 isc.org. A IN NOERROR 0.000000 1 100
+[10883.360355] unbound[39]: [1775597341] unbound[39:0] query: 127.0.0.1 isc.org. A IN
+[10883.360497] unbound[39]: [1775597341] unbound[39:0] reply: 127.0.0.1 isc.org. A IN NOERROR 0.000000 1 100
+[10883.370212] unbound[39]: [1775597341] unbound[39:0] query: 127.0.0.1 isc.org. A IN
+[10883.370316] unbound[39]: [1775597341] unbound[39:0] reply: 127.0.0.1 isc.org. A IN NOERROR 0.000000 1 100
+[10883.379635] unbound[39]: [1775597341] unbound[39:1] query: 127.0.0.1 isc.org. A IN
+[10883.379732] unbound[39]: [1775597341] unbound[39:1] reply: 127.0.0.1 isc.org. A IN NOERROR 0.000000 1 100
+[10883.400578] unbound[39]: [1775597341] unbound[39:1] query: 127.0.0.1 isc.org. A IN
+[10883.400719] unbound[39]: [1775597341] unbound[39:1] reply: 127.0.0.1 isc.org. A IN NOERROR 0.000000 1 100
+[10883.411332] unbound[39]: [1775597341] unbound[39:1] query: 127.0.0.1 isc.org. A IN
+[10883.411461] unbound[39]: [1775597341] unbound[39:1] reply: 127.0.0.1 isc.org. A IN NOERROR 0.000000 1 100
+[10883.421859] unbound[39]: [1775597341] unbound[39:0] query: 127.0.0.1 isc.org. A IN
+[10883.422018] unbound[39]: [1775597341] unbound[39:0] reply: 127.0.0.1 isc.org. A IN NOERROR 0.000000 1 100
+[10883.432466] unbound[39]: [1775597341] unbound[39:0] query: 127.0.0.1 isc.org. A IN
+[10883.432605] unbound[39]: [1775597341] unbound[39:0] reply: 127.0.0.1 isc.org. A IN NOERROR 0.000000 1 100
+[10883.442639] unbound[39]: [1775597341] unbound[39:1] query: 127.0.0.1 isc.org. A IN
+[10883.442780] unbound[39]: [1775597341] unbound[39:1] reply: 127.0.0.1 isc.org. A IN NOERROR 0.000000 1 100
+[10883.452868] unbound[39]: [1775597341] unbound[39:0] query: 127.0.0.1 isc.org. A IN
+[10883.452982] unbound[39]: [1775597341] unbound[39:0] reply: 127.0.0.1 isc.org. A IN NOERROR 0.000000 1 100
+[10883.462785] unbound[39]: [1775597341] unbound[39:1] query: 127.0.0.1 isc.org. A IN
+[10883.462927] unbound[39]: [1775597341] unbound[39:1] reply: 127.0.0.1 isc.org. A IN NOERROR 0.000000 1 100
+[10883.470317] unbound[39]: [1775597341] unbound[39:0] debug: new control connection from 127.0.0.1 port 34234
+[10883.476638] unbound[39]: [1775597341] unbound[39:0] info: control cmd:  stats_noreset
+
+=== 20 LOCAL QUERIES TO isc.org ===
+151.101.2.217
+151.101.66.217
+151.101.130.217
+151.101.194.217
+151.101.2.217
+151.101.66.217
+151.101.130.217
+151.101.194.217
+151.101.194.217
+151.101.2.217
+151.101.66.217
+151.101.130.217
+151.101.130.217
+151.101.194.217
+151.101.2.217
+151.101.66.217
+151.101.66.217
+151.101.130.217
+151.101.194.217
+151.101.2.217
+151.101.194.217
+151.101.2.217
+151.101.66.217
+151.101.130.217
+151.101.130.217
+151.101.194.217
+151.101.2.217
+151.101.66.217
+151.101.2.217
+151.101.66.217
+151.101.130.217
+151.101.194.217
+151.101.194.217
+151.101.2.217
+151.101.66.217
+151.101.130.217
+151.101.66.217
+151.101.130.217
+151.101.194.217
+151.101.2.217
+151.101.2.217
+151.101.66.217
+151.101.130.217
+151.101.194.217
+151.101.66.217
+151.101.130.217
+151.101.194.217
+151.101.2.217
+151.101.2.217
+151.101.66.217
+151.101.130.217
+151.101.194.217
+151.101.130.217
+151.101.194.217
+151.101.2.217
+151.101.66.217
+151.101.66.217
+151.101.130.217
+151.101.194.217
+151.101.2.217
+151.101.130.217
+151.101.194.217
+151.101.2.217
+151.101.66.217
+151.101.130.217
+151.101.194.217
+151.101.2.217
+151.101.66.217
+151.101.66.217
+151.101.130.217
+151.101.194.217
+151.101.2.217
+151.101.130.217
+151.101.194.217
+151.101.2.217
+151.101.66.217
+151.101.2.217
+151.101.66.217
+151.101.130.217
+151.101.194.217
+
+=== UNBOUND LOGS AFTER ===
+[10260.906833] unbound[39]: [1775596719] unbound[39:1] info: mesh has 0 recursion states (0 with reply, 0 detached), 0 waiting replies, 4 recursion replies sent, 0 replies dropped, 0 states jostled out
+[10260.906918] unbound[39]: [1775596719] unbound[39:1] info: average recursion processing time 0.245396 sec
+[10260.906999] unbound[39]: [1775596719] unbound[39:1] info: histogram of recursion processing times
+[10260.907080] unbound[39]: [1775596719] unbound[39:1] info: [25%]=0.098304 median[50%]=0.131072 [75%]=0.262144
+[10260.907174] unbound[39]: [1775596719] unbound[39:1] info: lower(secs) upper(secs) recursions
+[10260.907255] unbound[39]: [1775596719] unbound[39:1] info:    0.065536    0.131072 2
+[10260.907335] unbound[39]: [1775596719] unbound[39:1] info:    0.131072    0.262144 1
+[10260.907417] unbound[39]: [1775596719] unbound[39:1] info:    0.524288    1.000000 1
+[10260.907491] unbound[39]: [1775596719] unbound[39:1] debug: cache memory msg=69608 rrset=75723 infra=8698 val=68767 subnet=0
+[10260.972185] unbound[39]: [1775596719] unbound[39:0] info: server stats for thread 0: 2 queries, 1 answers from cache, 1 recursions, 0 prefetch, 0 rejected by ip ratelimiting
+[10260.972361] unbound[39]: [1775596719] unbound[39:0] info: server stats for thread 0: requestlist max 0 avg 0 exceeded 0 jostled 0
+[10260.972509] unbound[39]: [1775596719] unbound[39:0] info: mesh has 0 recursion states (0 with reply, 0 detached), 0 waiting replies, 1 recursion replies sent, 0 replies dropped, 0 states jostled out
+[10260.972600] unbound[39]: [1775596719] unbound[39:0] info: average recursion processing time 0.411375 sec
+[10260.972684] unbound[39]: [1775596719] unbound[39:0] info: histogram of recursion processing times
+[10260.972759] unbound[39]: [1775596719] unbound[39:0] info: [25%]=0 median[50%]=0 [75%]=0
+[10260.972831] unbound[39]: [1775596719] unbound[39:0] info: lower(secs) upper(secs) recursions
+[10260.972890] unbound[39]: [1775596719] unbound[39:0] info:    0.262144    0.524288 1
+[10260.972957] unbound[39]: [1775596719] unbound[39:0] debug: cache memory msg=69608 rrset=75723 infra=8698 val=68767 subnet=0
+[10320.952638] unbound[39]: [1775596779] unbound[39:1] info: server stats for thread 1: 0 queries, 0 answers from cache, 0 recursions, 0 prefetch, 0 rejected by ip ratelimiting
+[10320.952939] unbound[39]: [1775596779] unbound[39:1] info: server stats for thread 1: requestlist max 0 avg 0 exceeded 0 jostled 0
+[10320.953014] unbound[39]: [1775596779] unbound[39:1] info: mesh has 0 recursion states (0 with reply, 0 detached), 0 waiting replies, 0 recursion replies sent, 0 replies dropped, 0 states jostled out
+[10320.953102] unbound[39]: [1775596779] unbound[39:1] debug: cache memory msg=69608 rrset=75723 infra=8698 val=68767 subnet=0
+[10321.032333] unbound[39]: [1775596779] unbound[39:0] info: server stats for thread 0: 0 queries, 0 answers from cache, 0 recursions, 0 prefetch, 0 rejected by ip ratelimiting
+[10321.032537] unbound[39]: [1775596779] unbound[39:0] info: server stats for thread 0: requestlist max 0 avg 0 exceeded 0 jostled 0
+[10321.032623] unbound[39]: [1775596779] unbound[39:0] info: mesh has 0 recursion states (0 with reply, 0 detached), 0 waiting replies, 0 recursion replies sent, 0 replies dropped, 0 states jostled out
+[10321.032711] unbound[39]: [1775596779] unbound[39:0] debug: cache memory msg=69608 rrset=75723 infra=8698 val=68767 subnet=0
+[10325.902971] unbound[39]: [1775596784] unbound[39:0] query: 127.0.0.1 . NS IN
+[10325.903136] unbound[39]: [1775596784] unbound[39:0] reply: 127.0.0.1 . NS IN NOERROR 0.000000 1 239
+[10380.979164] unbound[39]: [1775596839] unbound[39:1] info: server stats for thread 1: 0 queries, 0 answers from cache, 0 recursions, 0 prefetch, 0 rejected by ip ratelimiting
+[10380.979562] unbound[39]: [1775596839] unbound[39:1] info: server stats for thread 1: requestlist max 0 avg 0 exceeded 0 jostled 0
+[10380.979681] unbound[39]: [1775596839] unbound[39:1] info: mesh has 0 recursion states (0 with reply, 0 detached), 0 waiting replies, 0 recursion replies sent, 0 replies dropped, 0 states jostled out
+[10380.979785] unbound[39]: [1775596839] unbound[39:1] debug: cache memory msg=69608 rrset=75723 infra=8698 val=68767 subnet=0
+[10381.088217] unbound[39]: [1775596839] unbound[39:0] info: server stats for thread 0: 1 queries, 1 answers from cache, 0 recursions, 0 prefetch, 0 rejected by ip ratelimiting
+[10381.088431] unbound[39]: [1775596839] unbound[39:0] info: server stats for thread 0: requestlist max 0 avg 0 exceeded 0 jostled 0
+[10381.088530] unbound[39]: [1775596839] unbound[39:0] info: mesh has 0 recursion states (0 with reply, 0 detached), 0 waiting replies, 0 recursion replies sent, 0 replies dropped, 0 states jostled out
+[10381.088623] unbound[39]: [1775596839] unbound[39:0] debug: cache memory msg=69608 rrset=75723 infra=8698 val=68767 subnet=0
+[10415.978319] unbound[39]: [1775596874] unbound[39:1] query: 127.0.0.1 . NS IN
+[10415.978734] unbound[39]: [1775596874] unbound[39:1] reply: 127.0.0.1 . NS IN NOERROR 0.000000 1 239
+[10441.032318] unbound[39]: [1775596899] unbound[39:1] info: server stats for thread 1: 1 queries, 1 answers from cache, 0 recursions, 0 prefetch, 0 rejected by ip ratelimiting
+[10441.034918] unbound[39]: [1775596899] unbound[39:1] info: server stats for thread 1: requestlist max 0 avg 0 exceeded 0 jostled 0
+[10441.035022] unbound[39]: [1775596899] unbound[39:1] info: mesh has 0 recursion states (0 with reply, 0 detached), 0 waiting replies, 0 recursion replies sent, 0 replies dropped, 0 states jostled out
+[10441.035099] unbound[39]: [1775596899] unbound[39:1] debug: cache memory msg=69608 rrset=75723 infra=8698 val=68767 subnet=0
+[10441.148290] unbound[39]: [1775596899] unbound[39:0] info: server stats for thread 0: 0 queries, 0 answers from cache, 0 recursions, 0 prefetch, 0 rejected by ip ratelimiting
+[10441.148546] unbound[39]: [1775596899] unbound[39:0] info: server stats for thread 0: requestlist max 0 avg 0 exceeded 0 jostled 0
+[10441.148707] unbound[39]: [1775596899] unbound[39:0] info: mesh has 0 recursion states (0 with reply, 0 detached), 0 waiting replies, 0 recursion replies sent, 0 replies dropped, 0 states jostled out
+[10441.148811] unbound[39]: [1775596899] unbound[39:0] debug: cache memory msg=69608 rrset=75723 infra=8698 val=68767 subnet=0
+[10501.057379] unbound[39]: [1775596959] unbound[39:1] info: server stats for thread 1: 0 queries, 0 answers from cache, 0 recursions, 0 prefetch, 0 rejected by ip ratelimiting
+[10501.057782] unbound[39]: [1775596959] unbound[39:1] info: server stats for thread 1: requestlist max 0 avg 0 exceeded 0 jostled 0
+[10501.057906] unbound[39]: [1775596959] unbound[39:1] info: mesh has 0 recursion states (0 with reply, 0 detached), 0 waiting replies, 0 recursion replies sent, 0 replies dropped, 0 states jostled out
+[10501.057977] unbound[39]: [1775596959] unbound[39:1] debug: cache memory msg=69608 rrset=75723 infra=8698 val=68767 subnet=0
+[10501.208219] unbound[39]: [1775596959] unbound[39:0] info: server stats for thread 0: 0 queries, 0 answers from cache, 0 recursions, 0 prefetch, 0 rejected by ip ratelimiting
+[10501.208472] unbound[39]: [1775596959] unbound[39:0] info: server stats for thread 0: requestlist max 0 avg 0 exceeded 0 jostled 0
+[10501.208574] unbound[39]: [1775596959] unbound[39:0] info: mesh has 0 recursion states (0 with reply, 0 detached), 0 waiting replies, 0 recursion replies sent, 0 replies dropped, 0 states jostled out
+[10501.208663] unbound[39]: [1775596959] unbound[39:0] debug: cache memory msg=69608 rrset=75723 infra=8698 val=68767 subnet=0
+[10506.059145] unbound[39]: [1775596964] unbound[39:1] query: 127.0.0.1 . NS IN
+[10506.059294] unbound[39]: [1775596964] unbound[39:1] reply: 127.0.0.1 . NS IN NOERROR 0.000000 1 239
+[10561.084785] unbound[39]: [1775597019] unbound[39:1] info: server stats for thread 1: 1 queries, 1 answers from cache, 0 recursions, 0 prefetch, 0 rejected by ip ratelimiting
+[10561.085078] unbound[39]: [1775597019] unbound[39:1] info: server stats for thread 1: requestlist max 0 avg 0 exceeded 0 jostled 0
+[10561.085170] unbound[39]: [1775597019] unbound[39:1] info: mesh has 0 recursion states (0 with reply, 0 detached), 0 waiting replies, 0 recursion replies sent, 0 replies dropped, 0 states jostled out
+[10561.085248] unbound[39]: [1775597019] unbound[39:1] debug: cache memory msg=69608 rrset=75723 infra=8698 val=68767 subnet=0
+[10561.225134] unbound[39]: [1775597019] unbound[39:0] info: server stats for thread 0: 0 queries, 0 answers from cache, 0 recursions, 0 prefetch, 0 rejected by ip ratelimiting
+[10561.225348] unbound[39]: [1775597019] unbound[39:0] info: server stats for thread 0: requestlist max 0 avg 0 exceeded 0 jostled 0
+[10561.225441] unbound[39]: [1775597019] unbound[39:0] info: mesh has 0 recursion states (0 with reply, 0 detached), 0 waiting replies, 0 recursion replies sent, 0 replies dropped, 0 states jostled out
+[10561.225523] unbound[39]: [1775597019] unbound[39:0] debug: cache memory msg=69608 rrset=75723 infra=8698 val=68767 subnet=0
+[10596.134169] unbound[39]: [1775597054] unbound[39:0] query: 127.0.0.1 . NS IN
+[10596.134483] unbound[39]: [1775597054] unbound[39:0] reply: 127.0.0.1 . NS IN NOERROR 0.000000 1 239
+[10621.088595] unbound[39]: [1775597079] unbound[39:1] info: server stats for thread 1: 0 queries, 0 answers from cache, 0 recursions, 0 prefetch, 0 rejected by ip ratelimiting
+[10621.088763] unbound[39]: [1775597079] unbound[39:1] info: server stats for thread 1: requestlist max 0 avg 0 exceeded 0 jostled 0
+[10621.088866] unbound[39]: [1775597079] unbound[39:1] info: mesh has 0 recursion states (0 with reply, 0 detached), 0 waiting replies, 0 recursion replies sent, 0 replies dropped, 0 states jostled out
+[10621.088996] unbound[39]: [1775597079] unbound[39:1] debug: cache memory msg=69608 rrset=75723 infra=8698 val=68767 subnet=0
+[10621.228526] unbound[39]: [1775597079] unbound[39:0] info: server stats for thread 0: 1 queries, 1 answers from cache, 0 recursions, 0 prefetch, 0 rejected by ip ratelimiting
+[10621.228746] unbound[39]: [1775597079] unbound[39:0] info: server stats for thread 0: requestlist max 0 avg 0 exceeded 0 jostled 0
+[10621.228905] unbound[39]: [1775597079] unbound[39:0] info: mesh has 0 recursion states (0 with reply, 0 detached), 0 waiting replies, 0 recursion replies sent, 0 replies dropped, 0 states jostled out
+[10621.229035] unbound[39]: [1775597079] unbound[39:0] debug: cache memory msg=69608 rrset=75723 infra=8698 val=68767 subnet=0
+[10681.148528] unbound[39]: [1775597139] unbound[39:1] info: server stats for thread 1: 0 queries, 0 answers from cache, 0 recursions, 0 prefetch, 0 rejected by ip ratelimiting
+[10681.148847] unbound[39]: [1775597139] unbound[39:1] info: server stats for thread 1: requestlist max 0 avg 0 exceeded 0 jostled 0
+[10681.148935] unbound[39]: [1775597139] unbound[39:1] info: mesh has 0 recursion states (0 with reply, 0 detached), 0 waiting replies, 0 recursion replies sent, 0 replies dropped, 0 states jostled out
+[10681.149014] unbound[39]: [1775597139] unbound[39:1] debug: cache memory msg=69608 rrset=75723 infra=8698 val=68767 subnet=0
+[10681.288625] unbound[39]: [1775597139] unbound[39:0] info: server stats for thread 0: 0 queries, 0 answers from cache, 0 recursions, 0 prefetch, 0 rejected by ip ratelimiting
+[10681.288831] unbound[39]: [1775597139] unbound[39:0] info: server stats for thread 0: requestlist max 0 avg 0 exceeded 0 jostled 0
+[10681.288918] unbound[39]: [1775597139] unbound[39:0] info: mesh has 0 recursion states (0 with reply, 0 detached), 0 waiting replies, 0 recursion replies sent, 0 replies dropped, 0 states jostled out
+[10681.289004] unbound[39]: [1775597139] unbound[39:0] debug: cache memory msg=69608 rrset=75723 infra=8698 val=68767 subnet=0
+[10686.218105] unbound[39]: [1775597144] unbound[39:1] query: 127.0.0.1 . NS IN
+[10686.218266] unbound[39]: [1775597144] unbound[39:1] reply: 127.0.0.1 . NS IN NOERROR 0.000000 1 239
+[10730.107366] unbound[39]: [1775597188] unbound[39:1] query: 127.0.0.1 isc.org. A IN
+[10730.107808] unbound[39]: [1775597188] unbound[39:1] reply: 127.0.0.1 isc.org. A IN NOERROR 0.000000 1 100
+[10741.164689] unbound[39]: [1775597199] unbound[39:1] info: server stats for thread 1: 2 queries, 2 answers from cache, 0 recursions, 0 prefetch, 0 rejected by ip ratelimiting
+[10741.167496] unbound[39]: [1775597199] unbound[39:1] info: server stats for thread 1: requestlist max 0 avg 0 exceeded 0 jostled 0
+[10741.167589] unbound[39]: [1775597199] unbound[39:1] info: mesh has 0 recursion states (0 with reply, 0 detached), 0 waiting replies, 0 recursion replies sent, 0 replies dropped, 0 states jostled out
+[10741.167663] unbound[39]: [1775597199] unbound[39:1] debug: cache memory msg=69608 rrset=75723 infra=8698 val=68767 subnet=0
+[10741.344193] unbound[39]: [1775597199] unbound[39:0] info: server stats for thread 0: 0 queries, 0 answers from cache, 0 recursions, 0 prefetch, 0 rejected by ip ratelimiting
+[10741.344380] unbound[39]: [1775597199] unbound[39:0] info: server stats for thread 0: requestlist max 0 avg 0 exceeded 0 jostled 0
+[10741.344469] unbound[39]: [1775597199] unbound[39:0] info: mesh has 0 recursion states (0 with reply, 0 detached), 0 waiting replies, 0 recursion replies sent, 0 replies dropped, 0 states jostled out
+[10741.344554] unbound[39]: [1775597199] unbound[39:0] debug: cache memory msg=69608 rrset=75723 infra=8698 val=68767 subnet=0
+[10776.286692] unbound[39]: [1775597234] unbound[39:0] query: 127.0.0.1 . NS IN
+[10776.287096] unbound[39]: [1775597234] unbound[39:0] reply: 127.0.0.1 . NS IN NOERROR 0.000000 1 239
+[10801.224616] unbound[39]: [1775597259] unbound[39:1] info: server stats for thread 1: 0 queries, 0 answers from cache, 0 recursions, 0 prefetch, 0 rejected by ip ratelimiting
+[10801.224780] unbound[39]: [1775597259] unbound[39:1] info: server stats for thread 1: requestlist max 0 avg 0 exceeded 0 jostled 0
+[10801.224903] unbound[39]: [1775597259] unbound[39:1] info: mesh has 0 recursion states (0 with reply, 0 detached), 0 waiting replies, 0 recursion replies sent, 0 replies dropped, 0 states jostled out
+[10801.225003] unbound[39]: [1775597259] unbound[39:1] debug: cache memory msg=69608 rrset=75723 infra=8698 val=68767 subnet=0
+[10801.372195] unbound[39]: [1775597259] unbound[39:0] info: server stats for thread 0: 1 queries, 1 answers from cache, 0 recursions, 0 prefetch, 0 rejected by ip ratelimiting
+[10801.372506] unbound[39]: [1775597259] unbound[39:0] info: server stats for thread 0: requestlist max 0 avg 0 exceeded 0 jostled 0
+[10801.372638] unbound[39]: [1775597259] unbound[39:0] info: mesh has 0 recursion states (0 with reply, 0 detached), 0 waiting replies, 0 recursion replies sent, 0 replies dropped, 0 states jostled out
+[10801.372734] unbound[39]: [1775597259] unbound[39:0] debug: cache memory msg=69608 rrset=75723 infra=8698 val=68767 subnet=0
+[10828.958545] unbound[39]: [1775597287] unbound[39:0] query: 127.0.0.1 isc.org. A IN
+[10828.958871] unbound[39]: [1775597287] unbound[39:0] reply: 127.0.0.1 isc.org. A IN NOERROR 0.000000 1 100
+[10861.231082] unbound[39]: [1775597319] unbound[39:1] info: server stats for thread 1: 0 queries, 0 answers from cache, 0 recursions, 0 prefetch, 0 rejected by ip ratelimiting
+[10861.231390] unbound[39]: [1775597319] unbound[39:1] info: server stats for thread 1: requestlist max 0 avg 0 exceeded 0 jostled 0
+[10861.231476] unbound[39]: [1775597319] unbound[39:1] info: mesh has 0 recursion states (0 with reply, 0 detached), 0 waiting replies, 0 recursion replies sent, 0 replies dropped, 0 states jostled out
+[10861.231544] unbound[39]: [1775597319] unbound[39:1] debug: cache memory msg=69608 rrset=75723 infra=8698 val=68767 subnet=0
+[10861.396247] unbound[39]: [1775597319] unbound[39:0] info: server stats for thread 0: 1 queries, 1 answers from cache, 0 recursions, 0 prefetch, 0 rejected by ip ratelimiting
+[10861.396510] unbound[39]: [1775597319] unbound[39:0] info: server stats for thread 0: requestlist max 0 avg 0 exceeded 0 jostled 0
+[10861.396616] unbound[39]: [1775597319] unbound[39:0] info: mesh has 0 recursion states (0 with reply, 0 detached), 0 waiting replies, 0 recursion replies sent, 0 replies dropped, 0 states jostled out
+[10861.396721] unbound[39]: [1775597319] unbound[39:0] debug: cache memory msg=69608 rrset=75723 infra=8698 val=68767 subnet=0
+[10866.370152] unbound[39]: [1775597324] unbound[39:1] query: 127.0.0.1 . NS IN
+[10866.370326] unbound[39]: [1775597324] unbound[39:1] reply: 127.0.0.1 . NS IN NOERROR 0.000000 1 239
+[10883.182046] unbound[39]: [1775597341] unbound[39:0] debug: new control connection from 127.0.0.1 port 34224
+[10883.226292] unbound[39]: [1775597341] unbound[39:0] info: control cmd:  stats_noreset
+[10883.239649] unbound[39]: [1775597341] unbound[39:1] query: 127.0.0.1 isc.org. A IN
+[10883.239812] unbound[39]: [1775597341] unbound[39:1] reply: 127.0.0.1 isc.org. A IN NOERROR 0.000000 1 100
+[10883.260417] unbound[39]: [1775597341] unbound[39:1] query: 127.0.0.1 isc.org. A IN
+[10883.260545] unbound[39]: [1775597341] unbound[39:1] reply: 127.0.0.1 isc.org. A IN NOERROR 0.000000 1 100
+[10883.270259] unbound[39]: [1775597341] unbound[39:1] query: 127.0.0.1 isc.org. A IN
+[10883.270360] unbound[39]: [1775597341] unbound[39:1] reply: 127.0.0.1 isc.org. A IN NOERROR 0.000000 1 100
+[10883.280267] unbound[39]: [1775597341] unbound[39:1] query: 127.0.0.1 isc.org. A IN
+[10883.280379] unbound[39]: [1775597341] unbound[39:1] reply: 127.0.0.1 isc.org. A IN NOERROR 0.000000 1 100
+[10883.290085] unbound[39]: [1775597341] unbound[39:0] query: 127.0.0.1 isc.org. A IN
+[10883.290228] unbound[39]: [1775597341] unbound[39:0] reply: 127.0.0.1 isc.org. A IN NOERROR 0.000000 1 100
+[10883.299972] unbound[39]: [1775597341] unbound[39:1] query: 127.0.0.1 isc.org. A IN
+[10883.300104] unbound[39]: [1775597341] unbound[39:1] reply: 127.0.0.1 isc.org. A IN NOERROR 0.000000 1 100
+[10883.309954] unbound[39]: [1775597341] unbound[39:1] query: 127.0.0.1 isc.org. A IN
+[10883.310059] unbound[39]: [1775597341] unbound[39:1] reply: 127.0.0.1 isc.org. A IN NOERROR 0.000000 1 100
+[10883.319834] unbound[39]: [1775597341] unbound[39:1] query: 127.0.0.1 isc.org. A IN
+[10883.319958] unbound[39]: [1775597341] unbound[39:1] reply: 127.0.0.1 isc.org. A IN NOERROR 0.000000 1 100
+[10883.329938] unbound[39]: [1775597341] unbound[39:0] query: 127.0.0.1 isc.org. A IN
+[10883.330035] unbound[39]: [1775597341] unbound[39:0] reply: 127.0.0.1 isc.org. A IN NOERROR 0.000000 1 100
+[10883.339889] unbound[39]: [1775597341] unbound[39:0] query: 127.0.0.1 isc.org. A IN
+[10883.339998] unbound[39]: [1775597341] unbound[39:0] reply: 127.0.0.1 isc.org. A IN NOERROR 0.000000 1 100
+[10883.360355] unbound[39]: [1775597341] unbound[39:0] query: 127.0.0.1 isc.org. A IN
+[10883.360497] unbound[39]: [1775597341] unbound[39:0] reply: 127.0.0.1 isc.org. A IN NOERROR 0.000000 1 100
+[10883.370212] unbound[39]: [1775597341] unbound[39:0] query: 127.0.0.1 isc.org. A IN
+[10883.370316] unbound[39]: [1775597341] unbound[39:0] reply: 127.0.0.1 isc.org. A IN NOERROR 0.000000 1 100
+[10883.379635] unbound[39]: [1775597341] unbound[39:1] query: 127.0.0.1 isc.org. A IN
+[10883.379732] unbound[39]: [1775597341] unbound[39:1] reply: 127.0.0.1 isc.org. A IN NOERROR 0.000000 1 100
+[10883.400578] unbound[39]: [1775597341] unbound[39:1] query: 127.0.0.1 isc.org. A IN
+[10883.400719] unbound[39]: [1775597341] unbound[39:1] reply: 127.0.0.1 isc.org. A IN NOERROR 0.000000 1 100
+[10883.411332] unbound[39]: [1775597341] unbound[39:1] query: 127.0.0.1 isc.org. A IN
+[10883.411461] unbound[39]: [1775597341] unbound[39:1] reply: 127.0.0.1 isc.org. A IN NOERROR 0.000000 1 100
+[10883.421859] unbound[39]: [1775597341] unbound[39:0] query: 127.0.0.1 isc.org. A IN
+[10883.422018] unbound[39]: [1775597341] unbound[39:0] reply: 127.0.0.1 isc.org. A IN NOERROR 0.000000 1 100
+[10883.432466] unbound[39]: [1775597341] unbound[39:0] query: 127.0.0.1 isc.org. A IN
+[10883.432605] unbound[39]: [1775597341] unbound[39:0] reply: 127.0.0.1 isc.org. A IN NOERROR 0.000000 1 100
+[10883.442639] unbound[39]: [1775597341] unbound[39:1] query: 127.0.0.1 isc.org. A IN
+[10883.442780] unbound[39]: [1775597341] unbound[39:1] reply: 127.0.0.1 isc.org. A IN NOERROR 0.000000 1 100
+[10883.452868] unbound[39]: [1775597341] unbound[39:0] query: 127.0.0.1 isc.org. A IN
+[10883.452982] unbound[39]: [1775597341] unbound[39:0] reply: 127.0.0.1 isc.org. A IN NOERROR 0.000000 1 100
+[10883.462785] unbound[39]: [1775597341] unbound[39:1] query: 127.0.0.1 isc.org. A IN
+[10883.462927] unbound[39]: [1775597341] unbound[39:1] reply: 127.0.0.1 isc.org. A IN NOERROR 0.000000 1 100
+[10883.470317] unbound[39]: [1775597341] unbound[39:0] debug: new control connection from 127.0.0.1 port 34234
+[10883.476638] unbound[39]: [1775597341] unbound[39:0] info: control cmd:  stats_noreset
+[10899.561719] unbound[39]: [1775597357] unbound[39:0] query: 127.0.0.1 isc.org. A IN
+[10899.562015] unbound[39]: [1775597357] unbound[39:0] reply: 127.0.0.1 isc.org. A IN NOERROR 0.000000 1 100
+[10899.665450] unbound[39]: [1775597357] unbound[39:0] query: 127.0.0.1 isc.org. A IN
+[10899.665602] unbound[39]: [1775597357] unbound[39:0] reply: 127.0.0.1 isc.org. A IN NOERROR 0.000000 1 100
+[10899.769660] unbound[39]: [1775597357] unbound[39:0] query: 127.0.0.1 isc.org. A IN
+[10899.769795] unbound[39]: [1775597357] unbound[39:0] reply: 127.0.0.1 isc.org. A IN NOERROR 0.000000 1 100
+[10899.910605] unbound[39]: [1775597358] unbound[39:1] query: 127.0.0.1 isc.org. A IN
+[10899.910757] unbound[39]: [1775597358] unbound[39:1] reply: 127.0.0.1 isc.org. A IN NOERROR 0.000000 1 100
+[10900.012986] unbound[39]: [1775597358] unbound[39:1] query: 127.0.0.1 isc.org. A IN
+[10900.013130] unbound[39]: [1775597358] unbound[39:1] reply: 127.0.0.1 isc.org. A IN NOERROR 0.000000 1 100
+[10900.083028] unbound[39]: [1775597358] unbound[39:0] query: 127.0.0.1 isc.org. A IN
+[10900.083200] unbound[39]: [1775597358] unbound[39:0] reply: 127.0.0.1 isc.org. A IN NOERROR 0.000000 1 100
+[10900.194590] unbound[39]: [1775597358] unbound[39:0] query: 127.0.0.1 isc.org. A IN
+[10900.194782] unbound[39]: [1775597358] unbound[39:0] reply: 127.0.0.1 isc.org. A IN NOERROR 0.000000 1 100
+[10900.282221] unbound[39]: [1775597358] unbound[39:1] query: 127.0.0.1 isc.org. A IN
+[10900.282367] unbound[39]: [1775597358] unbound[39:1] reply: 127.0.0.1 isc.org. A IN NOERROR 0.000000 1 100
+[10900.352233] unbound[39]: [1775597358] unbound[39:1] query: 127.0.0.1 isc.org. A IN
+[10900.352399] unbound[39]: [1775597358] unbound[39:1] reply: 127.0.0.1 isc.org. A IN NOERROR 0.000000 1 100
+[10900.445288] unbound[39]: [1775597358] unbound[39:1] query: 127.0.0.1 isc.org. A IN
+[10900.445423] unbound[39]: [1775597358] unbound[39:1] reply: 127.0.0.1 isc.org. A IN NOERROR 0.000000 1 100
+[10900.561972] unbound[39]: [1775597358] unbound[39:0] query: 127.0.0.1 isc.org. A IN
+[10900.562090] unbound[39]: [1775597358] unbound[39:0] reply: 127.0.0.1 isc.org. A IN NOERROR 0.000000 1 100
+[10900.677051] unbound[39]: [1775597358] unbound[39:1] query: 127.0.0.1 isc.org. A IN
+[10900.677200] unbound[39]: [1775597358] unbound[39:1] reply: 127.0.0.1 isc.org. A IN NOERROR 0.000000 1 100
+[10900.777566] unbound[39]: [1775597358] unbound[39:0] query: 127.0.0.1 isc.org. A IN
+[10900.777754] unbound[39]: [1775597358] unbound[39:0] reply: 127.0.0.1 isc.org. A IN NOERROR 0.000000 1 100
+[10900.882101] unbound[39]: [1775597359] unbound[39:0] query: 127.0.0.1 isc.org. A IN
+[10900.882272] unbound[39]: [1775597359] unbound[39:0] reply: 127.0.0.1 isc.org. A IN NOERROR 0.000000 1 100
+[10900.994208] unbound[39]: [1775597359] unbound[39:1] query: 127.0.0.1 isc.org. A IN
+[10900.994377] unbound[39]: [1775597359] unbound[39:1] reply: 127.0.0.1 isc.org. A IN NOERROR 0.000000 1 100
+[10901.089373] unbound[39]: [1775597359] unbound[39:1] query: 127.0.0.1 isc.org. A IN
+[10901.089524] unbound[39]: [1775597359] unbound[39:1] reply: 127.0.0.1 isc.org. A IN NOERROR 0.000000 1 100
+[10901.210401] unbound[39]: [1775597359] unbound[39:1] query: 127.0.0.1 isc.org. A IN
+[10901.210559] unbound[39]: [1775597359] unbound[39:1] reply: 127.0.0.1 isc.org. A IN NOERROR 0.000000 1 100
+[10901.317359] unbound[39]: [1775597359] unbound[39:0] query: 127.0.0.1 isc.org. A IN
+[10901.317487] unbound[39]: [1775597359] unbound[39:0] reply: 127.0.0.1 isc.org. A IN NOERROR 0.000000 1 100
+[10901.421874] unbound[39]: [1775597359] unbound[39:1] query: 127.0.0.1 isc.org. A IN
+[10901.422013] unbound[39]: [1775597359] unbound[39:1] reply: 127.0.0.1 isc.org. A IN NOERROR 0.000000 1 100
+[10901.538149] unbound[39]: [1775597359] unbound[39:0] query: 127.0.0.1 isc.org. A IN
+[10901.538309] unbound[39]: [1775597359] unbound[39:0] reply: 127.0.0.1 isc.org. A IN NOERROR 0.000000 1 100

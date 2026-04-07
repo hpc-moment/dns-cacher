@@ -1,0 +1,17 @@
+=== Изменение статистики после 20 запросов к isc.org ===
+> thread0.num.queries=8
+> thread0.num.cachehits=8
+> thread1.num.queries=13
+> thread1.num.cachehits=13
+> total.num.queries=21
+> total.num.cachehits=21
+> time.now=1775597341.699836
+> time.up=742.604863
+> time.elapsed=742.604863
+> num.query.type.A=20
+> num.query.class.IN=21
+> num.query.opcode.QUERY=21
+> num.query.flags.RD=21
+> num.query.flags.AD=21
+> num.query.edns.present=21
+> num.answer.rcode.NOERROR=21

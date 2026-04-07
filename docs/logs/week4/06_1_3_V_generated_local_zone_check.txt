@@ -1,3 +1,4 @@
+=== GENERATED local-zones.conf ===
 server:
 
 local-zone: "isc.org." transparent
@@ -22,3 +23,6 @@ local-data: "ns1.isc.org. 3600 IN A 149.20.2.26"
 local-data: "ns2.isc.org. 3600 IN A 199.6.1.52"
 local-data: "ns3.isc.org. 3600 IN A 51.75.79.143"
 local-data: "nsp.dnsnode.net. 3600 IN A 194.58.198.32"
+
+=== UNBOUND CHECKCONF ===
+unbound-checkconf: no errors in /etc/unbound/unbound.conf

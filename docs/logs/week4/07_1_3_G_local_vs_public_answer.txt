@@ -1,0 +1,53 @@
+=== LOCAL isc.org ANSWER ===
+
+; <<>> DiG 9.18.39-0ubuntu0.22.04.3-Ubuntu <<>> @127.0.0.1 isc.org A +dnssec
+; (1 server found)
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 14368
+;; flags: qr aa rd ra; QUERY: 1, ANSWER: 4, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags: do; udp: 1232
+;; QUESTION SECTION:
+;isc.org.			IN	A
+
+;; ANSWER SECTION:
+isc.org.		3600	IN	A	151.101.66.217
+isc.org.		3600	IN	A	151.101.130.217
+isc.org.		3600	IN	A	151.101.194.217
+isc.org.		3600	IN	A	151.101.2.217
+
+;; Query time: 0 msec
+;; SERVER: 127.0.0.1#53(127.0.0.1) (UDP)
+;; WHEN: Tue Apr 07 21:28:07 UTC 2026
+;; MSG SIZE  rcvd: 100
+
+
+=== PUBLIC VALIDATING ANSWER ===
+;; communications error to 8.8.8.8#53: timed out
+;; communications error to 8.8.8.8#53: timed out
+
+; <<>> DiG 9.18.39-0ubuntu0.22.04.2-Ubuntu <<>> isc.org A @8.8.8.8 +dnssec
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 8168
+;; flags: qr rd ra ad; QUERY: 1, ANSWER: 5, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; MBZ: 0x012c, udp: 512
+;; QUESTION SECTION:
+;isc.org.			IN	A
+
+;; ANSWER SECTION:
+isc.org.		300	IN	A	151.101.130.217
+isc.org.		300	IN	A	151.101.194.217
+isc.org.		300	IN	A	151.101.2.217
+isc.org.		300	IN	A	151.101.66.217
+isc.org.		300	IN	RRSIG	A 13 2 300 20260420235821 20260406233900 27566 isc.org. HlLaK4c/r3zFhhzFzS3yeS6lKOCzwkaPbuG4p3CMUOwQ2F7jV/1aoJgB A/5aUzcCsCpYbkc6deq3bDGMQZIzsw==
+
+;; Query time: 1592 msec
+;; SERVER: 8.8.8.8#53(8.8.8.8) (UDP)
+;; WHEN: Wed Apr 08 00:28:18 MSK 2026
+;; MSG SIZE  rcvd: 238
+

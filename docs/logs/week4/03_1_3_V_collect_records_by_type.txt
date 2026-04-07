@@ -1,0 +1,19 @@
+=== Сбор записей для apex зоны isc.org ===
+Запрос: isc.org A
+Запрос: isc.org AAAA
+Запрос: isc.org NS
+Запрос: isc.org MX
+Запрос: isc.org SOA
+Запрос: isc.org TXT
+Запрос: isc.org CAA
+Запрос: isc.org DNSKEY
+Запрос: isc.org DS
+Запрос: isc.org RRSIG
+Запрос: isc.org NSEC3PARAM
+Запрос: isc.org SRV
+Запрос поддомена: www.isc.org
+Запрос поддомена: ftp.isc.org
+Запрос поддомена: mail.isc.org
+Запрос поддомена: dl.isc.org
+Запрос поддомена: lists.isc.org
+Запрос поддомена: www.lists.isc.org

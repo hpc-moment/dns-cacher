@@ -114,14 +114,28 @@
 
 ## Week 4. DNSSEC bypass
 
-### 1.3.А Выбор и локальное размещение DNSSEC-зоны
-**Статус:** TODO
+### W4-01. 1.3.А Выбор и локальное размещение DNSSEC-зоны
+**Цель:** подтвердить, что выбрана DNSSEC-зона `isc.org`, и её локальное описание подключено в Unbound.  
+**Артефакты:** `docs/logs/week4/01_1_3_A_zone_selection_and_local_zone_retest.txt`, `docs/screenshots/week4/01_1_3_A_*.jpg`  
+**Статус:** DONE  
+**Баллы:** 5 / 5
 
-### 1.3.Б Настройка ответов по зоне из локального описания
-**Статус:** TODO
+### W4-02. 1.3.Б Настройка ответов по зоне из локального описания
+**Цель:** подтвердить, что `isc.org` и его поддомены обслуживаются локальной зоной и возвращают подменный IP.  
+**Артефакты:** `docs/logs/week4/02_1_3_B_local_zone_priority_retest.txt`, `docs/screenshots/week4/02_1_3_B_*.jpg`  
+**Статус:** DONE  
+**Баллы:** 5 / 5
 
-### 1.3.В Сбор данных по зоне и создание zone-file
-**Статус:** TODO
+### W4-03. 1.3.В Сбор данных по зоне и создание zone-file
+**Цель:** подтвердить сбор реальных записей зоны `isc.org` и генерацию локального описания зоны для Unbound.  
+**Артефакты:** `docs/logs/week4/03_1_3_V_collect_records_by_type.txt`, `docs/logs/week4/04_1_3_V_view_collected_records.txt`, `docs/logs/week4/05_1_3_V_zone_collector_override.txt`, `docs/logs/week4/06_1_3_V_generated_local_zone_check.txt`, `docs/screenshots/week4/03_1_3_V_*.jpg`  
+**Статус:** DONE  
+**Баллы:** 10 / 10
 
-### 1.3.Г Демонстрация ответов из локальной базы резолвера
-**Статус:** TODO
+### W4-04. 1.3.Г Демонстрация ответов из локальной базы резолвера
+**Цель:** подтвердить, что ответы по `isc.org` выдаются из локальной базы без обращения к апстриму.  
+**Артефакты:** `docs/logs/week4/07_1_3_G_local_vs_public_answer.txt`, `docs/logs/week4/08_1_3_G_stats_check.txt`, `docs/logs/week4/09_1_3_G_unbound_logs_before_after.txt`, `docs/screenshots/week4/04_1_3_G_*.jpg`  
+**Статус:** DONE 
+**Баллы:** 5 / 5
+
+**Итог Week 4:** `25 / 25`
