@@ -13,9 +13,9 @@
 )
 
 // Настройка межстрочного интервала и отступов
-#set text(size: 20pt, lang: "ru") // Установка языка для авто-заголовков
-#set par(leading: 0.8em) // Межстрочный интервал (возврат к разумному значению)
-#show heading: it => it + v(0.5em) // Отступ после заголовка (возврат к разумному значению)
+#set text(size: 20pt, lang: "ru")
+#set par(leading: 0.8em)
+#show heading: it => it + v(0.5em)
 
 #title-slide()
 
@@ -26,39 +26,35 @@
 
 = Техническое задание и задачи
 
-== Описание кейса
+== Описание кейса и схема поиска
 
-Проект реализует гибкую DNS-инфраструктуру для решения ограничений стандартных систем:
-- *Управление временем жизни (TTL):* переопределение политик хранения записей.
-- *Внешнее кэширование:* вынос данных в Redis для масштабируемости.
-- *Управление зонами DNSSEC:* механизмы подмены данных в подписанных зонах.
+#slide[
+  #set text(size: 13pt)
+  #side-by-side[
+    *Контекст и проблематика:*
+    - DNS сопоставляет имена хостов с IP-адресами. При потере связности с авторитетными серверами, записи в обычном резолвере удаляются по истечении TTL.
+    - *Решение:* Принудительное хранение информации во внешнем кэше (Redis) для доступа при "падении" апстрима.
+    - *Безопасность:* Возможность обхода ограничений DNSSEC при локальной подмене данных.
+    
+    *Типы запросов:*
+    1. Рекурсивный (клиент -> резолвер).
+    2. Итеративный (резолвер -> иерархия серверов).
+  ][
+    #box(width: 95%)[
+      #image("screenshots/dns_scheme.png", width: 100%)
+      #align(center)[_Схема иерархического поиска_]
+    ]
+  ]
+]
 
 == Ключевые технические цели
 
-1. Рекурсивная валидация DNSSEC (флаг `ad`).
-2. Упреждающее кэширование (Prefetch) и анализ вытеснения.
-3. Разработка Proxy-посредника для интеграции с Redis.
-4. Подмена записей в локальных зонах (Spoofing) с обходом валидатора.
+- *Инфраструктура (W1):* Развертывание контейнеризированной среды Docker Compose с поддержкой DNSSEC и рекурсивной валидации (флаг `ad`).
+- *Исследовательский анализ (W2):* Настройка лимитов кэша, запуск стресс-тестов на вытеснение (Eviction) и активация префетчинга для популярных имен.
+- *Внешняя интеграция (W3):* Разработка Python-прокси для выноса кэширующего слоя в Redis с возможностью принудительного управления TTL.
+- *Управление зонами (W4):* Реализация "Local Zones Collector" для нативной подмены данных в защищенных зонах через механизм `domain-insecure`.
 
 = Архитектура системы
-
-== Архитектурные решения (ADR)
-
-#set text(size: 14pt)
-#table(
-  columns: (auto, 1fr, auto),
-  stroke: 0.5pt,
-  inset: 5pt,
-  fill: (x, y) => if y == 0 { gray.lighten(80%) },
-  [*ID*], [*Название решения*], [*Статус*],
-  [ADR-001], [Отказ от BIND9 в пользу Unbound], [Отклонено],
-  [ADR-002], [Контейнеризация Unbound через Systemd], [Принято],
-  [ADR-003], [Базовая конфигурация сети и безопасности], [Принято],
-  [ADR-004], [Стратегии кэширования и мониторинг], [Принято],
-  [ADR-005], [Разработка Python DNS-прокси с Redis], [Принято],
-  [ADR-006], [Использование iptables DNAT для подмены], [Отклонено],
-  [ADR-007], [Реализация Spoofing и политик TTL], [Принято],
-)
 
 == Стек технологий
 
@@ -68,12 +64,12 @@
 - *Среда:* Docker & Docker Compose.
 - *Инструменты:* `unbound-control`, `dig`, `redis-cli`.
 
-== Схема взаимодействия компонентов
+== Схема взаимодействия и сетевая топология
 
 #slide[
   #align(center + horizon)[
-    #box(width: 95%)[
-      #set text(size: 14pt)
+    #box(width: 98%)[
+      #set text(size: 13pt)
       #stack(
         dir: ltr,
         spacing: 1fr,
@@ -83,26 +79,26 @@
           align(center, [Клиент]),
           block(stroke: 1pt, inset: 8pt, radius: 4pt)[Браузер / dig],
         ),
-        sym.arrow.r,
+        stack(dir: ttb, spacing: 0.3em, align(center, [UDP/53]), sym.arrow.r),
         stack(
           dir: ttb,
           spacing: 0.5em,
-          align(center, [Прокси (53)]),
-          block(stroke: 1pt, inset: 8pt, radius: 4pt, fill: blue.lighten(92%))[Python (UDP)],
+          align(center, [dns-proxy]),
+          block(stroke: 1pt, inset: 8pt, radius: 4pt, fill: blue.lighten(92%))[Python \ 10.10.0.5],
         ),
-        sym.arrow.r,
+        stack(dir: ttb, spacing: 0.3em, align(center, [TCP/6379]), sym.arrow.r),
         stack(
           dir: ttb,
           spacing: 0.5em,
-          align(center, [Хранилище]),
-          block(stroke: 1pt, inset: 8pt, radius: 4pt, fill: red.lighten(92%), width: 7em)[Redis],
+          align(center, [dns-cache]),
+          block(stroke: 1pt, inset: 8pt, radius: 4pt, fill: red.lighten(92%), width: 7em)[Redis \ 10.10.0.3],
         ),
-        sym.arrow.r,
+        stack(dir: ttb, spacing: 0.3em, align(center, [UDP/53]), sym.arrow.r),
         stack(
           dir: ttb,
           spacing: 0.5em,
-          align(center, [Резолвер]),
-          block(stroke: 1pt, inset: 8pt, radius: 4pt, fill: green.lighten(92%), width: 7em)[Unbound],
+          align(center, [dns-resolver]),
+          block(stroke: 1pt, inset: 8pt, radius: 4pt, fill: green.lighten(92%), width: 7em)[Unbound \ 10.10.0.2],
         ),
         sym.arrow.r,
         stack(dir: ttb, spacing: 0.5em, align(center, [Сеть]), block(stroke: 1pt, inset: 8pt, radius: 4pt)[Интернет]),
@@ -110,7 +106,7 @@
 
       #v(0.8em)
       #align(left)[
-        *Инфраструктурная роль:* proxy на python - это точка входа, изолирующая клиентские запросы от логики рекурсивного резолвинга и базы данных.
+        *Спецификация dns-lab (10.10.0.0/24):* Все компоненты изолированы в Docker-сети. Доступ извне только к порту 53/udp прокси-сервера. Redis и Unbound скрыты от прямого доступа клиента.
       ]
     ]
   ]
@@ -153,90 +149,143 @@
 #slide[
   #set text(size: 14pt)
   #side-by-side[
-    - Развернута сеть `dns-lab`.
-    - Подтверждена валидация DNSSEC (флаг `ad`).
-    - Модульная поддержка Unbound (python, validator).
+    ```conf
+    server:
+        # Работа с кэшем
+        prefetch: yes
+        prefetch-key: yes
+        cache-min-ttl: 330
+
+        # Безопасность
+        module-config: "validator iterator"
+        auto-trust-anchor-file: "...root.key"
+
+        # Мониторинг
+        extended-statistics: yes
+    ```
   ][
-    #image("screenshots/week1/unbound_service_active.jpg", height: 90%)
-    #align(center)[_Служба Unbound активна_]
+    1. *Prefetch:* Обновление популярных записей до их истечения.
+    2. *Validator:* Обязательный модуль для работы DNSSEC.
+    3. *Min-TTL:* Исключение слишком частых запросов к апстриму.
+    4. *Statistics:* Сбор данных о вытеснении (eviction) для анализа лимитов.
   ]
 ]
 
 == Кэширование и Лимиты (Неделя 2)
 
 #slide[
-  #set text(size: 14pt)
+  #set text(size: 13pt)
   #side-by-side[
-    - `prefetch: yes` (фоновый префетчинг).
-    - Стресс-тест `fill_cache.sh`.
-    - Фиксация вытеснения (`eviction`).
+  ```conf
+  # unbound.conf
+  server:
+      verbosity: 3
+      prefetch: yes         # Фоновое обновление
+      prefetch-key: yes     # Обновление ключей
+      cache-min-ttl: 330    # Минимум 5.5 минут
+      
+      module-config: "validator iterator"
+      auto-trust-anchor-file: "...root.key"
+      extended-statistics: yes 
+  ```
   ][
-    #image("screenshots/week2/eviction_run_3.jpg", height: 90%)
-    #align(center)[_Процесс вытеснения записей_]
+  1. *Failsafe:* запуск через `systemd` внутри контейнера (ADR-002).
+  2. *Healthcheck:* авто-проверка доступности порта 53 через `dig`.
+  3. *Validator:* обязательная рекурсивная проверка DNSSEC.
+  4. *Prefetch:* обновление популярных записей при TTL < 10%.
   ]
 ]
 
 == Внешний кэш и Proxy (Неделя 3)
 
 #slide[
-  #set text(size: 14pt)
+  #set text(size: 13pt)
   #side-by-side[
-    - Интеграция с Redis.
-    - Переопределение TTL на 3600с.
-    - Логирование MISS/HIT переходов.
-  ][
     ```python
+    # proxy/main.py
+    
+    # Проверка наличия в Redis
+    if (cached := r.get(key)):
+        resp = dns.message.from_wire(cached)
+        return resp
+        
     # MISS: Запрос к Unbound
-    # и переопределение TTL
-    resp = dns.query.udp(query,
-           UNBOUND_IP, port=53)
+    resp = dns.query.udp(query, IP, 53)
+    
+    # Переопределение TTL
     for rrset in resp.answer:
         rrset.ttl = 3600
-    r.setex(key, 3600,
-        resp.to_wire())
+        
+    # Запись ответа в Redis
+    r.setex(key, 3600, resp.to_wire())
     ```
-    #align(center)[_Фрагмент логики прокси_]
+  ][
+  1. *Redis Integration:* вынос кэша в независимый контейнер.
+  2. *TTL Override:* принудительное сохранение на 1 час (3600с).
+  3. *Persistence:* кэш сохраняется даже после перезапуска Proxy.
   ]
 ]
 
-= Управление зонами DNSSEC
+= Управление зонами DNSSEC 
 
-== Механизм подмены (ADR-007)
+== Механизм подмены (Неделя 4)
 
-#set text(size: 16pt)
-*Проблема:* DNSSEC блокирует изменение данных (`SERVFAIL`).
+#slide[
+  #set text(size: 13pt)
+  #side-by-side[
+  ```conf
+  # local-zones.conf
+  server:
+      # Захват зоны isc.org
+      local-zone: "isc.org." redirect
+      
+      # Подменные данные (A, SOA, NS)
+      local-data: "isc.org. 3600 IN A 192.0.2.0"
+      
+      # Обход DNSSEC (Критично!)
+      domain-insecure: "isc.org."
+  ```
+  ][
+  1. *Redirect:* перехват всех запросов зоны.
+  2. *Domain-insecure:* ручное исключение из валидации для обхода подписи.
+  3. *AA-флаг:* резолвер выступает авторитетом для подмененных данных.
+  ]
+]
 
-*Техническое решение:*
-1. Резолвер — "авторитет": `local-zone: "isc.org" redirect`.
-2. Исключение из валидации: `domain-insecure: "isc.org"`.
-3. Подмена IP: `local-data: "isc.org A 10.10.0.100"`.
+== Почему не сетевой перехват? (ADR-006)
 
-== Обоснование выбора (ADR-006)
-
-*Почему не iptables DNAT?*
-- Высокая сложность управления UDP-сессиями.
-- Проблемы с фрагментированными пакетами.
-- Нативная подмена в Unbound проще в дебаге и конфигурации.
+#slide[
+  #side-by-side[
+    *Сложность сетевого уровня:*
+    - Не видит контента (только "конверты").
+    - Невозможен обход DNSSEC.
+    - Требует опасных прав `NET_ADMIN`.
+  ][
+    *Наш выбор (Unbound):*
+    - *Нативно:* понимает структуру DNS.
+    - *Безопасно:* чистая конфигурация.
+    - *Гибко:* управление TTL.
+  ]
+  
+  #v(0.5em)
+  *Аналогия:* Вместо перехвата писем на дороге (сложно и незаконно), мы договорились с почтальоном выдавать нужный адрес.
+]
 
 = Итоги
 
 == Технические результаты
 
-- Валидация DNSSEC работает (флаг `ad`).
-- Спуфинг зон реализован без нарушения работы резолвера.
-- Redis обеспечивает персистентность кэша.
-- TTL переопределяется на 1 час (3600с).
-
-// == Возможные вопросов
-
-// #set text(size: 14pt)
-// - *Актуальность кэша:* через `SETEX` в Redis (авто-удаление).
-// - *Отказоустойчивость:* Proxy работает напрямую with Unbound при сбое Redis.
-// - *Обход подписи:* `domain-insecure` помечает зону как доверенную без проверки ключей.
+#set text(size: 13pt)
+- *Безопасность (DNSSEC):* Стабильная рекурсивная валидация, флаг `ad`. Реализован обход проверки для подлежщих спуфингу зон (`domain-insecure`).
+- *Производительность (Prefetch):* Механизм фонового обновления подтвержден ростом счетчика `total.num.prefetch` и обновлением записей при TTL < 10%.
+- *Управление кэшем (Eviction):* Экспериментально подтверждено вытеснение записей при достижении лимита памяти (~540 КБ / 1500 уникальных запросов).
+- *Redis-интеграция:* Внешний кэш обеспечивает персистентность. Подтвержден режим `HIT` без обращения к Unbound и переопределение TTL до 1 часа.
+- *Гибкость:* Реализовано динамическое управление TTL (режимы `respect`, `override`, `min`) и нативная подмена через `local-zone` (AA-флаг).
 
 == Список литературы
 
-#set text(size: 14pt)
+#set text(size: 13pt)
++ Команда 5, *SAMT: DNS Cacher (Source Code)*. [Электронный ресурс]. Доступно: https://github.com/hpc-moment/dns-cacher
 + П. Альбитц, К. Ли, *DNS и BIND. Руководство для системных администраторов*. [Электронный ресурс]. Доступно: https://disnetern.ru/wp-content/uploads/2016/11/DNS_BIND.pdf
 + RIPE NCC, *RIPE Database Documentation*. [Электронный ресурс]. Доступно: https://apps.db.ripe.net/docs/
 + P. Hoffman, P. McManus, *RFC 8484: DNS Queries over HTTPS (DoH)*. [Электронный ресурс]. Доступно: https://www.rfc-editor.org/rfc/rfc8484
@@ -245,6 +294,7 @@
 + Internet Systems Consortium, *BIND 9 Administrator Reference Manual*. [Электронный ресурс]. Доступно: https://www.isc.org/bind/
 + NLnet Labs, *Unbound DNS Resolver Documentation*. [Электронный ресурс]. Доступно: https://nlnetlabs.nl/projects/unbound/about/
 + PowerDNS.COM BV, *PowerDNS Authoritative Server and Recursor*. [Электронный ресурс]. Доступно: https://www.powerdns.com/
+
 
 #focus-slide[
   Спасибо за внимание!
