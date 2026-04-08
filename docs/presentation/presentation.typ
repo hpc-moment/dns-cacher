@@ -150,6 +150,7 @@
   #set text(size: 14pt)
   #side-by-side[
     ```conf
+    # unbound.conf
     server:
         # Работа с кэшем
         prefetch: yes
