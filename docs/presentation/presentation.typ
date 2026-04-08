@@ -79,7 +79,7 @@
           align(center, [Клиент]),
           block(stroke: 1pt, inset: 8pt, radius: 4pt)[Браузер / dig],
         ),
-        stack(dir: ttb, spacing: 0.3em, align(center, [UDP/53]), sym.arrow.r),
+        stack(dir: ttb, spacing: 0.3em, align(center, [UDP/5300]), sym.arrow.r),
         stack(
           dir: ttb,
           spacing: 0.5em,
@@ -106,7 +106,7 @@
 
       #v(0.8em)
       #align(left)[
-        *Спецификация dns-lab (10.10.0.0/24):* Все компоненты изолированы в Docker-сети. Доступ извне только к порту 53/udp прокси-сервера. Redis и Unbound скрыты от прямого доступа клиента.
+        *Спецификация dns-lab (10.10.0.0/24):* Все компоненты изолированы в Docker-сети. Доступ извне осуществляется к порту 5300/udp (мапинг 5300:53) прокси-сервера. Redis и Unbound скрыты от прямого доступа клиента.
       ]
     ]
   ]
