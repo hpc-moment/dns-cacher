@@ -1,0 +1,87 @@
+=== 1.3.A DNSSEC ZONE SELECTION ===
+
+=== DS CHECK FOR isc.org ===
+
+; <<>> DiG 9.18.39-0ubuntu0.22.04.2-Ubuntu <<>> isc.org DS @8.8.8.8 +dnssec
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 32945
+;; flags: qr rd ra ad; QUERY: 1, ANSWER: 2, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; MBZ: 0x0e10, udp: 512
+;; QUESTION SECTION:
+;isc.org.			IN	DS
+
+;; ANSWER SECTION:
+isc.org.		3600	IN	DS	7250 13 2 A30B3F78B6DDE9A4A9A2AD0C805518B4F49EC62E7D3F4531D33DE697 CDA01CB2
+isc.org.		3600	IN	RRSIG	DS 8 2 3600 20260422153322 20260401143322 29805 org. leQpSbVTKlJOOoD/UxZd0Pbc/T4r6ABpTA0QL6PE1KMd2ECi6I9F0oJ4 ixFtr2uUkP+uAjWFW09jl0b+vqXy7HmKBjLonk4b/OBye9XtMpNSmusN ednJHTlwrnoF8w4tTJTtz7tDh/AOH26SwLyiL9autuuuufGxYUlp0TVv KOk=
+
+;; Query time: 116 msec
+;; SERVER: 8.8.8.8#53(8.8.8.8) (UDP)
+;; WHEN: Wed Apr 08 00:17:37 MSK 2026
+;; MSG SIZE  rcvd: 261
+
+
+=== REAL isc.org A FROM AUTHORITATIVE SERVER ===
+151.101.2.217
+151.101.130.217
+151.101.66.217
+151.101.194.217
+
+=== LOCAL isc.org A FROM UNBOUND CONTAINER ===
+151.101.66.217
+151.101.130.217
+151.101.194.217
+151.101.2.217
+
+=== UNBOUND STATUS ===
+● unbound.service - Unbound DNS server
+     Loaded: loaded (/lib/systemd/system/unbound.service; enabled; vendor preset: enabled)
+     Active: active (running) since Tue 2026-04-07 21:16:39 UTC; 58s ago
+       Docs: man:unbound(8)
+    Process: 32 ExecStartPre=/usr/lib/unbound/package-helper chroot_setup (code=exited, status=0/SUCCESS)
+    Process: 35 ExecStartPre=/usr/lib/unbound/package-helper root_trust_anchor_update (code=exited, status=0/SUCCESS)
+   Main PID: 39 (unbound)
+      Tasks: 2 (limit: 8217)
+     Memory: 10.3M
+        CPU: 73ms
+     CGroup: /system.slice/unbound.service
+             └─39 /usr/sbin/unbound -d -p
+
+Apr 07 21:16:44 3a76da52302c unbound[39]: [1775596604] unbound[39:1] info: query response was ANSWER
+Apr 07 21:16:44 3a76da52302c unbound[39]: [1775596604] unbound[39:1] info: finishing processing for . NS IN
+Apr 07 21:16:44 3a76da52302c unbound[39]: [1775596604] unbound[39:1] debug: validator[module 0] operate: extstate:module_wait_module event:module_event_moddone
+Apr 07 21:16:44 3a76da52302c unbound[39]: [1775596604] unbound[39:1] info: validator operate: query . NS IN
+Apr 07 21:16:44 3a76da52302c unbound[39]: [1775596604] unbound[39:1] info: validate(positive): sec_status_secure
+Apr 07 21:16:44 3a76da52302c unbound[39]: [1775596604] unbound[39:1] info: validation success . NS IN
+Apr 07 21:16:44 3a76da52302c unbound[39]: [1775596604] unbound[39:1] reply: 127.0.0.1 . NS IN NOERROR 0.102174 0 239
+Apr 07 21:16:44 3a76da52302c unbound[39]: [1775596604] unbound[39:1] debug: cache memory msg=66833 rrset=69969 infra=8401 val=68046 subnet=0
+Apr 07 21:17:37 3a76da52302c unbound[39]: [1775596657] unbound[39:1] query: 127.0.0.1 isc.org. A IN
+Apr 07 21:17:37 3a76da52302c unbound[39]: [1775596657] unbound[39:1] reply: 127.0.0.1 isc.org. A IN NOERROR 0.000000 1 100
+
+=== ACTIVE LOCAL ZONE CONFIG ===
+server:
+
+local-zone: "isc.org." transparent
+domain-insecure: "isc.org."
+
+local-data: "isc.org. 3600 IN A 151.101.130.217"
+local-data: "isc.org. 3600 IN A 151.101.194.217"
+local-data: "isc.org. 3600 IN A 151.101.2.217"
+local-data: "isc.org. 3600 IN A 151.101.66.217"
+local-data: "isc.org. 3600 IN MX 10 mx.ams1.isc.org."
+local-data: "isc.org. 3600 IN MX 5 mx.pao1.isc.org."
+local-data: "isc.org. 3600 IN NS ns.isc.afilias-nst.info."
+local-data: "isc.org. 3600 IN NS ns1.isc.org."
+local-data: "isc.org. 3600 IN NS ns2.isc.org."
+local-data: "isc.org. 3600 IN NS ns3.isc.org."
+local-data: "isc.org. 3600 IN NS nsp.dnsnode.net."
+local-data: "isc.org. 3600 IN SOA ns-int.isc.org. hostmaster.isc.org. 2026040237 7200 3600 24796800 3600"
+local-data: "mx.ams1.isc.org. 3600 IN A 199.6.1.65"
+local-data: "mx.pao1.isc.org. 3600 IN A 149.20.2.50"
+local-data: "ns.isc.afilias-nst.info. 3600 IN A 199.254.63.254"
+local-data: "ns1.isc.org. 3600 IN A 149.20.2.26"
+local-data: "ns2.isc.org. 3600 IN A 199.6.1.52"
+local-data: "ns3.isc.org. 3600 IN A 51.75.79.143"
+local-data: "nsp.dnsnode.net. 3600 IN A 194.58.198.32"

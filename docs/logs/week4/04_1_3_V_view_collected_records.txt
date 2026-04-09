@@ -1,0 +1,167 @@
+=== Собранные файлы ===
+total 176
+drwxr-xr-x 2 zenenk zenenk 4096 Apr  7 22:59 .
+drwxr-xr-x 3 zenenk zenenk 4096 Apr  7 22:59 ..
+-rw-r--r-- 1 zenenk zenenk 1347 Apr  8 00:20 dl_isc_org_A.txt
+-rw-r--r-- 1 zenenk zenenk 1353 Apr  8 00:20 dl_isc_org_AAAA.txt
+-rw-r--r-- 1 zenenk zenenk 1355 Apr  8 00:20 dl_isc_org_CNAME.txt
+-rw-r--r-- 1 zenenk zenenk 1350 Apr  8 00:20 dl_isc_org_MX.txt
+-rw-r--r-- 1 zenenk zenenk 1351 Apr  8 00:20 dl_isc_org_TXT.txt
+-rw-r--r-- 1 zenenk zenenk  948 Apr  8 00:20 ftp_isc_org_A.txt
+-rw-r--r-- 1 zenenk zenenk  965 Apr  8 00:20 ftp_isc_org_AAAA.txt
+-rw-r--r-- 1 zenenk zenenk  746 Apr  8 00:20 ftp_isc_org_CNAME.txt
+-rw-r--r-- 1 zenenk zenenk 1279 Apr  8 00:20 ftp_isc_org_MX.txt
+-rw-r--r-- 1 zenenk zenenk 1281 Apr  8 00:20 ftp_isc_org_TXT.txt
+-rw-r--r-- 1 zenenk zenenk  839 Apr  8 00:20 isc.org_A.txt
+-rw-r--r-- 1 zenenk zenenk  875 Apr  8 00:20 isc.org_AAAA.txt
+-rw-r--r-- 1 zenenk zenenk 1392 Apr  8 00:20 isc.org_CAA.txt
+-rw-r--r-- 1 zenenk zenenk 1091 Apr  8 00:20 isc.org_DNSKEY.txt
+-rw-r--r-- 1 zenenk zenenk  907 Apr  8 00:20 isc.org_DS.txt
+-rw-r--r-- 1 zenenk zenenk  789 Apr  8 00:20 isc.org_MX.txt
+-rw-r--r-- 1 zenenk zenenk  898 Apr  8 00:20 isc.org_NS.txt
+-rw-r--r-- 1 zenenk zenenk 1267 Apr  8 00:20 isc.org_NSEC3PARAM.txt
+-rw-r--r-- 1 zenenk zenenk  716 Apr  8 00:20 isc.org_RRSIG.txt
+-rw-r--r-- 1 zenenk zenenk  940 Apr  8 00:20 isc.org_SOA.txt
+-rw-r--r-- 1 zenenk zenenk  577 Apr  8 00:20 isc.org_SRV.txt
+-rw-r--r-- 1 zenenk zenenk 1524 Apr  8 00:20 isc.org_TXT.txt
+-rw-r--r-- 1 zenenk zenenk  739 Apr  8 00:20 lists_isc_org_A.txt
+-rw-r--r-- 1 zenenk zenenk 1059 Apr  8 00:20 lists_isc_org_AAAA.txt
+-rw-r--r-- 1 zenenk zenenk 1061 Apr  8 00:20 lists_isc_org_CNAME.txt
+-rw-r--r-- 1 zenenk zenenk  797 Apr  8 00:20 lists_isc_org_MX.txt
+-rw-r--r-- 1 zenenk zenenk  957 Apr  8 00:20 lists_isc_org_TXT.txt
+-rw-r--r-- 1 zenenk zenenk 1322 Apr  8 00:20 mail_isc_org_A.txt
+-rw-r--r-- 1 zenenk zenenk 1328 Apr  8 00:20 mail_isc_org_AAAA.txt
+-rw-r--r-- 1 zenenk zenenk 1330 Apr  8 00:20 mail_isc_org_CNAME.txt
+-rw-r--r-- 1 zenenk zenenk 1323 Apr  8 00:20 mail_isc_org_MX.txt
+-rw-r--r-- 1 zenenk zenenk 1326 Apr  8 00:20 mail_isc_org_TXT.txt
+-rw-r--r-- 1 zenenk zenenk  927 Apr  8 00:20 www_isc_org_A.txt
+-rw-r--r-- 1 zenenk zenenk  956 Apr  8 00:20 www_isc_org_AAAA.txt
+-rw-r--r-- 1 zenenk zenenk  755 Apr  8 00:20 www_isc_org_CNAME.txt
+-rw-r--r-- 1 zenenk zenenk  865 Apr  8 00:20 www_isc_org_MX.txt
+-rw-r--r-- 1 zenenk zenenk  867 Apr  8 00:20 www_isc_org_TXT.txt
+-rw-r--r-- 1 zenenk zenenk 1337 Apr  8 00:20 www_lists_isc_org_A.txt
+-rw-r--r-- 1 zenenk zenenk 1342 Apr  8 00:20 www_lists_isc_org_AAAA.txt
+-rw-r--r-- 1 zenenk zenenk 1338 Apr  8 00:20 www_lists_isc_org_CNAME.txt
+-rw-r--r-- 1 zenenk zenenk 1385 Apr  8 00:20 www_lists_isc_org_MX.txt
+-rw-r--r-- 1 zenenk zenenk 1335 Apr  8 00:20 www_lists_isc_org_TXT.txt
+
+=== A-записи isc.org ===
+
+; <<>> DiG 9.18.39-0ubuntu0.22.04.2-Ubuntu <<>> isc.org A @ns1.isc.org +dnssec +multiline
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 40318
+;; flags: qr rd ra ad; QUERY: 1, ANSWER: 5, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; MBZ: 0x0018, udp: 512
+;; QUESTION SECTION:
+;isc.org.		IN A
+
+;; ANSWER SECTION:
+isc.org.		24 IN A	151.101.194.217
+isc.org.		24 IN A	151.101.66.217
+isc.org.		24 IN A	151.101.2.217
+isc.org.		24 IN A	151.101.130.217
+isc.org.		24 IN RRSIG A 13 2 300 (
+				20260420235821 20260406233900 27566 isc.org.
+				HlLaK4c/r3zFhhzFzS3yeS6lKOCzwkaPbuG4p3CMUOwQ
+				2F7jV/1aoJgBA/5aUzcCsCpYbkc6deq3bDGMQZIzsw== )
+
+;; Query time: 132 msec
+;; SERVER: 149.20.2.26#53(ns1.isc.org) (UDP)
+;; WHEN: Wed Apr 08 00:20:05 MSK 2026
+;; MSG SIZE  rcvd: 238
+
+
+=== MX-записи isc.org ===
+
+; <<>> DiG 9.18.39-0ubuntu0.22.04.2-Ubuntu <<>> isc.org MX @ns1.isc.org +dnssec +multiline
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 52829
+;; flags: qr rd ra ad; QUERY: 1, ANSWER: 3, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; MBZ: 0x012c, udp: 512
+;; QUESTION SECTION:
+;isc.org.		IN MX
+
+;; ANSWER SECTION:
+isc.org.		300 IN MX 5 mx.pao1.isc.org.
+isc.org.		300 IN MX 10 mx.ams1.isc.org.
+isc.org.		300 IN RRSIG MX 13 2 300 (
+				20260420235821 20260406233900 27566 isc.org.
+				ceXLNF91P2h4PPYfX1+hQWfPDqzNc5tgUH92xvNl/94A
+				l7Fpk194EJwloRz6yhmwFSGircICAPQGhdIQpLd9Ow== )
+
+;; Query time: 232 msec
+;; SERVER: 149.20.2.26#53(ns1.isc.org) (UDP)
+;; WHEN: Wed Apr 08 00:20:07 MSK 2026
+;; MSG SIZE  rcvd: 222
+
+
+=== TXT-записи isc.org (SPF и др.) ===
+
+; <<>> DiG 9.18.39-0ubuntu0.22.04.2-Ubuntu <<>> isc.org TXT @ns1.isc.org +dnssec +multiline
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 46160
+;; flags: qr rd ra ad; QUERY: 1, ANSWER: 8, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; MBZ: 0x1c20, udp: 512
+;; QUESTION SECTION:
+;isc.org.		IN TXT
+
+;; ANSWER SECTION:
+isc.org.		7200 IN	TXT "google-site-verification=grXE1SbXWNed6C5yQgI8fwxgucE0DppnbICbhZr9qG0"
+isc.org.		7200 IN	TXT "v=spf1 a mx ip4:149.20.0.0/20 ip6:2001:04F8::0/32 ip6:2001:500:60::65/128 ip4:199.6.1.0/24 ip6:2001:500:6b:2::0/64 " "include:shops.shopify.com include:servers.mcsv.net include:_spf.salesforce.com " "include:spf-a.customercenter.net include:spf-b.customercenter.net include:spf-c.customercenter.net ~all"
+isc.org.		7200 IN	TXT "_globalsign-domain-verification=ckxXdoIq27XGYE4ATbBYQOBeV7PTJWRxYe-PXDyzMX"
+isc.org.		7200 IN	TXT "google-site-verification=wg4m8dWi3XVPRYmtBoy6xSKp3juhxIWa6UdxjZkNQCg"
+isc.org.		7200 IN	TXT "google-site-verification=6v652rgkk_kI6Ky32iGdxqXjQ4_BAd5DYKsrnRXKUiE"
+isc.org.		7200 IN	TXT "F8C4EB9011"
+isc.org.		7200 IN	TXT "MS=2583E0E0DCCBF33EC6DAFF0B4BFBAF78FFCF7AD0"
+isc.org.		7200 IN	RRSIG TXT 13 2 7200 (
+				20260420235821 20260406233900 27566 isc.org.
+				ltgISErkrllUxGtgLDMRZMdDcQ9NQMZn3hNMpv7+slE0
+				fwCzCNMVT/Y1iZ9a5DuPQAwEc/kaMuxgry50F0uiSw== )
+
+;; Query time: 108 msec
+;; SERVER: 149.20.2.26#53(ns1.isc.org) (UDP)
+;; WHEN: Wed Apr 08 00:20:09 MSK 2026
+;; MSG SIZE  rcvd: 916
+
+
+=== DNSKEY isc.org ===
+
+; <<>> DiG 9.18.39-0ubuntu0.22.04.2-Ubuntu <<>> isc.org DNSKEY @ns1.isc.org +dnssec +multiline
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 35093
+;; flags: qr rd ra ad; QUERY: 1, ANSWER: 3, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; MBZ: 0x01d5, udp: 512
+;; QUESTION SECTION:
+;isc.org.		IN DNSKEY
+
+;; ANSWER SECTION:
+isc.org.		469 IN DNSKEY 257 3 13 (
+				zEoOfseNFDM+E8spu7RR2Ar/GzFqAehe4yapWLiv6McI
+				UF6xmI5GcIQ3+uLAizS2cNWHt6EArVj8ogjtrRXwfw==
+				) ; KSK; alg = ECDSAP256SHA256 ; key id = 7250
+isc.org.		469 IN DNSKEY 256 3 13 (
+				1CS+VQcRn4lGTK+b3wDjVO0hFDx4DV7s3Q1Fwxuq9ahd
+				255FRny4f4vdZOMMMxpbRH5Zhwoh/706IV0v9JwjlA==
+				) ; ZSK; alg = ECDSAP256SHA256 ; key id = 27566
+isc.org.		469 IN RRSIG DNSKEY 13 2 3600 (
+				20260421095612 20260407090032 7250 isc.org.
+				1bGIM1u41NdtQVx0QShQuTxxecD1+pa7WOxNGR7HHRz9
+				XeOO7a10M7HUMOhXqyaBEnJhw0AfZ7+z13GdrG1+lA== )
+
+;; Query time: 124 msec
+;; SERVER: 149.20.2.26#53(ns1.isc.org) (UDP)
+;; WHEN: Wed Apr 08 00:20:10 MSK 2026
+;; MSG SIZE  rcvd: 320
+

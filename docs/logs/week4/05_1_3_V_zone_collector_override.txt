@@ -1,0 +1,22 @@
+[OK] isc.org A
+[MISS] isc.org AAAA: The DNS response does not contain an answer to the question: isc.org. IN AAAA
+[OK] isc.org MX
+[OK] isc.org NS
+[OK] isc.org SOA
+[OK] nsp.dnsnode.net A
+[MISS] nsp.dnsnode.net AAAA: The DNS response does not contain an answer to the question: nsp.dnsnode.net. IN AAAA
+[OK] isc.org A
+[MISS] isc.org AAAA: The DNS response does not contain an answer to the question: isc.org. IN AAAA
+[OK] mx.pao1.isc.org A
+[MISS] mx.pao1.isc.org AAAA: The DNS response does not contain an answer to the question: mx.pao1.isc.org. IN AAAA
+[OK] ns2.isc.org A
+[MISS] ns2.isc.org AAAA: The DNS response does not contain an answer to the question: ns2.isc.org. IN AAAA
+[OK] ns1.isc.org A
+[MISS] ns1.isc.org AAAA: The DNS response does not contain an answer to the question: ns1.isc.org. IN AAAA
+[OK] mx.ams1.isc.org A
+[MISS] mx.ams1.isc.org AAAA: The DNS response does not contain an answer to the question: mx.ams1.isc.org. IN AAAA
+[OK] ns3.isc.org A
+[MISS] ns3.isc.org AAAA: The DNS response does not contain an answer to the question: ns3.isc.org. IN AAAA
+[OK] ns.isc.afilias-nst.info A
+[MISS] ns.isc.afilias-nst.info AAAA: The DNS response does not contain an answer to the question: ns.isc.afilias-nst.info. IN AAAA
+[DONE] Config written to local-zones.conf
